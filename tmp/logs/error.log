@@ -1,0 +1,150 @@
+2018-10-03 17:38:02 Error: [MissingControllerException] Controller class PostsController could not be found.
+Exception Attributes: array (
+  'class' => 'PostsController',
+  'plugin' => NULL,
+)
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-03 17:38:51 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-03 17:39:41 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 09:53:38 Error: [Error] Using $this when not in object context
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 [internal function]: PostsController::index()
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 10:29:24 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/posts/index
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 10:33:02 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/posts/
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 10:33:19 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/Posts
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 10:33:30 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\index.ctp',
+)
+Request URL: /cakephp/Posts/index
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 10:36:00 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\view.ctp',
+)
+Request URL: /cakephp/posts/view/1
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 13:30:39 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 13:36:22 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 13:36:24 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-04 13:36:30 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Posts\\add.ctp',
+)
+Request URL: /cakephp/posts/add
+Stack Trace:
+#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
+#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
