@@ -233,12 +233,12 @@
 /**
  * A random string used in security hashing methods.
  */
-	Configure::write('Security.salt', '');
+	Configure::write('Security.salt', 'DYhG93b0qyJfIhhkKgYFYHjgbWwvniR2G0FgaC9mi');
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
-	Configure::write('Security.cipherSeed', '');
+	Configure::write('Security.cipherSeed', '768564366457890678687976547867645');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
@@ -281,9 +281,9 @@
 	//date_default_timezone_set('UTC');
 
 /**
- * `Config.timezone` is available in which you can set users' timezone string.
+ * `Config.timezone` is available in which you can set user' timezone string.
  * If a method of CakeTime class is called with $timezone parameter as null and `Config.timezone` is set,
- * then the value of `Config.timezone` will be used. This feature allows you to set users' timezone just
+ * then the value of `Config.timezone` will be used. This feature allows you to set user' timezone just
  * once instead of passing it each time in function calls.
  */
 	//Configure::write('Config.timezone', 'Europe/Paris');

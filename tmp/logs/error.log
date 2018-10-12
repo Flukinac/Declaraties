@@ -1,150 +1,1149 @@
-2018-10-03 17:38:02 Error: [MissingControllerException] Controller class PostsController could not be found.
+2018-10-08 12:00:33 Error: [MissingControllerException] Controller class IndexController could not be found.
 Exception Attributes: array (
-  'class' => 'PostsController',
+  'class' => 'IndexController',
   'plugin' => NULL,
 )
-Request URL: /cakephp/posts/index
+Request URL: /cakeUren/index
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
-2018-10-03 17:38:51 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+2018-10-08 12:00:58 Error: [MissingViewException] View file "user\index.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'file' => 'user\\index.ctp',
 )
-Request URL: /cakephp/posts/index
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('user\\index')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-03 17:39:41 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+2018-10-08 14:02:41 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-08 14:04:26 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-08 14:05:30 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-08 16:44:54 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-08 16:57:32 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'class' => 'UserController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/posts/index
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2018-10-04 09:53:38 Error: [Error] Using $this when not in object context
-Request URL: /cakephp/posts/index
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-08 17:04:06 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
 Stack Trace:
-#0 [internal function]: PostsController::index()
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PostsController), Array)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 10:29:24 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+2018-10-08 17:20:46 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-08 17:20:49 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'class' => 'UserController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/posts/index
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-08 17:20:52 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 10:33:02 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+2018-10-09 00:18:47 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:18:58 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:23:21 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:23:22 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:28:04 Error: [MissingControllerException] Controller class UsersindexController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'class' => 'UsersindexController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/posts/
+Request URL: /cakeUren/usersindex
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
-#5 {main}
-2018-10-04 10:33:19 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 00:28:12 Error: [MissingControllerException] Controller class IndexController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'class' => 'IndexController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/Posts
+Request URL: /cakeUren/index
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 00:31:23 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 10:33:30 Error: [MissingViewException] View file "Posts\index.ctp" is missing.
+2018-10-09 00:33:00 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:33:16 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:33:18 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:34:09 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:36:53 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:36:54 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:37:01 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:37:09 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:37:18 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:40:19 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:40:20 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:40:33 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:42:47 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:42:49 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:42:50 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:43:09 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:43:22 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:43:27 Error: [MissingControllerException] Controller class IndexController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\index.ctp',
+  'class' => 'IndexController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/Posts/index
+Request URL: /cakeUren/index
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\index')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 00:43:32 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/users
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 10:36:00 Error: [MissingViewException] View file "Posts\view.ctp" is missing.
+2018-10-09 00:44:23 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:44:27 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:47:08 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:47:09 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: UsersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:51:29 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 00:51:42 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 09:32:10 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 09:33:33 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: usersController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(usersController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(usersController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 09:59:33 Error: [MissingControllerException] Controller class UserController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\view.ctp',
+  'class' => 'UserController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/posts/view/1
+Request URL: /cakeUren/
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\view')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 10:07:37 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 13:30:39 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+2018-10-09 10:13:50 Error: [MissingControllerException] Controller class UsersController could not be found.
 Exception Attributes: array (
-  'file' => 'Posts\\add.ctp',
+  'class' => 'UsersController',
+  'plugin' => NULL,
 )
-Request URL: /cakephp/posts/add
+Request URL: /cakeUren/users
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 10:13:56 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 13:36:22 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+2018-10-09 10:19:02 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 10:19:03 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 10:19:04 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 10:19:21 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: userController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(userController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(userController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 10:30:49 Error: [MissingViewException] View file "User\index.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Posts\\add.ctp',
+  'file' => 'User\\index.ctp',
 )
-Request URL: /cakephp/posts/add
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('User\\index')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 13:36:24 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+2018-10-09 10:32:41 Error: [MissingViewException] View file "User\index.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Posts\\add.ctp',
+  'file' => 'User\\index.ctp',
 )
-Request URL: /cakephp/posts/add
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('User\\index')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
-2018-10-04 13:36:30 Error: [MissingViewException] View file "Posts\add.ctp" is missing.
+2018-10-09 10:33:58 Error: [MissingViewException] View file "User\index.ctp" is missing.
 Exception Attributes: array (
-  'file' => 'Posts\\add.ctp',
+  'file' => 'User\\index.ctp',
 )
-Request URL: /cakephp/posts/add
+Request URL: /cakeUren/user
 Stack Trace:
-#0 C:\xampp\php\www\cakephp\lib\Cake\View\View.php(470): View->_getViewFileName('Posts\\add')
-#1 C:\xampp\php\www\cakephp\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
-#2 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
-#3 C:\xampp\php\www\cakephp\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PostsController), Object(CakeRequest))
-#4 C:\xampp\php\www\cakephp\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('User\\index')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2018-10-09 10:43:00 Error: [ParseError] syntax error, unexpected '$user' (T_VARIABLE), expecting ',' or ';'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-09 13:30:32 Error: [MissingControllerException] Controller class CompaniesController could not be found.
+Exception Attributes: array (
+  'class' => 'CompaniesController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/companies
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:31:14 Error: [MissingControllerException] Controller class CompaniesController could not be found.
+Exception Attributes: array (
+  'class' => 'CompaniesController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/companies
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:31:15 Error: [MissingControllerException] Controller class CompaniesController could not be found.
+Exception Attributes: array (
+  'class' => 'CompaniesController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/companies
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:31:29 Error: [MissingControllerException] Controller class CompaniesController could not be found.
+Exception Attributes: array (
+  'class' => 'CompaniesController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Companies
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:32:03 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/Companies
+Stack Trace:
+#0 [internal function]: CompaniesController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 13:33:11 Error: [ParseError] syntax error, unexpected 's' (T_STRING), expecting function (T_FUNCTION)
+Request URL: /cakeUren/Companies
+Stack Trace:
+#0 [internal function]: App::load('Company')
+#1 [internal function]: spl_autoload_call('Company')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('Company')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(741): ClassRegistry::init('Company')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(368): Controller->loadModel('Company')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(406): Controller->__isset('Company')
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompaniesController.php(11): Controller->__get('Company')
+#7 [internal function]: CompaniesController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompaniesController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompaniesController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-09 13:34:51 Error: [MissingControllerException] Controller class CompaniesController could not be found.
+Exception Attributes: array (
+  'class' => 'CompaniesController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Companies
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:35:01 Error: [MissingControllerException] Controller class CompanyController could not be found.
+Exception Attributes: array (
+  'class' => 'CompanyController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Company
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:35:16 Error: [MissingControllerException] Controller class CompanyController could not be found.
+Exception Attributes: array (
+  'class' => 'CompanyController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Company
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 13:35:38 Error: [ParseError] syntax error, unexpected 's' (T_STRING), expecting function (T_FUNCTION)
+Request URL: /cakeUren/Company
+Stack Trace:
+#0 [internal function]: App::load('Company')
+#1 [internal function]: spl_autoload_call('Company')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('Company')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(741): ClassRegistry::init('Company')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(368): Controller->loadModel('Company')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(406): Controller->__isset('Company')
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompanyController.php(11): Controller->__get('Company')
+#7 [internal function]: CompanyController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-09 14:38:15 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:38:15 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:40:09 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:40:13 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:42:32 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:42:35 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:42:35 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:47:53 Error: [Error] Call to undefined method View::redirect()
+Request URL: /cakeUren/Company
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#6 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-10-09 14:51:26 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/users
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 14:52:20 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-09 14:53:24 Error: [MissingActionException] Action CompanyController::add() could not be found.
+Exception Attributes: array (
+  'controller' => 'CompanyController',
+  'action' => 'add',
+)
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2018-10-09 14:58:30 Error: [Error] Call to a member function create() on null
+Request URL: /cakeUren/Company/add
+Stack Trace:
+#0 [internal function]: CompanyController->add()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-09 16:01:47 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')'
+Request URL: /cakeUren/Company/
+Stack Trace:
+#0 [internal function]: App::load('CompanyControll...')
+#1 [internal function]: spl_autoload_call('CompanyControll...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('CompanyControll...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-09 16:04:49 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'companies.company_id' in 'where clause'
+Request URL: /cakeUren/Company/update/9
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompanyController.php(24): Model->find('first', Array)
+#7 [internal function]: CompanyController->update('9')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-09 17:09:57 Error: [Error] Using $this when not in object context
+Request URL: /cakeUren/Company/update/9
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(567): include()
+#1 [internal function]: App::load('CompanyControll...')
+#2 [internal function]: spl_autoload_call('CompanyControll...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('CompanyControll...')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#6 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2018-10-10 15:00:26 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `User`.`...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Model->find('all')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:05:57 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `User`.`...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Model->find('all')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:06:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `User`.`...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Model->find('all')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:07:14 Error: [MissingControllerException] Controller class AddController could not be found.
+Exception Attributes: array (
+  'class' => 'AddController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-10 15:07:41 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Company.id' in 'on clause'
+Request URL: /cakeUren/Company
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompanyController.php(9): Model->find('all')
+#7 [internal function]: CompanyController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:10:29 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `User`.`...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Model->find('all')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:11:22 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Company.id' in 'on clause'
+Request URL: /cakeUren/Company/index
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompanyController.php(9): Model->find('all')
+#7 [internal function]: CompanyController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:13:37 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Company.id' in 'on clause'
+Request URL: /cakeUren/Company/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\CompanyController.php(9): Model->find('all')
+#7 [internal function]: CompanyController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(CompanyController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(CompanyController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 15:13:47 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'User.id' in 'field list'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `User`.`...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `User`.`...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `User`.`...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Model->find('all')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 17:09:50 Error: [ParseError] syntax error, unexpected ')', expecting ';'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: App::load('User')
+#1 [internal function]: spl_autoload_call('User')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('User')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(741): ClassRegistry::init('User')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(368): Controller->loadModel('User')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(406): Controller->__isset('User')
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): Controller->__get('User')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-10 17:10:16 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:11:03 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:11:04 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:11:12 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/users
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-10 17:11:17 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:22:37 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(10): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:25:58 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:26:01 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:30:29 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-10 17:57:51 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-11 10:31:42 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): User->findAllUsers()
+#1 [internal function]: UserController->index()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2018-10-11 10:45:13 Error: [ParseError] syntax error, unexpected ')', expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: App::load('User')
+#1 [internal function]: spl_autoload_call('User')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('User')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(741): ClassRegistry::init('User')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(368): Controller->loadModel('User')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(406): Controller->__isset('User')
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): Controller->__get('User')
+#7 [internal function]: UserController->index()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2018-10-12 09:13:09 Error: [MissingControllerException] Controller class ContractController could not be found.
+Exception Attributes: array (
+  'class' => 'ContractController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Contract
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-12 09:13:09 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/users/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-12 09:13:09 Error: [MissingControllerException] Controller class UsersController could not be found.
+Exception Attributes: array (
+  'class' => 'UsersController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/users/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-12 09:13:09 Error: [MissingControllerException] Controller class ContractController could not be found.
+Exception Attributes: array (
+  'class' => 'ContractController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Contract
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2018-10-12 11:10:07 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'findAllUsers' at line 1
+Request URL: /cakeUren/user
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('findAllUsers', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('findAllUsers', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('findAllUsers', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('findAllUsers', Array, Object(User))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(11): Model->__call('findAllUsers', Array)
+#6 [internal function]: UserController->index()
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-10-12 11:17:55 Error: [Error] Function name must be a string
+Request URL: /cakeUren/user/view
+Stack Trace:
+#0 [internal function]: UserController->view()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-12 12:03:17 Error: [Error] Call to a member function paginate() on null
+Request URL: /cakeUren/user
+Stack Trace:
+#0 [internal function]: UserController->index()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2018-10-12 13:06:34 Error: [MissingControllerException] Controller class ContractController could not be found.
+Exception Attributes: array (
+  'class' => 'ContractController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Contract/view/1
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}

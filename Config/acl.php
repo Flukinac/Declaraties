@@ -85,10 +85,10 @@
  * $config['rules'] = array(
  *    'allow' => array(
  *        '*' => 'Role/admin',
- *        'controllers/users/(dashboard|profile)' => 'Role/default',
+ *        'controllers/user/(dashboard|profile)' => 'Role/default',
  *        'controllers/invoices/*' => 'Role/accountant',
  *        'controllers/articles/*' => 'Role/editor',
- *        'controllers/users/*'  => 'Role/manager',
+ *        'controllers/user/*'  => 'Role/manager',
  *        'controllers/invoices/delete'  => 'Role/manager',
  *    ),
  *    'deny' => array(
