@@ -4,7 +4,7 @@ App::uses('Model', 'Model');
 
 class Company extends AppModel {
     public $primaryKey = 'company_id';
-    public $hasOne = array(
+    public $hasMany = array(
         'Contract' => array(
             'className' => 'Contract',
             'conditions' => '',

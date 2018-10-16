@@ -21,10 +21,10 @@
 
 App::uses('Model', 'Model');
 
-
 class Contracts extends AppModel {
     public $primaryKey = 'contract_id';
-    public $hasOne = array(
+
+    public $belongsTo = array(
         'Company' => array(
             'className' => 'Company',
             'conditions' => '',
@@ -36,10 +36,11 @@ class Contracts extends AppModel {
         'User' => array(
             'className' => 'User',
             'conditions' => '',
+            'foreignKey' => 'user_id',
             'order' => '',
             'limit' => '',
             'offset' => '',
-            'dependent' => false,
+            'dependent' => false
         )
     );
 }

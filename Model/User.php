@@ -20,9 +20,10 @@
  */
 
 App::uses('Model', 'Model');
-
+App::uses('BlowfishPasswordHasher', 'Controller/Component/Auth');
 
 class User extends AppModel {
+
     public $primaryKey = 'user_id';
     public $belongsTo = array(
         'Roles' => array(
@@ -30,18 +31,18 @@ class User extends AppModel {
             'conditions' => '',
             'foreignKey' => 'role_id',
             'order' => '',
-            'fields' => 'description',
             'dependent' => false
         )
     );
+
     public $hasMany = array(
-        'User_monthbookings' => array(
-            'className' => 'User_monthbookings',
+        'UserMonthbookings' => array(
+            'className' => 'UserMonthbookings',
             'conditions' => '',
             'order' => '',
             'limit' => '',
             'offset' => '',
-            'dependent' => false,
+            'dependent' => false
         ),
         'Contracts' => array(
             'className' => 'Contracts',
@@ -53,41 +54,35 @@ class User extends AppModel {
         )
     );
 
-    public function findAllUsers($limit = 5) {
-        $params = array(
-            'limit' => $limit
-            );
-        return $this->find('all', $params);
-    }
-//
-//    public function saveUser($data = null, $params = array()) {
-//        $this->create();
-//        if ($this->request->allowMethod('Post', 'Put')) {
-//            if ($params['user']['user']['id'] == null) {
-//                if($this->save($data)) {
-//                    $this->Flash->succes(__('Nieuwe user opgeslagen'));
-//                    return $this->redirect(array('action' => 'user'));
-//                } else {
-//                    $this->Flash->error(__('Fout bij opslaan'));
-//                }
-//            }
-//        }
-//    }
-//
-//    public function updateUser($data, $params = array()) {
-//        $this->create();
-//
-//        if($this->request->allowMethod('Post', 'Put')) {
-//            if ($this->save($data, $params)) {
-//                $this->Flash->succes(__('User geupdate'));
-//                return $this->redirect(array('action' => 'user'));
-//            } else {
-//                $this->Flash->error(__('Fout bij updaten'));
-//            }
-//        }
-//    }
+    public $validate = array(
+        'username' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een naam is vereist'
+            )
+        ),
+        'password' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een wachtwoord is vereist'
+            )
+        ),
+        'role' => array(
+            'valid' => array(
+                'rule' => array('inList', array('admin', 'user', 'company')),
+                'message' => 'Voer een geldige waarde in',
+                'allowEmpty' => false
+            )
+        )
+    );
 
-//    public function deleteUser($params = array()) {
-//
-//    }
+    public function beforeSave($options = array()) {
+        if (isset($this->data[$this->alias]['password'])) {
+            $passwordHasher = new BlowfishPasswordHasher();
+            $this->data[$this->alias]['password'] = $passwordHasher->hash(
+                $this->data[$this->alias]['password']
+            );
+        }
+        return true;
+    }
 }

@@ -31,14 +31,25 @@ App::uses('Controller', 'Controller');
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    //...
 
-    /**
-     * Components loaded for this controller.
-     *
-     * @var array
-     */
     public $components = array(
         'Flash',
+        'Auth' => array(
+            'loginRedirect' => array(
+                'controller' => 'User',
+                'action' => 'index'
+            ),
+            'logoutRedirect' => array(
+                'controller' => 'User',
+                'action' => 'login'
+            ),
+            'authenticate' => array(
+                'Form' => array(
+                    'passwordHasher' => 'Blowfish'
+                )
+            )
+        )
     );
 
     /**
@@ -59,14 +70,31 @@ class AppController extends Controller {
      */
     public $uses = array();
 
-    /**
-     * This function is executed before every action in the controller. It’s a
-     * handy place to check for an active session or inspect user permissions.
-     *
-     * @return void
-     */
     public function beforeFilter() {
-        parent::beforeFilter();
+        $this->Auth->allow('login');
+    }
+
+    public function isAuthorized($user) {
+        // Admin can access every action
+        if (isset($user['role']) && $user['role'] === 'admin') {
+            return true;
+        }
+
+        // Default deny
+        return false;
+    }
+
+    public function login() {
+        if ($this->request->is('post')) {
+            if ($this->Auth->login()) {
+                return $this->redirect($this->Auth->redirectUrl());
+            }
+            $this->Flash->error(__('Verkeerde gebruikersnaam of wachtwoord. Probeer het nog eens.'));
+        }
+    }
+
+    public function logout() {
+        return $this->redirect($this->Auth->logout());
     }
 
     /**

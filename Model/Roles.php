@@ -23,12 +23,13 @@ App::uses('Model', 'Model');
 
 
 class Roles extends AppModel {
+
     public $primaryKey = 'role_id';
     public $hasMany = array(
-        'user' => array(
+        'User' => array(
             'className' => 'User',
             'conditions' => '',
-            'foreignKey' => 'user_id',
+            'foreignKey' => 'role_id',
             'order' => '',
             'fields' => '',
             'dependent' => false

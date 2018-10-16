@@ -14,6 +14,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 $title = __d('cake_dev', 'Uren declaratie');
+
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
 $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
@@ -40,12 +41,40 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<h1><?php echo $title; ?></h1>
+            <div>
+                <?php if ($this->request->here !== '/cakeUren/user/login') {
+                            echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout'));
+                        }
+                ?>
+            </div>
 		</div>
 		<div id="content">
 
 			<?php echo $this->Flash->render(); ?>
 
 			<?php echo $this->fetch('content'); ?>
+            <?php if ($this->request->here !== '/cakeUren/User/login') : ?>
+            <div class="actions">
+                <h3><?php echo __('Actions'); ?></h3>
+                <ul>
+                    <li><?php if ($this->request->here !== '/cakeUren/User/add') {
+                                echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'));
+                            } ?>
+                    </li>
+                    <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'products', 'action' => 'add')); ?></li>
+                    <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'contract', 'action' => 'add')); ?></li>
+                    <li><?php echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'products', 'action' => 'add')); ?></li>
+                    <li><hr></li>
+                    <li><?php if ($this->request->here !== '/cakeUren/User') {
+                                echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'));
+                            } ?>
+                    </li>
+                    <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'contract', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'products', 'action' => 'index')); ?></li>
+                </ul>
+            </div>
+            <?php endif; ?>
 		</div>
 		<div id="footer">
 			<?php //echo $this->Html->link(

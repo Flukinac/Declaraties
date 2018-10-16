@@ -1,49 +1,40 @@
-<div class="users view">
+<div class="User view">
     <h2><?php echo __('Gebruiker'); ?></h2>
     <dl>
         <dt><?php echo __('Id'); ?></dt>
-        <dd><?php echo h($user['user']['user_id']); ?></dd>
+        <dd><?php echo h($user['User']['user_id']); ?></dd>
         <dt><?php echo __('Naam'); ?></dt>
-        <dd><?php echo h($user['user']['username']); ?></dd>
+        <dd><?php echo h($user['User']['username']); ?></dd>
         <dt><?php echo __('Rol'); ?></dt>
-        <dd><?php echo h($user['user']['role_id']); ?></dd>
+        <dd><?php echo h($user['User']['role_id']); ?></dd>
         <dt><?php echo __('Aangemaakt op'); ?></dt>
-        <dd><?php echo h($user['user']['created']); ?></dd>
+        <dd><?php echo h($user['User']['created']); ?></dd>
         <dt><?php echo __('Gewijzigd op'); ?></dt>
-        <dd><?php echo h($user['user']['modified']); ?></dd>
+        <dd><?php echo h($user['User']['modified']); ?></dd>
     </dl>
-</div>
-<div class="actions">
-    <h3><?php echo __('Actions'); ?></h3>
-    <ul>
-        <li><?php echo $this->Html->link(__('Alle gebruikers'), array('action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('Nieuwe gebruiker'), array('action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contract', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'Contract', 'action' => 'add')); ?></li>
-        <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'products', 'action' => 'add')); ?> </li>
-        <li><?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'products', 'action' => 'index')); ?> </li>
-        <li><?php echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'products', 'action' => 'add')); ?> </li>
-    </ul>
 </div>
 <div class="related">
     <h3><?php echo __('Gerelateerde Contracten'); ?></h3>
-    <?php if (!empty($user['Contracts'])): ?>
+    <?php if (!empty($user['Contracts'])):
+        foreach ($user['Contracts'] as $contract) : ?>
+        <br><br>
         <dl>
             <dt><?php echo __('Id'); ?></dt>
-            <dd><?php echo $user['Contracts']['contract_id']; ?></dd>
+            <dd><?php echo $contract['contract_id']; ?></dd>
             <dt><?php echo __('Naam'); ?></dt>
-            <dd><?php echo $user['Contracts']['name']; ?></dd>
+            <dd><?php echo $contract['name']; ?></dd>
             <dt><?php echo __('Start datum'); ?></dt>
-            <dd><?php echo $user['Contracts']['start_date']; ?></dd>
+            <dd><?php echo $contract['start_date']; ?></dd>
             <dt><?php echo __('Eind datum'); ?></dt>
-            <dd><?php echo $user['Contracts']['end_date']; ?></dd>
+            <dd><?php echo $contract['end_date']; ?></dd>
             <dt><?php echo __('Aangemaakt op'); ?></dt>
-            <dd><?php echo $user['Contracts']['created']; ?></dd>
+            <dd><?php echo $contract['created']; ?></dd>
             <dt><?php echo __('Gewijzigd op'); ?></dt>
-            <dd><?php echo $user['Contracts']['modified']; ?></dd>
+            <dd><?php echo $contract['modified']; ?></dd>
         </dl>
-    <?php endif; ?>
+    <?php endforeach;
+        endif;
+    ?>
     <div class="actions">
         <ul>
             <li><?php //echo $this->Html->link(__('Edit User Address'), array('controller' => 'user_addresses', 'action' => 'edit', $user['UserAddress']['id'])); ?></li>

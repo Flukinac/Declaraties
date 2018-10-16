@@ -68,7 +68,7 @@
 <div class="actions">
     <h3><?php echo __('Navigatie'); ?></h3>
     <ul>
-        <li><?php echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'users', 'action' => 'add')); ?> </li>
+        <li><?php echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add')); ?> </li>
         <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contract', 'action' => 'index')); ?> </li>
         <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'Contract', 'action' => 'add')); ?></li>
         <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?> </li>

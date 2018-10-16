@@ -22,6 +22,6 @@
 App::uses('Model', 'Model');
 
 
-class Intern_hours extends AppModel {
+class InternHours extends AppModel {
     public $primaryKey = 'intern_hour_id';
 }

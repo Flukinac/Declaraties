@@ -22,10 +22,10 @@
 App::uses('Model', 'Model');
 
 
-class User_monthbookings extends AppModel {
+class UserMonthbookings extends AppModel {
     public $primaryKey = 'user_monthbooking_id';
     public $hasOne = array(
-        'user' => array(
+        'User' => array(
             'className' => 'User',
             'conditions' => '',
             'foreignKey' => 'user_id',
@@ -33,9 +33,10 @@ class User_monthbookings extends AppModel {
             'fields' => '',
             'dependent' => false
         ),
-        'monthbookings' => array(
+        'Monthbookings' => array(
             'className' => 'Monthbookings',
             'conditions' => '',
+            'foreignKey' => 'monthbooking_id',
             'order' => '',
             'limit' => '',
             'offset' => '',
