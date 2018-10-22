@@ -68,13 +68,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
         <?php if (AuthComponent::user('user_id')) : ?>
             <div class="actions">
-                <h3><?php echo __('Actions'); ?></h3>
+                <h3><?php echo __('Menu'); ?></h3>
                 <ul>
                     <li><?php if ($this->request->here !== '/cakeUren/User/add') {
                             echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'));
                         } ?>
                     </li>
                     <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'products', 'action' => 'add')); ?></li>
+
+                    <li><?php if ($this->request->here !== '/cakeUren/Roles/add') {
+                        echo $this->Html->link(__('Nieuwe rol'), array('controller' => 'Roles', 'action' => 'add'));
+                        } ?>
+                    </li>
+
                     <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'contracts', 'action' => 'add')); ?></li>
                     <li><?php if ($this->request->here !== '/cakeUren/Company/add') {
                             echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'Company', 'action' => 'add'));
@@ -87,8 +93,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                             echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'));
                         } ?>
                     </li>
+                    <li><?php if ($this->request->here !== '/cakeUren/Roles') {
+                            echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'));
+                        } ?>
+                    </li>
                     <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?></li>
-                    <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'contracts', 'action' => 'index')); ?></li>
+                    <li><?php if ($this->request->here !== '/cakeUren/contracts') {
+                        echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contracts', 'action' => 'index'));
+                        } ?>
+                    </li>
                     <li><?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'Company', 'action' => 'index')); ?></li>
                 </ul>
             </div>
