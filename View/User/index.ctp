@@ -27,7 +27,7 @@
                     <td class="actions">
                         <?php echo $this->Html->link(__('Tonen'), array('action' => 'view', $user['User']['user_id'])); ?>
                         <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $user['User']['user_id'])); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['user_id']))); ?>
+                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['username']))); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

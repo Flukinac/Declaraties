@@ -20,74 +20,92 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 ?>
 <!DOCTYPE html>
 <html>
-<head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-        Uren declaratie
-		<?php //echo $cakeDescription ?>
-		<?php //echo $this->fetch('title'); ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
+    <head>
+        <?= $this->Html->script('jQuery 3.3.1'); ?>
+        <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js') ?>
+        <?php echo $this->Html->charset(); ?>
 
-		echo $this->Html->css('cake.generic');
+        <title>
+            Uren declaratie
+            <?php //echo $cakeDescription ?>
+            <?php //echo $this->fetch('title'); ?>
+        </title>
+        <?php
+        echo $this->Html->meta('icon');
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
+        echo $this->Html->css('cake.generic');
+        echo $this->Html->css('cake.custom');
+        echo $this->Html->css('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css');
+
+        echo $this->fetch('meta');
+        echo $this->fetch('css');
+        echo $this->fetch('script');
+        ?>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.selection').select2({
+                    width: 'resolve'
+                });
+            });
+        </script>
+    </head>
 <body>
-	<div id="container">
-		<div id="header">
-			<h1><?php echo $title; ?></h1>
-            <div>
-                <?php if ($this->request->here !== '/cakeUren/user/login') {
-                            echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout'));
-                        }
-                ?>
-            </div>
-		</div>
-		<div id="content">
+<div id="container">
+    <div id="header">
+        <h1><?php echo $title; ?></h1>
+        <div>
+            <?php if (AuthComponent::user('user_id')) {
+                echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout'));
+            }
+            ?>
+        </div>
+    </div>
+    <div id="content">
 
-			<?php echo $this->Flash->render(); ?>
+        <?php echo $this->Flash->render(); ?>
 
-			<?php echo $this->fetch('content'); ?>
-            <?php if ($this->request->here !== '/cakeUren/User/login') : ?>
+        <?php echo $this->fetch('content'); ?>
+
+        <?php if (AuthComponent::user('user_id')) : ?>
             <div class="actions">
                 <h3><?php echo __('Actions'); ?></h3>
                 <ul>
                     <li><?php if ($this->request->here !== '/cakeUren/User/add') {
-                                echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'));
-                            } ?>
+                            echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'));
+                        } ?>
                     </li>
                     <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'products', 'action' => 'add')); ?></li>
-                    <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'contract', 'action' => 'add')); ?></li>
-                    <li><?php echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'products', 'action' => 'add')); ?></li>
-                    <li><hr></li>
+                    <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'contracts', 'action' => 'add')); ?></li>
+                    <li><?php if ($this->request->here !== '/cakeUren/Company/add') {
+                            echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'Company', 'action' => 'add'));
+                        } ?>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
                     <li><?php if ($this->request->here !== '/cakeUren/User') {
-                                echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'));
-                            } ?>
+                            echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'));
+                        } ?>
                     </li>
                     <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?></li>
-                    <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'contract', 'action' => 'index')); ?></li>
-                    <li><?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'products', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'contracts', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'Company', 'action' => 'index')); ?></li>
                 </ul>
             </div>
-            <?php endif; ?>
-		</div>
-		<div id="footer">
-			<?php //echo $this->Html->link(
-//					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-//					'https://cakephp.org/',
-//					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
-//				);
-			?>
-			<p>
-				<?php //echo $cakeVersion; ?>
-			</p>
-		</div>
-	</div>
-	<?php //echo $this->element('sql_dump'); ?>
+        <?php endif; ?>
+    </div>
+    <div id="footer">
+        <?php //echo $this->Html->link(
+        //					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
+        //					'https://cakephp.org/',
+        //					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
+        //				);
+        ?>
+        <p>
+            <?php //echo $cakeVersion; ?>
+        </p>
+    </div>
+</div>
+<?php //echo $this->element('sql_dump'); ?>
 </body>
 </html>

@@ -4,9 +4,27 @@ App::uses('appController', 'Controller');
 
 class CompanyController extends AppController {
     public $helpers = array('Html', 'Form');
+    public $uses = array('Company');
+    public $components = array('Paginator');
+    public $paginate = array('limit' => 10);
 
     public function index() {
-        $this->set('companies', $this->Company->find('all'));
+        $this->Paginator->settings = $this->paginate;
+        $data = $this->Paginator->paginate('Company');
+        $this->set('companies', $data);
+    }
+
+    public function view($id = null) {
+        $this->Company->id = $id;
+        if (!$this->Company->exists()) {
+            throw new NotFoundException(__('Bedrijf niet gevonden.'));
+        }
+        $params = array(
+            'conditions' => array(
+                'company_id' => $id
+            )
+        );
+        $this->set('company', $this->Company->find('first', $params));
     }
 
     public function add() {
@@ -20,18 +38,9 @@ class CompanyController extends AppController {
         }
     }
 
-    public function update($id) {
-        if ($id !== null) {
-            $this->set('company' ,$this->Company->find('first', array('conditions' => array('Company.company_id' => $id))));
-        } else {
-            $this->Flash->error(__('Bedrijf niet gevonden!'));
-        }
-    }
-
     public function edit($id) {
-        if ($id !== null) {
-            $this->Company->company_id = $id;
-            $this->Company->set(array());
+        if ($this->request->is('post') || $this->request->is('put')) {
+            $this->Company->id = $id;
             if ($this->Company->save($this->request->data)) {
                 $this->Flash->success(__('Bedrijf gewijzigd.'));
                 return $this->redirect(array('action' => 'index'));
@@ -40,8 +49,31 @@ class CompanyController extends AppController {
                 return $this->redirect(array('action' => 'update'));
             }
         } else {
-            $this->Flash->error(__('Bedrijf niet gevonden!.'));
+            $params = array(
+                'conditions' => array('company_id' => $id),
+                'recursive' => 0
+            );
+
+            $company = $this->Company->find('first', $params);
+            $this->request->data['Company'] = $company['Company'];
+
+            return $this->set($company);
         }
+    }
+    public function delete($id = null) {
+
+        $this->request->allowMethod('post');
+
+        $this->Company->id = $id;
+        if (!$this->Company->exists()) {
+            throw new NotFoundException(__('Bedrijf niet gevonden'));
+        }
+        if ($this->Company->delete()) {
+            $this->Flash->success(__('Bedrijf verwijderd'));
+            return $this->redirect(array('action' => 'index'));
+        }
+        $this->Flash->error(__('Fout bij deleten. Het bedrijf is niet verwijderd. Probeer het nog eens.'));
+        return $this->redirect(array('action' => 'index'));
     }
 }
 

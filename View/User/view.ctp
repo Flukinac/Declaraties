@@ -13,7 +13,7 @@
         <dd><?php echo h($user['User']['modified']); ?></dd>
     </dl>
 </div>
-<div class="related">
+<div class="User view">
     <h3><?php echo __('Gerelateerde Contracten'); ?></h3>
     <?php if (!empty($user['Contracts'])):
         foreach ($user['Contracts'] as $contract) : ?>
@@ -35,13 +35,8 @@
     <?php endforeach;
         endif;
     ?>
-    <div class="actions">
-        <ul>
-            <li><?php //echo $this->Html->link(__('Edit User Address'), array('controller' => 'user_addresses', 'action' => 'edit', $user['UserAddress']['id'])); ?></li>
-        </ul>
-    </div>
 </div>
-<div class="related">
+<div class="User view">
     <h3><?php echo __('Gerelateerde boekingen'); ?></h3>
     <?php if (!empty($user['User_monthbookings'])): ?>
         <table cellpadding = "0" cellspacing = "0">

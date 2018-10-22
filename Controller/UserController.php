@@ -16,14 +16,18 @@ class UserController extends AppController {
     }
 
     public function index() {
-        $this->User->recursive = 1;
+       $this->User->recursive = 1;
+
+        //$this->User->contain(array('Contracts' => array('fields' => 'contract_id'), 'Roles'));
+        // $this->User->find('all', array('fields' => array('')))
+        //($this->paginate());
         $this->set('users', $this->paginate());
     }
 
     public function view($id = null) {
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('Gebruiker niet gevonden.'));
         }
         $params = array(
             'conditions' => array(
@@ -38,11 +42,11 @@ class UserController extends AppController {
 
             $this->User->create();
             if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('The user has been saved'));
+                $this->Flash->success(__('Gebruiker opgeslagen.'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Flash->error(
-                __('The user could not be saved. Please, try again.')
+                __('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.')
             );
         }
 
@@ -56,17 +60,19 @@ class UserController extends AppController {
     }
 
     public function edit($id = null) {
+
+
         if ($this->request->is('post') || $this->request->is('put')) {
             $saveParams = array(
                 'validation' => true,
             );
             $this->User->id = $id;
             if ($this->User->save($this->request->data, $saveParams)) {
-                $this->Flash->success(__('The user has been saved'));
+                $this->Flash->success(__('Gebruiker opgeslagen.'));
                 return $this->redirect(array('action' => 'index'));
             }
             $this->Flash->error(
-                __('The user could not be saved. Please, try again.')
+                __('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.')
             );
         } else {
             $params = array(
@@ -76,8 +82,7 @@ class UserController extends AppController {
                     'User.user_id',
                     'User.username',
                     'User.password',
-                    'Roles.role_id',
-                    'Roles.description'
+                    'User.role_id',
                 )
             );
             $paramsRoles = array(
@@ -87,11 +92,14 @@ class UserController extends AppController {
                 )
             );
             $user = $this->User->find('first', $params);
+
+
+            $this->request->data['User'] = $user['User'];
+
             $roles = $this->Roles->find('list', $paramsRoles);
             $values = compact('user', 'roles');
 
             return $this->set($values);
-            //unset($this->request->data['User']['password']);
         }
     }
 
@@ -101,13 +109,13 @@ class UserController extends AppController {
 
         $this->User->id = $id;
         if (!$this->User->exists()) {
-            throw new NotFoundException(__('Invalid user'));
+            throw new NotFoundException(__('Gebruiker niet gevonden'));
         }
         if ($this->User->delete()) {
-            $this->Flash->success(__('User deleted'));
+            $this->Flash->success(__('Gebruiker verwijderd'));
             return $this->redirect(array('action' => 'index'));
         }
-        $this->Flash->error(__('User was not deleted'));
+        $this->Flash->error(__('Fout bij deleten. De gebruiker is niet verwijderd. Probeer het nog eens.'));
         return $this->redirect(array('action' => 'index'));
     }
 }
