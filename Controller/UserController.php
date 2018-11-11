@@ -1,17 +1,25 @@
 <?php
 App::uses('appController', 'Controller');
 
+/**
+ * @property Contracts $Contracts
+ * @Property UserMonthbookings $UserMonthbookings
+ * @Property InternHours $InternHours
+ * @property User $User
+ * @property ContractHours $ContractHours
+ */
+
 class UserController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses = array('User', 'Roles', 'Contracts');
+    public $uses = array('User', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours');
     public $components = array('Paginator');
 
     public function beforeFilter() {
         parent::beforeFilter();
 
-//        $model = 'Contracts';
-//        $this->loadModel($model);
-//        debug($this->$model->find('first'));
+        //modeltesting area
+//        $this->loadModel('ContractHours');
+//        debug($this->ContractHours->find('all'));
 //        exit();
     }
 
@@ -41,6 +49,7 @@ class UserController extends AppController {
         if ($this->request->is('post')) {
 
             $this->User->create();
+            debug($this->request->data); exit();
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('Gebruiker opgeslagen.'));
                 return $this->redirect(array('action' => 'index'));

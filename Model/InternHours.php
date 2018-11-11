@@ -24,4 +24,16 @@ App::uses('Model', 'Model');
 
 class InternHours extends AppModel {
     public $primaryKey = 'intern_hour_id';
+    public $belongsTo = array(
+        'InternHoursTypes' => array(
+            'className' => 'InternHoursTypes',
+            'foreignKey' => 'intern_hour_type_id',
+            'dependent' => false
+        ),
+        'IternHours' => array(
+            'className' => 'IternHours',
+            'foreignKey' => 'user_monthbookings_id',
+            'dependent' => false
+        )
+    );
 }

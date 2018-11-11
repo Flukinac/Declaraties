@@ -43,6 +43,16 @@ class Contracts extends AppModel {
             'dependent' => false
         )
     );
+    public $hasMany = array(
+        'ContractHours' => array(
+            'classname' => 'ContractHours',
+            'foreignkey' => 'contract_id',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'dependent' => false
+        )
+    );
     public $validate = array(
         'name' => array(
             'required' => array(

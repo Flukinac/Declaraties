@@ -2,22 +2,18 @@
 App::uses('appController', 'Controller');
 
 /**
- * @property Roles $Roles
- * @property User $User
+ * @property Years $Years
+ * @property Months $Months
  */
 
-class RolesController extends AppController {
+class MonthbookingsController extends AppController
+{
     public $helpers = array('Html', 'Form');
-    public $uses = array('Roles', 'User');
     public $components = array('Paginator');
 
     public function index() {
         $this->Roles->recursive = -1;
         $this->set('roles', $this->Paginator->paginate('Roles'));
-    }
-
-    public function view($id = null) {
-        // ophalen van alle items per rol die verschillende functies vervullen.
     }
 
     public function add() {
@@ -66,7 +62,6 @@ class RolesController extends AppController {
         if (!$this->Roles->exists()) {
             throw new NotFoundException(__('Rol niet gevonden'));
         }
-
         if ($this->Roles->delete()) {
             $this->Flash->success(__('Rol verwijderd'));
             return $this->redirect(array('action' => 'index'));

@@ -24,7 +24,7 @@ App::uses('Model', 'Model');
 
 class UserMonthbookings extends AppModel {
     public $primaryKey = 'user_monthbooking_id';
-    public $hasOne = array(
+    public $belongsTo = array(
         'User' => array(
             'className' => 'User',
             'conditions' => '',
@@ -32,7 +32,9 @@ class UserMonthbookings extends AppModel {
             'order' => '',
             'fields' => '',
             'dependent' => false
-        ),
+        )
+    );
+    public $hasOne = array(
         'Monthbookings' => array(
             'className' => 'Monthbookings',
             'conditions' => '',
@@ -41,6 +43,24 @@ class UserMonthbookings extends AppModel {
             'limit' => '',
             'offset' => '',
             'dependent' => false,
+        )
+    );
+    public $hasMany = array(
+        'ContractHours' => array(
+            'className' => 'ContractHours',
+            'conditions' => '',
+            'foreignKey' => 'user_monthbooking_id',
+            'order' => '',
+            'fields' => '',
+            'dependent' => false
+        ),
+        'InternHours' => array(
+            'className' => 'InternHours',
+            'conditions' => '',
+            'foreignKey' => 'user_monthbooking_id',
+            'order' => '',
+            'fields' => '',
+            'dependent' => false
         )
     );
 }

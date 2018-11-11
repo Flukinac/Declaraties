@@ -22,24 +22,17 @@
 App::uses('Model', 'Model');
 
 
-class Monthbookings extends AppModel {
-    public $primaryKey = 'monthbooking_id';
-    public $hasOne = array(
-        'years' => array(
-            'className' => 'Years',
-            'foreignKey' => 'year_id',
+class ContractHours extends AppModel {
+    public $primaryKey = 'contract_hour_id';
+    public $belongsTo = array(
+        'Contracts' => array(
+            'className' => 'Contracts',
+            'foreignKey' => 'contract_id',
             'dependent' => false
         ),
-        'months' => array(
-            'className' => 'Months',
-            'foreignKey' => 'month_id',
-            'dependent' => false
-        )
-    );
-    public $hasMany = array(
         'UserMonthbookings' => array(
             'className' => 'UserMonthbookings',
-            'foreignKey' => 'user_monthbooking_id',
+            'foreignKey' => 'user_monthbookings_id',
             'dependent' => false
         )
     );

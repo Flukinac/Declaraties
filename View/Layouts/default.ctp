@@ -74,14 +74,14 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                             echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'));
                         } ?>
                     </li>
-                    <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'products', 'action' => 'add')); ?></li>
+                    <li><?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'UserMonthbookings', 'action' => 'add')); ?></li>
 
                     <li><?php if ($this->request->here !== '/cakeUren/Roles/add') {
                         echo $this->Html->link(__('Nieuwe rol'), array('controller' => 'Roles', 'action' => 'add'));
                         } ?>
                     </li>
 
-                    <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'contracts', 'action' => 'add')); ?></li>
+                    <li><?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'Contracts', 'action' => 'add')); ?></li>
                     <li><?php if ($this->request->here !== '/cakeUren/Company/add') {
                             echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'Company', 'action' => 'add'));
                         } ?>
@@ -97,7 +97,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                             echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'));
                         } ?>
                     </li>
-                    <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'products', 'action' => 'index')); ?></li>
+                    <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'Monthbookings', 'action' => 'index')); ?></li>
                     <li><?php if ($this->request->here !== '/cakeUren/contracts') {
                         echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contracts', 'action' => 'index'));
                         } ?>
