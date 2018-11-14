@@ -36,4 +36,23 @@ class ContractHours extends AppModel {
             'dependent' => false
         )
     );
+    public $validate = array(
+        'hours' => array(
+            'Rulename1' => array(
+                'rule' => array('comparison', '>=', 0),
+                'required' => true,
+                'message' => 'Invoer moet tussen 0-16 liggen'
+            ),
+            'Rulename2' => array(
+                'rule' => array('comparison', '<=', 16),
+                'required' => true,
+                'message' => 'Invoer moet tussen 0-16 liggen'
+            ),
+            'Rulename3' => array(
+                'rule' => 'numeric',
+                'required' => true,
+                'message' => 'Invoer moet uit cijfers bestaan'
+            ),
+        )
+    );
 }

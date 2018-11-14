@@ -36,7 +36,7 @@
     <p>
         <?php
         echo $this->Paginator->counter(array(
-            'format' => __('Pagina {:page} van {:pages}, toont {:current} registraties van het {:count} totaal, beginnend bij {:start}, eindigend bij {:end}')
+            'format' => __('Pagina {:page} van {:pages}, toont {:current} registratie(s) van het {:count} totaal, beginnend bij {:start}, eindigend bij {:end}')
         ));
         ?>	</p>
     <div class="paging">

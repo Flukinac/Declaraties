@@ -20,14 +20,130 @@ class UserMonthbookingsController extends AppController {
     public $monthbooking_id;
 
     public function index()
-    { debug("BULLSHIT!!!");
-//        $this->Roles->recursive = -1;
-//        $this->set('roles', $this->Paginator->paginate('Roles'));
+    {
+        $this->UserMonthbookings->Behaviors->load('Containable');
+
+        $this->paginate = array(
+            'fields' => array(
+                'UserMonthbookings.*'
+            ),
+            'contain' => array(
+                'Monthbookings' => array(
+                    'Years' => array(
+                        'year'
+                    ),
+                    'Months' => array(
+                        'month'
+                    )
+                ),
+                'InternHours' => array(
+                    'hours'
+                ),
+                'ContractHours' => array(
+                    'hours'
+                ),
+            )
+        );
+        $userMonthbookings = $this->Paginator->paginate('UserMonthbookings');
+
+        foreach ($userMonthbookings as $key => $userMonthbooking) {                         //loop door de boekingen heen en verzamel van elke booking de uren en dagen van elke geboekte dag van zowel contract als interne uren
+            $userMonthbookings[$key]['UserMonthbookings']['contractHoursTotal'] = 0;        //reserveer de plaatsen voor de som van uren en dagen
+            $userMonthbookings[$key]['UserMonthbookings']['internHoursTotal'] = 0;
+            $userMonthbookings[$key]['UserMonthbookings']['contractDays'] = 0;
+            $userMonthbookings[$key]['UserMonthbookings']['internDays'] = 0;
+
+            if (isset($userMonthbooking['ContractHours'])) {                                //maak totaal aantal uren en dagen voor de contract boekingen en sla deze op
+                foreach ($userMonthbooking['ContractHours'] as $booking) {
+                    $userMonthbookings[$key]['UserMonthbookings']['contractHoursTotal'] += $booking['hours'];
+                    $userMonthbookings[$key]['UserMonthbookings']['contractDays']++;
+                }
+            }
+            if (isset($userMonthbooking['InternHours'])) {                                  //maak totaal aantal uren en dagen voor de interne boekingen en sla deze op
+                foreach ($userMonthbooking['InternHours'] as $booking) {
+                    $userMonthbookings[$key]['UserMonthbookings']['internHoursTotal'] += $booking['hours'];
+                    $userMonthbookings[$key]['UserMonthbookings']['internDays']++;
+                }
+            }
+            $userMonthbookings[$key]['ContractHours'] = null;       //deze data is gebruikt en niet meer nodig voor de index view
+            $userMonthbookings[$key]['InternHours'] = null;         //deze data is gebruikt en niet meer nodig voor de index view
+        }
+
+        $this->set('UserMonthbookings', $userMonthbookings);
     }
 
     public function view($id = null)
     {
-        // ophalen van alle items per rol die verschillende functies vervullen.
+        $this->UserMonthbookings->id = $id;
+        $this->UserMonthbookings->Behaviors->load('Containable');
+
+        if (!$this->UserMonthbookings->exists()) {
+            throw new NotFoundException(__('Boeking niet gevonden.'));
+        }
+
+        $date = array();
+        $contractBookings = array();
+        $internBookings = array();
+
+        $params = array(
+            'conditions' => array(
+                'user_monthbooking_id' => $id
+            ),
+            'contain' => array(
+                'User' => array(
+                    'username'
+                ),
+                'Monthbookings' => array(
+                    'Years',
+                    'Months'
+                ),
+                'InternHours' => array(
+                    'hours',
+                    'day',
+                    'intern_hour_type_id'
+                ),
+                'ContractHours' => array(
+                    'hours',
+                    'day',
+                    'contract_id'
+                ),
+            )
+
+        );
+        $types = $this->InternHoursTypes->find('list', array('fields' => 'description') );
+        $contractNames = $this->Contracts->find('list');
+        $bleg = $this->UserMonthbookings->find('all', $params);
+
+        $date['year'] = $bleg[0]['Monthbookings']['Years'];
+        $date['month'] = $bleg[0]['Monthbookings']['Months'];
+        $username = $bleg[0]['User']['username'];
+        $userMonthbooking = $bleg[0]['UserMonthbookings'];
+        $days = $this->checkDayType($date['month']['month_id'], $date['year']['year']);
+
+        foreach ($bleg[0]['ContractHours'] as $booking) {
+            $contractBookings[$booking['contract_id']][] = $booking;
+        }
+
+        foreach ($bleg[0]['InternHours'] as $booking) {
+            $internBookings[$booking['intern_hour_type_id']][] = $booking;
+        }
+
+//        debug($contractBookings);
+//        debug($internBookings);
+//        debug($username);
+//        debug($date);
+//        debug($userMonthbooking);
+//        debug($types);
+//        debug($contractNames);
+//        debug($days);
+//        foreach ($contractBookings as $booking) {
+//
+//                debug($booking[0]['hours']);
+//
+//
+//        }exit();
+
+
+        $this->set(compact('userMonthbooking','types', 'contractNames', 'contractBookings', 'internBookings', 'username', 'date', 'days'));
     }
 
     public function add()
@@ -43,7 +159,7 @@ class UserMonthbookingsController extends AppController {
                     $yearId = $data['Monthbookings']['year_id'];
                     $month = $data['Monthbookings']['month_id'];
 
-                    if ($this->Monthbookings->hasAny($data['Monthbookings']) == 0) {
+                    if (!$this->checkIfRecordExists('Monthbookings', $data['Monthbookings'])) {
                         $this->Monthbookings->create();                                             //als er geen monthbookingrecord gevonden is voer dan dit
                         $this->Monthbookings->save($data);                                          //stuk uit om een nieuwe rij aan te maken.
                         $monthbookingId = $this->Monthbookings->getLastInsertID();
@@ -181,9 +297,9 @@ class UserMonthbookingsController extends AppController {
         return $this->redirect(array('action' => 'index'));
     }
     public function create()
-    {   //ophalen contracten adhv user_id om te bepalen hoeveel rijen gemaakt gaan worden voor de werkuren boeking, meegeven maanden en jaren die toegestaan worden door contracten
-        $user_id = $this->Auth->user('user_id');
-        $params = array(
+    {                                                                               //ophalen contracten adhv user_id om te bepalen hoeveel rijen gemaakt
+        $user_id = $this->Auth->user('user_id');                               //gaan worden voor de werkuren boeking, meegeven maanden en jaren
+        $params = array(                                                            //die toegestaan worden door contracten
             'conditions' => array('contracts.user_id' => $user_id),
             'recursive' => -1,
             'order' =>array('Contracts.start_date' => 'desc')
@@ -203,21 +319,19 @@ class UserMonthbookingsController extends AppController {
         $description = "text";      //tijdelijk
         $userMonthbookingId = array_pop($data);
 
-        if ($this->UserMonthbookings->hasAny($userMonthbookingId, array('conditons' => array('user_id' => $user_id))) == 1) {
+        if ($this->checkIfRecordExists('UserMonthbookings',  array('conditions' => array('UserMonthbookings.user_id' => $user_id)))) {
 
             foreach ($data as $key => $value) {
                 if ($value !== '') {
-                    $key = explode('_', $key);                      //@TODO check inbouwen zodat er geen dubbele uren kunnen worden opgeslagen
+                    $key = explode('_', $key);
                     if ($key[0] == 'contract') {
-                        $checkIfRecordExists = $this->ContractHours->hasAny(array('day' => $key[1], 'contract_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId));
-                        if ($checkIfRecordExists == false) {
+                        if (!$this->checkIfRecordExists('ContractHours', array('day' => $key[1], 'contract_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId))) {
                             $newData['ContractHours'][] = ['description' => $description, 'hours' => $value, 'day' => $key[1], 'contract_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId];
                         } else {
                             $recordExist = true;
                         }
                     } elseif ($key[0] == 'intern') {
-                        $checkIfRecordExists = $this->InternHours->hasAny(array('day' => $key[1], 'intern_hour_type_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId));
-                        if ($checkIfRecordExists == false) {
+                        if (!$this->checkIfRecordExists('InternHours', array('day' => $key[1], 'intern_hour_type_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId))) {
                             $newData['InternHours'][] = ['description' => $description, 'hours' => $value, 'day' => $key[1], 'intern_hour_type_id' => $key[2], 'user_monthbooking_id' => $userMonthbookingId];
                         } else {
                             $recordExist = true;
@@ -240,13 +354,17 @@ class UserMonthbookingsController extends AppController {
             if ($recordExist == true) {
                 $this->Flash->success(__('Uren opgeslagen. N.B. Bepaalde uren zijn niet opgeslagen omdat deze reeds bestaan'));
                 return $this->redirect(array('controller' => 'User', 'action' => 'index'));
+            } else {
+                $this->Flash->success(__('Uren opgeslagen.'));
+                return $this->redirect(array('controller' => 'User', 'action' => 'index'));
             }
+        } else {
+            $this->Flash->error(__('Fout bij invoer. verkeerd ID terug gekregen.'));
+            return $this->redirect(array('action' => 'add'));
         }
-        $this->Flash->error(__('Fout bij invoer. verkeerd ID terug gekregen.'));
-        return $this->redirect(array('action' => 'add'));
     }
 
-    public function checkDayType($month, $year)
+    public function checkDayType($month, $year)     //month in '04', year in '2019'
     {
         $days = array();
 
@@ -283,7 +401,11 @@ class UserMonthbookingsController extends AppController {
                 $days[$i] = '';
             }
         }
-        return $days;
+        return $days;   //returned assocarray met alle dagen van ingevoerde maand met 'feestdagnaam', 'weekend', '' als key value afhankelijk van de dag
     }
 
+    public function checkIfRecordExists($model, $params) {
+        $checkIfRecordExists = $this->$model->hasAny($params);
+        return $checkIfRecordExists;
+    }
 }

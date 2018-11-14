@@ -30,10 +30,30 @@ class InternHours extends AppModel {
             'foreignKey' => 'intern_hour_type_id',
             'dependent' => false
         ),
-        'IternHours' => array(
-            'className' => 'IternHours',
+        'InternHours' => array(
+            'className' => 'InternHours',
             'foreignKey' => 'user_monthbookings_id',
             'dependent' => false
+        )
+    );
+
+    public $validate = array(
+        'hours' => array(
+            'Rulename1' => array(
+                'rule' => array('comparison', '>=', 0),
+                'required' => true,
+                'message' => 'Invoer moet tussen 0-16 liggen'
+            ),
+            'Rulename2' => array(
+                'rule' => array('comparison', '<=', 16),
+                'required' => true,
+                'message' => 'Invoer moet tussen 0-16 liggen'
+            ),
+            'Rulename3' => array(
+                'rule' => 'numeric',
+                'required' => true,
+                'message' => 'Invoer moet uit cijfers bestaan'
+            ),
         )
     );
 }

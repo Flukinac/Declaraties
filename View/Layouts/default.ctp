@@ -97,7 +97,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                             echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'));
                         } ?>
                     </li>
-                    <li><?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'Monthbookings', 'action' => 'index')); ?></li>
+                    <li><?php if ($this->request->here !== '/cakeUren/UserMonthbookings') {
+                            echo $this->Html->link(__('Alle boekingen'), array('controller' => 'UserMonthbookings', 'action' => 'index'));
+                        } ?>
+                    </li>
                     <li><?php if ($this->request->here !== '/cakeUren/contracts') {
                         echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contracts', 'action' => 'index'));
                         } ?>

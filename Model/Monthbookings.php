@@ -24,13 +24,13 @@ App::uses('Model', 'Model');
 
 class Monthbookings extends AppModel {
     public $primaryKey = 'monthbooking_id';
-    public $hasOne = array(
-        'years' => array(
+    public $belongsTo = array(
+        'Years' => array(
             'className' => 'Years',
             'foreignKey' => 'year_id',
             'dependent' => false
         ),
-        'months' => array(
+        'Months' => array(
             'className' => 'Months',
             'foreignKey' => 'month_id',
             'dependent' => false
