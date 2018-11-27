@@ -75,7 +75,6 @@ class ContractsController extends AppController {
             $contract = $this->Contracts->find('first', $params);
 
             $this->request->data = $contract;
-          //  debug($this->request->data);exit();
 
             $user = $this->User->find('list', $paramsUser);
             $company = $this->Company->find('list', $paramsCompany);

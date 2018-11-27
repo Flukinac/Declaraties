@@ -2,3 +2,71 @@
     color: #222222;
     text-decoration-color: #6c6cff;
 }
+
+
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out
+}
+
+.bg {
+    /* The image used */
+    background-image: url("img/");
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+    padding-top: 70px;
+}
+
+div.form,
+div.index,
+div.view {
+    float:right;
+    width: 97%;
+    border-left:1px solid #666;
+    padding:10px 2%;
+}
+.input{
+    clear: both;
+    padding: .5em;
+    vertical-align: text-top;
+}
+label {
+    display: block;
+    font-size: 80%;
+    margin-bottom:2px;
+}
+table tr td {
+    padding: 2px;
+    text-align: center;
+    vertical-align: middle;
+    border-bottom:1px solid #ddd;
+}
+table thead th{
+    text-align: center;
+    vertical-align: middle;
+}
+hr {
+    width: 1rem;
+}

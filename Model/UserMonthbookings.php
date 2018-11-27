@@ -20,31 +20,23 @@
  */
 
 App::uses('Model', 'Model');
-
+App::uses('ConnectionManager', 'Model');
 
 class UserMonthbookings extends AppModel {
     public $primaryKey = 'user_monthbooking_id';
+    public $db = 'default';
     public $belongsTo = array(
         'User' => array(
             'className' => 'User',
-            'conditions' => '',
             'foreignKey' => 'user_id',
-            'order' => '',
-            'fields' => '',
             'dependent' => false
-        )
-    );
-    public $hasOne = array(
+        ),
         'Monthbookings' => array(
             'className' => 'Monthbookings',
-            'conditions' => '',
             'foreignKey' => 'monthbooking_id',
-            'order' => '',
-            'limit' => '',
-            'offset' => '',
-            'dependent' => false,
         )
     );
+
     public $hasMany = array(
         'ContractHours' => array(
             'className' => 'ContractHours',

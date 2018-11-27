@@ -3,7 +3,7 @@
     <?php echo $this->Form->create('User'); ?>
     <fieldset>
         <legend>
-            <?php echo __('Voer een gebruikesnaam en wachtwoord in'); ?>
+            <?php echo __('Voer een gebruikersnaam en wachtwoord in'); ?>
         </legend>
         <?php echo $this->Form->input('username', array('label' => 'gebruikersnaam'));
         echo $this->Form->input('password', array('label' => 'wachtwoord'));

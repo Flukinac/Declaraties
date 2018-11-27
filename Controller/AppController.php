@@ -62,6 +62,7 @@ class AppController extends Controller {
         'Js'
     );
 
+
     /**
      * Models loaded for this controller.
      *
@@ -69,9 +70,15 @@ class AppController extends Controller {
      */
     public $uses = array();
 
+
+    public $user_id =  NULL;
+
+
     public function beforeFilter()
     {
+
         $this->Auth->allow('login');
+
     }
 
     public function isAuthorized($user) {

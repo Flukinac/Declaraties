@@ -1,10 +1,11 @@
 <div class="index">
-    <?php echo $this->Form->create('Monthbooking'); ?>
+    <?php echo $this->Form->create('UserMonthbooking', array('url' => 'addHours/' . $userMonthbookingId)); ?>
     <legend><?php echo __('Dien uw uren in ') . '(' . $month . ' ' . date("Y") . ')'; ?></legend>
     <fieldset>
         <?php
             echo '<table>';
             if (count($contracts) > 0) {
+
                 foreach ($contracts as $contract) {
                     echo "<tr>"."<td>".$contract['Company']['name']."</td>";
 
@@ -42,6 +43,5 @@
             echo '</tr></table>'
         ?>
     </fieldset>
-    <?php echo $this->Form->input('userMonthbookingId', array('type' => 'hidden', 'value' => $userMonthbookingId)); ?>
     <?php echo $this->Form->end('Opslaan'); ?>
 </div>

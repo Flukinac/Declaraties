@@ -49,7 +49,6 @@ class UserController extends AppController {
         if ($this->request->is('post')) {
 
             $this->User->create();
-            debug($this->request->data); exit();
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('Gebruiker opgeslagen.'));
                 return $this->redirect(array('action' => 'index'));

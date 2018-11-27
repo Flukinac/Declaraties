@@ -7,28 +7,20 @@
             <th><?php echo $this->Paginator->sort('month', 'Maand'); ?></th>
             <th><?php echo $this->Paginator->sort('created', 'Aangemaakt op'); ?></th>
             <th><?php echo $this->Paginator->sort('modified', 'Bewerkt op'); ?></th>
-            <th><?php echo $this->Paginator->sort('contractDays', 'Totaal geboekte werkdagen'); ?></th>
-            <th><?php echo $this->Paginator->sort('contractHoursTotal', 'Totaal geboekte werkuren'); ?></th>
-            <th><?php echo $this->Paginator->sort('internDays', 'Totaal geboekte interne dagen'); ?></th>
-            <th><?php echo $this->Paginator->sort('internHoursTotal', 'Totaal geboekte interne uren'); ?></th>
             <th class="actions"><?php echo __('Actions'); ?></th>
         </tr>
         </thead>
         <tbody>
         <?php foreach ($UserMonthbookings as $UserMonthbooking): ?>
+            <?php if ($UserMonthbooking['UserMonthbookings']['modified'] == $UserMonthbooking['UserMonthbookings']['created']) {$UserMonthbooking['UserMonthbookings']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
             <tr>
                 <td><?php echo h($UserMonthbooking['Monthbookings']['Years']['year']); ?></td>
                 <td><?php echo h($UserMonthbooking['Monthbookings']['Months']['month']); ?></td>
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['created']); ?></td>
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['modified']); ?></td>
-                <td><?php echo h($UserMonthbooking['UserMonthbookings']['contractHoursTotal']); ?></td>
-                <td><?php echo h($UserMonthbooking['UserMonthbookings']['internHoursTotal']); ?></td>
-                <td><?php echo h($UserMonthbooking['UserMonthbookings']['contractDays']); ?></td>
-                <td><?php echo h($UserMonthbooking['UserMonthbookings']['internDays']); ?></td>
                 <td class="actions">
                     <?php echo $this->Html->link(__('View'), array('action' => 'view', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id'])); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id'])); ?>
-                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('confirm' => __('Weet je zeker dat je boeking # %s wilt verwijderen?', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']))); ?>
+                    <?php echo $this->Html->link(__('Edit'), array('action' => 'addHours', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id'])); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

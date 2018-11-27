@@ -1,4 +1,4 @@
-<div class="users view">
+<div class="index">
 <h2><?php echo __('Boekingen'); ?></h2>
 	<dl>
 		<dt><?php echo __('Gebruikersnaam'); ?></dt>
@@ -20,48 +20,25 @@
 </div>
 
 <div class="users view">
-	<?php if (!empty($contractBookings) || !empty($internBookings)): ?>
+	<?php if (isset($data[1])) { ?>
         <h3><?php echo __('Contract boekingen'); ?></h3>
         <table cellpadding = "0" cellspacing = "0">
             <tr>
-                <th><?php echo __($date['month']['month'] . ' ' . $date['year']['year']); ?></th>
-                <?php if (isset($contractBookings)): ?>
-                    <?php foreach($contractBookings as $booking): ?>
-                        <th><?php echo __('Contract ' . $contractNames[$booking[0]['contract_id']]); ?></th>
-                    <?php endforeach; ?>
-                <?php endif; ?>
-                <?php if (isset($internBookings)): ?>
-                    <?php foreach($internBookings as $booking): ?>
-                        <th><?php echo __('Intern ' . $types[$booking[0]['intern_hour_type_id']]); ?></th>
-                    <?php endforeach; ?>
-                <?php endif; ?>
+                <th><?php echo __($date); ?></th>                                <!--aanmaak van tabel headers-->
+                <?php foreach ($data[0] as $key => $value) { ?>
+                    <th><?php echo __($key); ?></th>
+                <?php }; ?>
             </tr>
-            <?php foreach ($days as $key => $value): ?>
+            <?php for ($i = 1;$i < count($days); $i++) { ?>
                 <tr>
-                    <td><?php echo $key . ' ' . $value; ?></td>
-                    <?php if (isset($contractBookings)): ?>
-                        <?php $counterHour = 0; ?>
-                        <?php foreach ($contractBookings as $booking): ?>
-                            <?php if ($key == $booking[$counterHour]['day']): ?>
-                                <td><?php echo $booking[$counterHour]['hours']; ?></td>
-                                <?php $counterHour++; ?>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
-                    <?php if (isset($internBookings)): ?>
-                        <?php $counterIntern = 0; ?>
-                        <?php foreach ($internBookings as $booking): ?>
-                            <?php if ($key == $booking[$counterIntern]['day']): ?>
-                                <td><?php echo $booking[$counterIntern]['hours']; ?></td>
-                                <?php $counterIntern++; ?>
-                            <?php endif; ?>
-                        <?php endforeach; ?>
-                    <?php endif; ?>
+                    <td><?php echo $i . ' ' . $days[$i]; ?></td>
+                    <?php foreach ($data[$i] as $input): ?>
+                        <?php echo "<td>" . (isset($input['hours']) ? $input['hours'] : $input) . "</td>"?>
+                    <?php endforeach; ?>
                 </tr>
-
-            <?php endforeach; ?>
+            <?php }; ?>
         </table>
-    <?php else: ?>
+    <?php } else { ?>
         <h3><?php echo __('Geen geboekte uren gevonden'); ?></h3>
-    <?php endif; ?>
+    <?php }; ?>
 </div>
