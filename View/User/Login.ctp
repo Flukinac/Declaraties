@@ -3,10 +3,10 @@
     <?php echo $this->Form->create('User'); ?>
     <fieldset>
         <legend>
-            <?php echo __('Please enter your username and password'); ?>
+            <?php echo __('Voer een gebruikersnaam en wachtwoord in'); ?>
         </legend>
-        <?php echo $this->Form->input('username');
-        echo $this->Form->input('password');
+        <?php echo $this->Form->input('username', array('label' => 'gebruikersnaam'));
+        echo $this->Form->input('password', array('label' => 'wachtwoord'));
         ?>
     </fieldset>
     <?php echo $this->Form->end(__('Login')); ?>

@@ -43,4 +43,46 @@ class Contracts extends AppModel {
             'dependent' => false
         )
     );
+    public $hasMany = array(
+        'ContractHours' => array(
+            'classname' => 'ContractHours',
+            'foreignkey' => 'contract_id',
+            'order' => '',
+            'limit' => '',
+            'offset' => '',
+            'dependent' => false
+        )
+    );
+    public $validate = array(
+        'name' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een contractnaam is vereist'
+            )
+        ),
+        'start_date' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een start datum is vereist'
+            )
+        ),
+        'end_date' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een eind datum is vereist'
+            )
+        ),
+        'company_id' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een bedrijf is vereist'
+            )
+        ),
+        'user_id' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een gebruiker is vereist'
+            )
+        )
+    );
 }

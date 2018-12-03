@@ -25,7 +25,7 @@ App::uses('Model', 'Model');
 class Years extends AppModel {
     public $primaryKey = 'year_id';
     public $hasMany = array(
-        'monthbookings' => array(
+        'Monthbookings' => array(
             'className' => 'Monthbookings',
             'conditions' => '',
             'foreignKey' => 'monthbooking_id',

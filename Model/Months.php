@@ -28,7 +28,7 @@ class Months extends AppModel {
         'monthbookings' => array(
             'className' => 'Monthbookings',
             'conditions' => '',
-            'foreignKey' => 'monthbooking_id',
+            'foreignKey' => 'month_id',
             'order' => '',
             'fields' => '',
             'dependent' => false

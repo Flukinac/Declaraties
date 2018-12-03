@@ -14,4 +14,12 @@ class Company extends AppModel {
             'dependent' => false
         )
     );
+    public $validate = array(
+        'name' => array(
+            'required' => array(
+                'rule' => 'notBlank',
+                'message' => 'Een naam is vereist'
+            )
+        )
+    );
 }

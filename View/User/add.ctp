@@ -3,11 +3,12 @@
     <legend><?php echo __('Voeg gebruiker toe'); ?></legend>
     <fieldset>
         <?php
-        echo $this->Form->input('username', array('placeholder' => 'naam'));
-        echo $this->Form->input('password', array('placeholder' => 'wachtwoord'));
-        echo $this->Form->input('role_id', array('options' => $role));
+            echo $this->Form->input('username', array('placeholder' => 'naam'));
+            echo $this->Form->input('password', array('placeholder' => 'wachtwoord'));
+            echo $this->Form->input('password', array('placeholder' => 'Herhaal wachtwoord'));
+            echo $this->Form->input('role_id', array('options' => $role));
         ?>
     </fieldset>
-    <?php echo $this->Form->end('Opslaan'); ?>
+    <?php echo $this->Form->end('Opslaan', array('class' => 'rad-button dark gradient')); ?>
 </div>
 
