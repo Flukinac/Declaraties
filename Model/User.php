@@ -53,7 +53,13 @@ class User extends AppModel {
             'dependent' => false
         )
     );
-
+    public $hasOne = array(
+        'UserInfo' => array(
+            'className' => 'UserInfo',
+            'foreignKey' => 'user_info_id',
+            'dependent' => false
+        )
+    );
     public $validate = array(
         'username' => array(
             'required' => array(
@@ -67,6 +73,13 @@ class User extends AppModel {
                 'message' => 'Een wachtwoord is vereist'
             )
         ),
+        'passwordCheck' => array(
+            'required' => array(
+                'rule' => 'checkFields',
+                'message' => 'Wachtwoorden moeten overeenkomen.'
+            )
+        ),
+
         'role' => array(
             'valid' => array(
                 'rule' => array('inList', array('admin', 'user', 'company')),
@@ -84,5 +97,9 @@ class User extends AppModel {
             );
         }
         return true;
+    }
+
+    public function checkFields() {
+        return $this->data['User']['password'] == $this->data['User']['passwordCheck'];
     }
 }

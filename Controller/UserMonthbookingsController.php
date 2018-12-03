@@ -398,9 +398,8 @@ class UserMonthbookingsController extends AppController
         $goedeVrijdag = date('d-m', $easterStamp - 172800);
         $easterMonday = date('d-m', $easterStamp + 86400);
 
-        $specialDay = ['1-1', $goedeVrijdag, $easter, $easterMonday, '27-4', '5-5', $hemelvaart, $pinksteren, $pinksterMaandag, '25-12', '26-12'];
+        $specialDay = ['1-1', $goedeVrijdag, $easter, $easterMonday, '27-4', '5-5', $hemelvaart, $pinksteren, $pinksterMaandag, '25-12', '26-12'];  //TODO bevrijdingsdag mag 1 keer in de vijf jaar voorkomen
         $specialDayType = ['1 januari', 'Goede vrijdag', 'pasen', 'paasmaandag', 'koningsdag', 'bevrijdingsdag', 'hemelvaart', 'pinksteren', 'pinkstermaandag', '1e kerstdag', '2e kerstdag'];
-
 
         for ($i = 0; $i < date('t', $current);) {
             $findSpecialDay = array_search(++$i . '-' . $month, $specialDay); //returned de key zodat er een naam aan de feestdag wordt gegeven als de dag een feestdag is

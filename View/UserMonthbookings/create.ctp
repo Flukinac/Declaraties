@@ -20,7 +20,7 @@
                     </div>
                 </tr>
             <tr>
-                <?php echo $this->Form->end('Nieuwe boeking', array('class' => 'btn btn-primary mb-2')); ?>
+                <?php echo $this->Form->end('Nieuwe boeking', array('class' => 'rad-button dark gradient')); ?>
             </tr>
         </table>
     </fieldset>

@@ -12,12 +12,13 @@
         <tbody>
             <?php foreach ($roles as $role): ?>
                 <tr>
+                    <?php if ($role['Roles']['modified'] == $role['Roles']['created']) {$role['Roles']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
                     <td><?php echo h($role['Roles']['description']); ?></td>
                     <td><?php echo h($role['Roles']['created']); ?></td>
                     <td><?php echo h($role['Roles']['modified']); ?></td>
                     <td class="actions">
-                        <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $role['Roles']['role_id'])); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $role['Roles']['role_id']), array('confirm' => __('Are you sure you want to delete # %s?', $role['Roles']['role_id']))); ?>
+                        <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $role['Roles']['role_id']), array('class' => 'rad-button dark gradient')); ?>
+                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $role['Roles']['role_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $role['Roles']['role_id']))); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -31,9 +32,9 @@
         ?>	</p>
     <div class="paging">
         <?php
-        echo $this->Paginator->prev('< ' . __('volgende'), array(), null, array('class' => 'prev disabled'));
-        echo $this->Paginator->numbers(array('separator' => ''));
-        echo $this->Paginator->next(__('volgende') . ' >', array(), null, array('class' => 'next disabled'));
+        echo $this->Paginator->prev('< ' . __('vorige'), array('class' => 'page'), null);
+        echo $this->Paginator->numbers(array('separator' => '', 'class' => 'page'));
+        echo $this->Paginator->next(__('volgende') . ' >', array('class' => 'page'), null);
         ?>
     </div>
 </div>

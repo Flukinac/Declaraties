@@ -1,6 +1,7 @@
 <div class="index">
     <?php echo $this->Form->create('UserMonthbooking', array('url' => 'addHours/' . $userMonthbookingId)); ?>
     <legend><?php echo __('Dien uw uren in ') . '(' . $month . ' ' . date("Y") . ')'; ?></legend>
+    <p></p>
     <fieldset>
         <?php
             echo '<table>';
@@ -16,7 +17,7 @@
                         } elseif ($day == '') {
                             $color = 'white';
                         }
-                        echo '<td>' . $this->Form->input('contract' . '_' . $key . '_' . $contract['Contracts']['contract_id'], array('label' => 'Dag&nbsp' . $key, 'style' => 'width: 30px; background: ' . $color)) . '</td>';
+                        echo '<td>' . $this->Form->input('contract' . '_' . $key . '_' . $contract['Contracts']['contract_id'], array('label' => $key, 'onchange' => 'addRosterHours(this.value)','class' => 'testy', 'style' => 'width: 30px; background: ' . $color)) . '</td>';
                     }
                     echo "</tr>";
                 }
@@ -36,12 +37,12 @@
                     } elseif ($day == '') {
                         $color = 'white';
                     }
-                    echo '<td>' . $this->Form->input('intern' . '_' . $key . '_' . $bookingType['InternHoursTypes']['intern_hour_type_id'], array('label' => 'Dag&nbsp' . $key, 'style' => 'width: 30px; background: ' . $color)) . '</td>';
+                    echo '<td>' . $this->Form->input('intern' . '_' . $key . '_' . $bookingType['InternHoursTypes']['intern_hour_type_id'], array('label' => $key, 'onchange' => 'addRosterHours(this.value)','class' => 'testy', 'style' => 'width: 30px; background: ' . $color)) . '</td>';
                 }
                 echo "</tr>";
             }
             echo '</tr></table>'
         ?>
     </fieldset>
-    <?php echo $this->Form->end('Opslaan'); ?>
+    <?php echo $this->Form->end('Opslaan', array('class' => 'rad-button dark gradient')); ?>
 </div>

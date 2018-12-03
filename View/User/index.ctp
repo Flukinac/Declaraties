@@ -14,20 +14,21 @@
         <tbody>
             <?php foreach ($users as $user): ?>
                 <tr>
+                    <?php if ($user['User']['modified'] == $user['User']['created']) {$user['User']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
                     <td><?php echo h($user['User']['username']); ?></td>
                     <td><?php echo h($user['Roles']['description']); ?></td>
                     <td>
                         <?php foreach ($user['Contracts'] as $contract) {
-                            echo $this->Html->link($contract['name'], array('controller' => 'Contract', 'action' => 'view', $contract['contract_id']));
+                            echo $this->Html->link($contract['name'], array('controller' => 'Contracts', 'action' => 'view', $contract['contract_id']));
                             echo '<br>';
                         } ?>
                     </td>
                     <td><?php echo h($user['User']['created']); ?></td>
                     <td><?php echo h($user['User']['modified']); ?></td>
                     <td class="actions">
-                        <?php echo $this->Html->link(__('Tonen'), array('action' => 'view', $user['User']['user_id'])); ?>
-                        <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $user['User']['user_id'])); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['username']))); ?>
+                        <?php echo $this->Html->link(__('Tonen'), array('action' => 'view', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
+                        <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
+                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['username']))); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>
@@ -41,9 +42,9 @@
         ?>	</p>
     <div class="paging">
         <?php
-            echo $this->Paginator->prev('< ' . __('volgende'), array(), null, array('class' => 'prev disabled'));
-            echo $this->Paginator->numbers(array('separator' => ''));
-            echo $this->Paginator->next(__('volgende') . ' >', array(), null, array('class' => 'next disabled'));
+            echo $this->Paginator->prev('< ' . __('vorige'), array('class' => 'page'), null);
+            echo $this->Paginator->numbers(array('separator' => '', 'class' => 'page'));
+            echo $this->Paginator->next(__('volgende') . ' >', array('class' => 'page'), null);
         ?>
     </div>
 </div>

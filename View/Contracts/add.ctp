@@ -10,5 +10,5 @@
             echo $this->Form->input('end_date', array('placeholder' => 'Eind datum',  'label' => 'Einddatum', 'type' => 'date'));
         ?>
     </fieldset>
-    <?php echo $this->Form->end('Opslaan'); ?>
+    <?php echo $this->Form->end('Opslaan', array('class' => 'rad-button dark gradient')); ?>
 </div>

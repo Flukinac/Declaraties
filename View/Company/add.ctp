@@ -11,5 +11,5 @@
             echo $this->Form->input('housenumber_suffix', array('label' => 'Huisnummer toevoeging'));
         ?>
     </fieldset>
-    <?php echo $this->Form->end('Opslaan'); ?>
+    <?php echo $this->Form->end('Opslaan', array('class' => 'rad-button dark gradient')); ?>
 </div>

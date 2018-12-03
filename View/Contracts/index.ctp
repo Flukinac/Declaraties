@@ -19,6 +19,7 @@
         <tbody>
         <?php foreach ($contracts as $contract): ?>
             <tr>
+                <?php if ($contract['Contracts']['modified'] == $contract['Contracts']['created']) {$contract['Contracts']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
                 <td><?php echo h($contract['Contracts']['name']); ?></td>
                 <td><?php echo h($contract['Company']['name']); ?></td>
                 <td><?php echo h($contract['Contracts']['created']); ?></td>
@@ -27,9 +28,9 @@
                 <td><?php echo h($contract['Contracts']['start_date']); ?></td>
                 <td><?php echo h($contract['Contracts']['end_date']); ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $contract['Contracts']['contract_id'])); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $contract['Contracts']['contract_id'])); ?>
-                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $contract['Contracts']['contract_id']), array('confirm' => __('Are you sure you want to delete # %s?', $contract['Contracts']['contract_id']))); ?>
+                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $contract['Contracts']['contract_id']))); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -43,9 +44,9 @@
         ?>	</p>
     <div class="paging">
         <?php
-        echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-        echo $this->Paginator->numbers(array('separator' => ''));
-        echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
+        echo $this->Paginator->prev('< ' . __('vorige'), array('class' => 'page'), null);
+        echo $this->Paginator->numbers(array('separator' => '', 'class' => 'page'));
+        echo $this->Paginator->next(__('volgende') . ' >', array('class' => 'page'), null);
         ?>
     </div>
 </div>

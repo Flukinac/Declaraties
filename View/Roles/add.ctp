@@ -4,6 +4,6 @@
     <fieldset>
         <?php echo $this->Form->input('description', array('label' => 'Omschrijving')); ?>
     </fieldset>
-    <?php echo $this->Form->end('Opslaan'); ?>
+    <?php echo $this->Form->end('Opslaan', array('class' => 'rad-button dark gradient')); ?>
 </div>
 

@@ -19,8 +19,8 @@
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['created']); ?></td>
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['modified']); ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id'])); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'addHours', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id'])); ?>
+                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Html->link(__('Edit'), array('action' => 'addHours', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
                 </td>
             </tr>
         <?php endforeach; ?>
@@ -34,9 +34,9 @@
         ?>	</p>
     <div class="paging">
         <?php
-        echo $this->Paginator->prev('< ' . __('volgende'), array(), null, array('class' => 'prev disabled'));
-        echo $this->Paginator->numbers(array('separator' => ''));
-        echo $this->Paginator->next(__('vorige') . ' >', array(), null, array('class' => 'next disabled'));
+        echo $this->Paginator->prev('< ' . __('vorige'), array('class' => 'page'), null);
+        echo $this->Paginator->numbers(array('separator' => '', 'class' => 'page'));
+        echo $this->Paginator->next(__('volgende') . ' >', array('class' => 'page'), null);
         ?>
     </div>
 </div>

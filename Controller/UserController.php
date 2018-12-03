@@ -40,8 +40,13 @@ class UserController extends AppController {
         $params = array(
             'conditions' => array(
                 'user_id' => $id
-            )
+            ),
+            'fields' => array(
+                'UserInfo.*'
+            ),
+            'recursive' => 2
         );
+        debug($this->User->find('all', $params));exit();
         $this->set('user', $this->User->find('first', $params));
     }
 
@@ -71,6 +76,7 @@ class UserController extends AppController {
 
 
         if ($this->request->is('post') || $this->request->is('put')) {
+
             $saveParams = array(
                 'validation' => true,
             );
@@ -82,7 +88,7 @@ class UserController extends AppController {
             $this->Flash->error(
                 __('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.')
             );
-        } else {
+        }
             $params = array(
                 'conditions' => array('user_id' => $id),
                 'recursive' => 0,
@@ -108,7 +114,7 @@ class UserController extends AppController {
             $values = compact('user', 'roles');
 
             return $this->set($values);
-        }
+
     }
 
     public function delete($id = null) {
