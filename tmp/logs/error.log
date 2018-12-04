@@ -7001,3 +7001,82 @@ Stack Trace:
 #6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
 #7 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2018-12-04 13:43:16 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cakeUren/User/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp(64): View->__get('Auth')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include('C:\\xampp\\php\\ww...')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<div class="use...', 'default')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, 'default')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2018-12-04 13:43:47 Error: [Error] Class 'Auth' not found
+Request URL: /cakeUren/User/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<div class="use...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2018-12-04 13:43:48 Error: Fatal Error (1): Uncaught Error: Class 'Auth' not found in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:64
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Class &#039...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->re in [C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp, line 64]
+2018-12-04 13:43:48 Error: [FatalErrorException] Uncaught Error: Class 'Auth' not found in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:64
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Class &#039...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->re
+Request URL: /cakeUren/User/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 64)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 64, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2018-12-04 13:45:26 Error: [MissingHelperException] Helper class AuthHelper could not be found.
+Exception Attributes: array (
+  'class' => 'AuthHelper',
+  'plugin' => false,
+)
+Request URL: /cakeUren/User/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\HelperCollection.php(63): HelperCollection->load('Auth')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(858): HelperCollection->__isset('Auth')
+#2 C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp(64): View->__get('Auth')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include('C:\\xampp\\php\\ww...')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<div class="use...', 'default')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, 'default')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

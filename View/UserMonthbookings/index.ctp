@@ -1,4 +1,4 @@
-<div class="index"><?php //debug($UserMonthbookings);exit();?>
+<div class="index">
     <h2><?php echo __('Boekingen'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <thead>

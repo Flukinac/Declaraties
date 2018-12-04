@@ -1,6 +1,6 @@
 <div class="index">
     <?php echo $this->Form->create('UserMonthbooking', array('url' => 'addHours/' . $userMonthbookingId)); ?>
-    <legend><?php echo __('Dien uw uren in ') . '(' . $month . ' ' . date("Y") . ')'; ?></legend>
+    <legend><?php echo __('Dien uw uren in ') . '(' . $month . ' ' . $year . ')'; ?></legend>
     <p></p>
     <fieldset>
         <?php

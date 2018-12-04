@@ -221,6 +221,7 @@ class UserMonthbookingsController extends AppController
             //hier wordt meegestuurd: dagen in getalvorm, maanden in getalvorm, contracten: begindatum, einddatum, id en bedrijfsnaam, bookingtypes id, userMonthbookingId.
             $this->set(array(
                     'days' => $days,
+                    'year' => $year,
                     'month' => $chosenMonth,
                     'contracts' => $contracts,
                     'bookingTypes' => $bookingTypes,
@@ -398,8 +399,13 @@ class UserMonthbookingsController extends AppController
         $goedeVrijdag = date('d-m', $easterStamp - 172800);
         $easterMonday = date('d-m', $easterStamp + 86400);
 
+        $bevrijdingsdagen = ['2020', '2025', '2030', '2035', '2040', '2045', '2050'];
         $specialDay = ['1-1', $goedeVrijdag, $easter, $easterMonday, '27-4', '5-5', $hemelvaart, $pinksteren, $pinksterMaandag, '25-12', '26-12'];  //TODO bevrijdingsdag mag 1 keer in de vijf jaar voorkomen
         $specialDayType = ['1 januari', 'Goede vrijdag', 'pasen', 'paasmaandag', 'koningsdag', 'bevrijdingsdag', 'hemelvaart', 'pinksteren', 'pinkstermaandag', '1e kerstdag', '2e kerstdag'];
+
+        if (array_search($year, $bevrijdingsdagen) === false) {  //bevrijdingsdag is 1 keer in de 5 jaar een vrij dag in de meeste CAO's
+            $specialDay[5] = false;                              //deze functie haalt de dag eruit wanneer dit niet het geval is.
+        }
 
         for ($i = 0; $i < date('t', $current);) {
             $findSpecialDay = array_search(++$i . '-' . $month, $specialDay); //returned de key zodat er een naam aan de feestdag wordt gegeven als de dag een feestdag is
