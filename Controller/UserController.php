@@ -6,12 +6,13 @@ App::uses('appController', 'Controller');
  * @Property UserMonthbookings $UserMonthbookings
  * @Property InternHours $InternHours
  * @property User $User
+ * @property UserInfo $UserInfo
  * @property ContractHours $ContractHours
  */
 
 class UserController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses = array('User', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours');
+    public $uses = array('User', 'UserInfo', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours');
     public $components = array('Paginator');
 
     public function beforeFilter() {
@@ -37,16 +38,24 @@ class UserController extends AppController {
         if (!$this->User->exists()) {
             throw new NotFoundException(__('Gebruiker niet gevonden.'));
         }
+        $this->User->contain(array(
+            'UserInfo' => array(
+                'Cities',
+                'Birthplaces',
+                'Countries'
+            ),
+            'Roles' => array(
+                'description'
+            ),
+            'Contracts',
+            'UserMonthbookings'
+        ));
+
         $params = array(
             'conditions' => array(
                 'user_id' => $id
-            ),
-            'fields' => array(
-                'UserInfo.*'
-            ),
-            'recursive' => 2
+            )
         );
-        debug($this->User->find('all', $params));exit();
         $this->set('user', $this->User->find('first', $params));
     }
 
@@ -105,13 +114,17 @@ class UserController extends AppController {
                     'role_id', 'description'
                 )
             );
+            $paramsInfo = array(
+                'conditions' => array('user_info_id' => $id),
+                'recursive' => 0,
+            );
             $user = $this->User->find('first', $params);
-
+            $info = $this->UserInfo->find('first', $paramsInfo);
 
             $this->request->data['User'] = $user['User'];
 
             $roles = $this->Roles->find('list', $paramsRoles);
-            $values = compact('user', 'roles');
+            $values = compact('user', 'roles', 'info');
 
             return $this->set($values);
 

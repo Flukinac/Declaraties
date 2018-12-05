@@ -1,6 +1,6 @@
 <div class="index">
     <h2><?php echo __('Alle gebruikers'); ?></h2>
-    <table cellpadding="0" cellspacing="0" class="table">
+    <table class="table">
         <thead class="thead-light">
             <tr>
                 <th><?php echo $this->Paginator->sort('username', 'Naam'); ?></th>
