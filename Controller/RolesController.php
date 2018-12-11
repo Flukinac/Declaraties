@@ -11,6 +11,12 @@ class RolesController extends AppController {
     public $uses = array('Roles', 'User');
     public $components = array('Paginator');
 
+    public function beforeFilter() {
+        if (AuthComponent::user('role_id') !== 1) {
+            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+            $this->redirect('/');
+        }
+    }
     public function index() {
         $this->Roles->recursive = -1;
         $this->set('roles', $this->Paginator->paginate('Roles'));

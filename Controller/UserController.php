@@ -20,7 +20,10 @@ class UserController extends AppController {
     public $components = array('Paginator');
 
     public function beforeFilter() {
-        parent::beforeFilter();
+        if (AuthComponent::user('role_id') !== 1) {
+            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+            $this->redirect('/');
+        }
 
         //modeltesting area
 //        $this->loadModel('ContractHours');

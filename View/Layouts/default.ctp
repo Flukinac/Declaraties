@@ -65,6 +65,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <li class="nav-item active">
                 <a class="nav-link" href="/cakeUren">Home <span class="sr-only">(current)</span></a>
             </li>
+            <?php if (AuthComponent::user('role_id') == 1): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Gebruikers
@@ -120,11 +121,19 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     Beheer
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
+                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'nav-link')); ?>
                     <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Gebruikers beheer'), array('controller' => 'User', 'action' => 'users'), array('class' => 'dropdown-item')); ?>
+                    <?php echo $this->Html->link(__('Gebruikers beheer'), array('controller' => 'User', 'action' => 'users'), array('class' => 'nav-link')); ?>
                 </div>
             </li>
+            <?php else: ?>
+            <li class="nav-item active">
+                <a class="nav-link" href="/cakeUren/UserMonthbookings/addMonthBooking">Nieuwe boeking <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/cakeUren/UserMonthbookings/index">Al mijn boekingen <span class="sr-only">(current)</span></a>
+            </li>
+            <?php endif; ?>
         </ul>
         <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

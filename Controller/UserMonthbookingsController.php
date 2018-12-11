@@ -18,22 +18,13 @@ class UserMonthbookingsController extends AppController
     public $helpers = array('Html', 'Form');
     public $components = array('Paginator');
 
-
-
-    public function beforeFilter()
-    {
-
+    public function beforeFilter() {
+//        if (AuthComponent::user('role_id') !== 1) {
+//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+//            $this->redirect('/');
+//        }
     }
-//array(
-//  'UserMonthbookings' => array(
-//      'status' => '0',
-//      'active' => '1',
-//      'month_id_from' => '12',
-//      'year_id_from' => '1',
-//      'month_id_to' => '12',
-//      'year_id_to' => '1'
-//  )
-//)
+
     public function index()
     {
         $this->UserMonthbookings->contain(array('Monthbookings' => array('Years', 'Months')));
@@ -333,7 +324,7 @@ class UserMonthbookingsController extends AppController
         if (empty($totalHours)) {
             $totalHours = 0;
         }
-        SessionComponent::write('searchResultIds', $)
+
         $this->set(compact('result', 'totalHours'));
 
         $this->render('control');   //TODO pagination

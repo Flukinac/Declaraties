@@ -10,11 +10,23 @@
         <dt><?php echo __('Gewijzigd op'); ?></dt>
         <dd><?php echo h($user['User']['modified']); ?></dd>
         <dt><?php echo __('Woonplaats'); ?></dt>
-        <dd><?php echo h($user['UserInfo']['Cities']['cityname']); ?></dd>
+        <dd><?php if (!empty($user['UserInfo']['Cities']['cityname'])) {
+                echo h($user['UserInfo']['Cities']['cityname']);
+            } else {
+                echo h( 'Niet ingevoerd');
+            } ?></dd>
         <dt><?php echo __('Geboorteplaats'); ?></dt>
-        <dd><?php echo h($user['UserInfo']['Birthplaces']['birthplace']); ?></dd>
+        <dd><?php if (!empty($user['UserInfo']['Birthplaces']['birthplace'])) {
+                echo h($user['UserInfo']['Birthplaces']['birthplace']);
+            } else {
+            echo h( 'Niet ingevoerd');
+            } ?></dd>
         <dt><?php echo __('Nationaliteit'); ?></dt>
-        <dd><?php echo h($user['UserInfo']['Countries']['country']); ?></dd>
+        <dd><?php if (!empty($user['UserInfo']['Countries']['country'])) {
+            echo h($user['UserInfo']['Countries']['country']);
+            } else {
+                echo h( 'Niet ingevoerd');
+            } ?></dd>
     </dl>
 </div>
 <div class="User view">

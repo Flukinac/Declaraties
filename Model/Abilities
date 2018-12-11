@@ -22,25 +22,14 @@
 App::uses('Model', 'Model');
 
 
-class Roles extends AppModel {
-
-    public $primaryKey = 'role_id';
-    public $hasMany = array(
-        'User' => array(
-            'className' => 'User',
-            'conditions' => '',
-            'foreignKey' => 'role_id',
-            'order' => '',
-            'fields' => '',
-            'dependent' => false
-        )
-    );
+class Abilities extends AppModel {
+    public $primaryKey = 'ability_id';
     public $hasAndBelongsToMany = array(
-        'Abilities' => array(
-                'className' => 'Abilities',
+        'Roles' => array(
+                'className' => 'Roles',
                 'joinTable' => 'abilities_roles',
-                'foreignKey' => 'ability_id',
-                'associationForeignKey' => 'role_id',
+                'foreignKey' => 'role_id',
+                'associationForeignKey' => 'ability_id',
                 'unique' => true,
                 'conditions' => '',
                 'fields' => '',
