@@ -79,7 +79,6 @@ class User extends AppModel {
                 'message' => 'Wachtwoorden moeten overeenkomen.'
             )
         ),
-
         'role' => array(
             'valid' => array(
                 'rule' => array('inList', array('admin', 'user', 'company')),

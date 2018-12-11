@@ -32,7 +32,7 @@ class InternHours extends AppModel {
         ),
         'InternHours' => array(
             'className' => 'InternHours',
-            'foreignKey' => 'user_monthbookings_id',
+            'foreignKey' => 'user_monthbooking_id',
             'dependent' => false
         )
     );

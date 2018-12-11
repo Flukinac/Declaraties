@@ -5,14 +5,18 @@ App::uses('appController', 'Controller');
  * @property Contracts $Contracts
  * @Property UserMonthbookings $UserMonthbookings
  * @Property InternHours $InternHours
+ * @property Roles $Roles
  * @property User $User
  * @property UserInfo $UserInfo
+ * @property Birthplaces $Birthplaces
+ * @property Cities $Cities
+ * @property Countries $Countries
  * @property ContractHours $ContractHours
  */
 
 class UserController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses = array('User', 'UserInfo', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours');
+    public $uses = array('User', 'UserInfo', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours', 'Cities', 'Countries', 'Birthplaces');
     public $components = array('Paginator');
 
     public function beforeFilter() {
@@ -83,51 +87,124 @@ class UserController extends AppController {
 
     public function edit($id = null) {
 
-
         if ($this->request->is('post') || $this->request->is('put')) {
-
             $saveParams = array(
                 'validation' => true,
             );
+
             $this->User->id = $id;
-            if ($this->User->save($this->request->data, $saveParams)) {
-                $this->Flash->success(__('Gebruiker opgeslagen.'));
-                return $this->redirect(array('action' => 'index'));
+            if ($this->User->exists()) {
+
+                $dataSource = ConnectionManager::getDataSource('default');
+                $dataSource->begin();
+                $result = true;
+
+                //doing an create if not exitst on cities, countries and birthplace
+                $city_id = $this->Cities->find('first', array(
+                    'conditions' => array(
+                        'cityname' => $this->request->data['UserInfo']['Cities']['cityname']
+                    ),
+                    'recursive' => -1
+                ));
+
+                if(empty($city_id)) {
+                    if ($this->Cities->save($this->request->data['UserInfo']['Cities'], $saveParams)) {
+                        $city_id = $this->Cities->getLastInsertID();
+                    } else {
+                        $result = false;
+                    }
+                } else {
+                    $city_id = $city_id['Cities']['city_id'];
+                }
+
+                $birthplace_id = $this->Birthplaces->find('first', array(
+                    'conditions' => array(
+                        'birthplace' => $this->request->data['UserInfo']['Birthplaces']['birthplace']
+                    ),
+                    'recursive' => -1
+                ));
+                if(empty($birthplace_id)) {
+                    if ($this->Birthplaces->save($this->request->data['UserInfo']['Birthplaces'], $saveParams)) {
+                        $birthplace_id = $this->Birthplaces->getLastInsertID();
+                    } else {
+                        $result = false;
+                    }
+                } else {
+                    $birthplace_id = $birthplace_id['Birthplaces']['birthplace_id'];
+                }
+
+                $country_id = $this->Countries->find('first', array(
+                    'conditions' => array(
+                        'country' => $this->request->data['UserInfo']['Countries']['country']
+                    ),
+                    'recursive' => -1
+                ));
+                if(empty($country_id)) {
+                    if ($this->Countries->save($this->request->data['UserInfo']['Countries'], $saveParams)) {
+                        $country_id = $this->Countries->getLastInsertID();
+                    } else {
+                        $result = false;
+                    }
+                } else {
+                    $country_id = $country_id['Countries']['country_id'];
+                }
+
+                if (isset($city_id) && isset($birthplace_id) && isset($country_id)) {
+                    $info['UserInfo'] = array('user_info_id' => $id, 'city_id' => $city_id, 'birthplace_id' => $birthplace_id, 'country_id' => $country_id);
+                }
+
+                $this->UserInfo->id = $id;
+
+                if (!$this->UserInfo->save($info)) {
+                    $result = false;
+                };
+
+                if (!$this->User->save($this->request->data['User'])) {
+                    $result = false;
+                }
+
+                if ($result) {
+                    $dataSource->commit();
+                    $this->Flash->success(__('Gebruiker opgeslagen.'));
+                    return $this->redirect(array('controller' => 'User', 'action' => 'index'));
+                } else {
+
+                    $dataSource->rollback();
+                    $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+                    return false;
+                }
             }
-            $this->Flash->error(
-                __('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.')
-            );
         }
-            $params = array(
-                'conditions' => array('user_id' => $id),
-                'recursive' => 0,
-                'fields' => array(
-                    'User.user_id',
-                    'User.username',
-                    'User.password',
-                    'User.role_id',
-                )
-            );
-            $paramsRoles = array(
-                'recursive' => 0,
-                'fields' => array(
-                    'role_id', 'description'
-                )
-            );
-            $paramsInfo = array(
-                'conditions' => array('user_info_id' => $id),
-                'recursive' => 0,
-            );
-            $user = $this->User->find('first', $params);
-            $info = $this->UserInfo->find('first', $paramsInfo);
 
-            $this->request->data['User'] = $user['User'];
+        $this->User->contain(array(
+            'UserInfo' => array(
+                'Cities',
+                'Birthplaces',
+                'Countries'
+            )
+        ));
 
-            $roles = $this->Roles->find('list', $paramsRoles);
-            $values = compact('user', 'roles', 'info');
+        $params = array(
+            'conditions' => array(
+                'user_id' => $id
+            ),
+            'recursive' => -1
+        );
+        $paramsRoles = array(
+            'recursive' => 0,
+            'fields' => array(
+                'role_id', 'description'
+            )
+        );
 
-            return $this->set($values);
+        $userInfo = $this->User->find('first', $params);
 
+        $this->request->data['UserInfo'] = $userInfo['UserInfo'];
+        $this->request->data['User'] = $userInfo['User'];
+        $this->request->data['Roles'] = $this->Roles->find('list', $paramsRoles);
+
+
+        return $this->set('values', $this->request->data);
     }
 
     public function delete($id = null) {
@@ -145,4 +222,6 @@ class UserController extends AppController {
         $this->Flash->error(__('Fout bij deleten. De gebruiker is niet verwijderd. Probeer het nog eens.'));
         return $this->redirect(array('action' => 'index'));
     }
+
+
 }

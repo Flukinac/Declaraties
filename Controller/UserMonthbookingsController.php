@@ -18,14 +18,24 @@ class UserMonthbookingsController extends AppController
     public $helpers = array('Html', 'Form');
     public $components = array('Paginator');
 
+
+
     public function beforeFilter()
     {
 
     }
-
+//array(
+//  'UserMonthbookings' => array(
+//      'status' => '0',
+//      'active' => '1',
+//      'month_id_from' => '12',
+//      'year_id_from' => '1',
+//      'month_id_to' => '12',
+//      'year_id_to' => '1'
+//  )
+//)
     public function index()
     {
-
         $this->UserMonthbookings->contain(array('Monthbookings' => array('Years', 'Months')));
         $this->paginate = array(
             'conditions' => array(
@@ -82,22 +92,7 @@ class UserMonthbookingsController extends AppController
 
         }
 
-
-        $paramsYears = array(
-            'fields' => array('Years.year'),
-            'recursive' => 0
-        );
-        $paramsMonths = array(
-            'fields' => array('Months.month'),
-            'recursive' => 0
-        );
-
-        $years = $this->Years->find('list', $paramsYears);
-        $months = $this->Months->find('list', $paramsMonths);
-
-        $values = compact('years', 'months');
-
-        $this->set('values', $values);
+        $this->set('values', $this->getMonthsYears());
 
         $this->render('create');
 
@@ -243,6 +238,122 @@ class UserMonthbookingsController extends AppController
     }
 
 
+    public function settings() {
+        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
+        $status = array(0 => 'openstaand', 1 => 'goedgekeurd', 2 => 'beide');
+        $active = array(0 => 'non actief', 1 => 'actief', 2 => 'beide');
+        $result = $this->getMonthsYears();
+
+        $this->set('values', array('status' => $status, 'active' => $active, 'months' => $result['months'], 'years' => $result['years']));
+
+        $this->render('settings');
+    }
+
+    public function search() {
+        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
+        $this->control();
+    }
+    public function approve() {
+        $this->request->allowMethod('post');
+            foreach($this->request->data['UserMonthbookings'] as $key => $value) {
+                $this->UserMonthbookings->id = $key;
+                if (!$this->UserMonthbookings->exists()) {
+                    throw new NotFoundException(__('Boeking ' . $key . 'niet gevonden'));
+                }
+                if (!$this->UserMonthbookings->save(array('UserMonthbookings' => array('status' => $value)))) {
+                    $this->Flash->error(__('Fout bij goedkeuring van boeking ' . $key . ', probeer het nog eens.'));
+                }
+            }
+        $this->control();
+    }
+    private function control() {
+        if (SessionComponent::check('searchInfo')) {
+            $data = SessionComponent::read('searchInfo');
+        } else {
+            $data = $this->request->data;
+            SessionComponent::write('searchInfo', $data);    //sla de zoekdata op om later op te halen via approve()
+        }
+
+        $status = $data['UserMonthbookings']['status'];
+        $active = $data['UserMonthbookings']['active'];
+        $month_id_from = $data['UserMonthbookings']['month_id_from'];
+        $month_id_to = $data['UserMonthbookings']['month_id_to'];
+        $year_id = $data['UserMonthbookings']['year_id'];
+        //opstellen van condities om filtering mogelijk te maken in de control setting en view
+        if ($status < 2) {
+            $conditions['UserMonthbookings.status'] = $status;
+        }
+        if ($active < 2) {
+            $conditions['UserMonthbookings.active'] = $active;
+        }
+
+        $conditions['Monthbookings.year_id'] = $year_id;
+
+        $conditions['and'] = array(
+            array(
+                'Monthbookings.month_id >= ' => $month_id_from,
+                'Monthbookings.month_id <= ' => $month_id_to
+            )
+        );
+
+        //meenemen van boekingen met uren en periode in maanden en jaren en gebruikersnaam
+        $this->UserMonthbookings->contain(array(
+            'User.username',
+            'Monthbookings' => array(
+                'Years' => array('year'),
+                'Months' => array('month')
+            ),
+            'ContractHours' => array(
+                'hours'
+            ),
+            'InternHours' => array(
+                'hours'
+            )
+        ));
+
+        $result = $this->UserMonthbookings->find('all', array('conditions' => $conditions));
+
+        if (count($result) > 0) {
+            for ($i = 0; $i < count($result); $i++) {
+                $totalInternHours = 0;
+                $totalContractHours = 0;
+                if (count($result[$i]['ContractHours']) > 0) {
+                    foreach ($result[$i]['ContractHours'] as $hours) {
+                        $totalContractHours += $hours['hours'];
+                    }
+                }
+                if (count($result[$i]['InternHours']) > 0) {
+                    foreach ($result[$i]['InternHours'] as $hours) {
+                        $totalInternHours += $hours['hours'];
+                    }
+                }
+                $totalHours[$result[$i]['UserMonthbookings']['user_monthbooking_id']] = $totalInternHours + $totalContractHours;
+            }
+        }
+        if (empty($totalHours)) {
+            $totalHours = 0;
+        }
+        SessionComponent::write('searchResultIds', $)
+        $this->set(compact('result', 'totalHours'));
+
+        $this->render('control');   //TODO pagination
+    }
+    private function getMonthsYears() {
+        $paramsYears = array(
+            'fields' => array('Years.year'),
+            'recursive' => 0
+        );
+        $paramsMonths = array(
+            'fields' => array('Months.month'),
+            'recursive' => 0
+        );
+
+        $years = $this->Years->find('list', $paramsYears);
+        $months = $this->Months->find('list', $paramsMonths);
+
+        return compact('years', 'months');
+    }
+
     private function saveHours($data, $userMonthbookingId)
     {
 
@@ -375,7 +486,6 @@ class UserMonthbookingsController extends AppController
 
 
     }
-
 
     private function checkDayType($month, $year)     //month in '04', year in '2019'
     {

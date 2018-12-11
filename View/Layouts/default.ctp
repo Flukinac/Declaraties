@@ -58,9 +58,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="/cakeUren">Uren declaratie</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
+
     <?php if (AuthComponent::user()): ?>
     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -117,15 +115,31 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     <?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'UserMonthbookings', 'action' => 'addMonthBooking'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Beheer
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
+                    <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link(__('Gebruikers beheer'), array('controller' => 'User', 'action' => 'users'), array('class' => 'dropdown-item')); ?>
+                </div>
+            </li>
         </ul>
-        <?php
-            if (AuthComponent::user('user_id')) {
-                echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout'));
-            }
-        ?>
+        <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <span class="navbar-toggler-icon"></span>
+                </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <?php echo $this->Html->link(__('Mijn profiel'), array('controller' => 'User', 'action' => 'edit/' . AuthComponent::user("user_id"))); ?>
+                <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout')); ?>
+            </div>
+        </div>
     </div>
     <?php endif; ?>
 </nav>
+
     <div id="container">
             <?php echo $this->Flash->render(); ?>
             <?php echo $this->fetch('content'); ?>

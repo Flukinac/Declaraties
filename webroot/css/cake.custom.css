@@ -313,7 +313,7 @@ hr {
 /*sass variables used*/
 /*site container*/
 .wrapper {
-    width: 420px;
+    width: 60%;
     margin: 0 auto;
 }
 
