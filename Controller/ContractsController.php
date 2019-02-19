@@ -13,10 +13,10 @@ class ContractsController extends AppController {
     public $paginate = array('limit' => 10);
 
     public function beforeFilter() {
-        if (AuthComponent::user('role_id') !== 1) {
-            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-            $this->redirect('/');
-        }
+//        if (AuthComponent::user('role_id') !== '1') {
+//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+//            $this->redirect('/');
+//        }
     }
 
     public function index() {
@@ -25,27 +25,27 @@ class ContractsController extends AppController {
         $this->set('contracts', $data);
     }
 
-    public function view($id = null) {
-        if ($id) {
-            $params = array(
-                'conditions' => array('contract_id' => $id),
-                'fields' => array(
-                    'Contracts.*',
-                    'User.username',
-                    'Company.name'
-                ),
-                'recursive' => 1
-            );
-
-            $contract = $this->Contracts->find('first', $params);
-
-            $this->set('contract', $contract);
-
-
-        } else {
-            echo $this->Flash->error(__('Contract niet gevonden.'));
-        }
-    }
+//    public function view($id = null) {
+//        if ($id) {
+//            $params = array(
+//                'conditions' => array('contract_id' => $id),
+//                'fields' => array(
+//                    'Contracts.*',
+//                    'User.username',
+//                    'Company.name'
+//                ),
+//                'recursive' => 1
+//            );
+//
+//            $contract = $this->Contracts->find('first', $params);
+//
+//            $this->set('contract', $contract);
+//
+//
+//        } else {
+//            echo $this->Flash->error(__('Contract niet gevonden.'));
+//        }
+//    }
 
     public function add() {
         if ($this->request->is('post')) {
@@ -115,21 +115,5 @@ class ContractsController extends AppController {
 
             $this->set(array('user' => $user, 'company' => $company));
         }
-    }
-
-    public function delete($id = null) {
-
-        $this->request->allowMethod('post');
-
-        $this->Contracts->id = $id;
-        if (!$this->Contracts->exists()) {
-            throw new NotFoundException(__('Contract niet gevonden'));
-        }
-        if ($this->Contracts->delete()) {
-            $this->Flash->success(__('Contract verwijderd'));
-            return $this->redirect(array('action' => 'index'));
-        }
-        $this->Flash->error(__('Fout bij deleten. Het contract is niet verwijderd. Probeer het nog eens.'));
-        return $this->redirect(array('action' => 'index'));
     }
 }

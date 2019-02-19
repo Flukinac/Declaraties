@@ -4,7 +4,6 @@
 }
 
 
-
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -35,8 +34,15 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-body {
+
+.bodyclass {
     padding-top: 70px;
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 100;
+    height: 100vh;
+    margin: 0;
 }
 
 div.form,
@@ -111,6 +117,10 @@ hr {
     color: #777;
     border-bottom: 1px solid #ccc;
     box-shadow: 0px 0px 0px 0px #b8b8b8;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 .rad-button.flat {
     background: #f0f0f0;
@@ -237,7 +247,6 @@ hr {
 }
 
 .pagination {
-    background: #f2f2f2;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -331,13 +340,13 @@ hr {
     border: none;
     border: 1px solid black;
     margin-bottom: 10px;
-    color: #6E6E6E;
-    text-shadow: #000 0px 1px 5px;
+    color: black;
+    text-shadow: #000 0px 1px 2px;
 }
 
 input[type="submit"] {
-    width: 100%;
-    padding: 15px;
+    width: 200px;
+    padding: 10px;
     border-radius: 5px;
     outline: none;
     border: none;
@@ -359,6 +368,11 @@ input[type="submit"] {
     -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(255, 255, 255, 0.2)));
 }
 
+input[type="submit"]:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
 .formText:focus {
     box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
     background: rgba(0, 0, 0, 0.3);
@@ -367,11 +381,6 @@ input[type="submit"] {
     -o-transition: 1s ease;
     -ms-transition: 1s ease;
     transition: 1s ease;
-}
-
-input[type="submit"]:hover {
-    opacity: 1;
-    cursor: pointer;
 }
 
 .name-help, .email-help, .password-help{

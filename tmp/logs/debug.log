@@ -1,0 +1,513 @@
+2018-12-13 10:05:36 Debug: Gebruiker niet gevonden.15
+2018-12-13 10:12:58 Debug: ArrayGebruiker niet gevonden. gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:15:58 Debug: http://localhost/cakeUren/User/view/154Gebruiker niet gevonden. gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:16:24 Debug: http://localhost/cakeUren/cakeUren/User/view/154Gebruiker niet gevonden. gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:18:28 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:18:36 Debug: http://localhost/cakeUren/Roles/edit/1  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:18:44 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:24:03 Debug: http://localhost/cakeUren/Company/delete/4389  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:55:20 Debug: http://localhost/cakeUren/User/view_pdf  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 10:58:54 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 11:00:02 Debug: http://localhost/cakeUren/User/view_pdf/15  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 12:13:55 Debug: http://localhost/cakeUren/UserMonthbookings/view/53  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 13:30:08 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 13:30:42 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 13:30:57 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 13:42:26 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 15:13:37 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2018-12-13 16:02:56 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2018-12-13 17:10:19 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-14 13:45:59 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2018-12-14 13:46:59 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-03 11:52:10 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-03 11:53:58 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/59  gebruiker: fluke, id: 15, rol: 1
+2019-01-03 11:54:11 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/63  gebruiker: fluke, id: 15, rol: 1
+2019-01-07 00:37:42 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-07 00:37:46 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:53:54 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:54:41 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:55:02 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:56:55 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:06 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:15 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:21 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:28 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:42 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:57:46 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 18:59:37 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 19:01:21 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/63  gebruiker: fluke, id: 15, rol: 1
+2019-01-12 19:07:24 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/59  gebruiker: fluke, id: 15, rol: 1
+2019-01-19 19:18:38 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-19 20:48:57 Debug: http://localhost/cakeUren/Roles/add  gebruiker: fluke, id: 15, rol: 1
+2019-01-19 20:49:02 Debug: http://localhost/cakeUren/Roles/add  gebruiker: fluke, id: 15, rol: 1
+2019-01-19 23:00:31 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 12:40:58 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 12:41:30 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 12:45:54 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 12:46:49 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 12:47:22 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:07:15 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:07:22 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:07:56 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:07:59 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:12:08 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:12:11 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:12:14 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:12:21 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:12:24 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:12 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:17 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:20 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:23 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:25 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:14:47 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:15:11 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:37:31 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:42:50 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:43:00 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:43:09 Debug: http://localhost/cakeUren/user/login  gebruiker: , id: , rol: 
+2019-01-20 13:43:49 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-20 13:43:53 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-20 13:45:01 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:04 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:13 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:34 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:37 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:48 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:51 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:45:58 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:46:26 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:46:35 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:46:37 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:47:08 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:47:43 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:47:46 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 13:47:51 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 14:52:58 Debug: http://localhost/cakeUren/Roles/add  gebruiker: fluke, id: 15, rol: 1
+2019-01-20 15:50:33 Debug: http://localhost/cakeUren/Roles/delete/5  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 06:25:44 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-21 06:25:51 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 16:12:54 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-21 16:12:58 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 16:30:28 Debug: http://localhost/cakeUren/Roles/add  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 16:41:26 Debug: http://localhost/cakeUren/Roles/edit/1  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 17:13:16 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-21 17:19:43 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 06:09:38 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-22 06:09:41 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 06:09:46 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 06:14:26 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 06:15:43 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 06:24:29 Debug: http://localhost/cakeUren/Roles/edit  gebruiker: fluke, id: 15, rol: 1
+2019-01-22 15:50:27 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-23 05:17:31 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-23 05:17:35 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-24 10:54:46 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-24 10:54:50 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-24 11:06:32 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-24 18:35:16 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-24 18:35:19 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-24 18:50:12 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-24 22:38:32 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-24 22:38:35 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:23:54 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 04:24:01 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:24:07 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:25:16 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:26:45 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:28:30 Debug: http://localhost/cakeUren/Roles/edit/3  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:28:52 Debug: http://localhost/cakeUren/Roles/edit/42  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:36:20 Debug: http://localhost/cakeUren/Roles/edit/42  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:38:22 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:38:38 Debug: http://localhost/cakeUren/Roles/edit/42  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:38:54 Debug: http://localhost/cakeUren/Roles/edit/42  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:38:57 Debug: http://localhost/cakeUren/Roles/edit/3  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:39:00 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:39:30 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:41:22 Debug: http://localhost/cakeUren/Roles/edit/34  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:41:26 Debug: http://localhost/cakeUren/Roles/edit/3  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:42:43 Debug: http://localhost/cakeUren/User  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:46:52 Debug: http://localhost/cakeUren/User  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 04:46:56 Debug: http://localhost/cakeUren/User/add  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 15:29:44 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 15:31:30 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 15:32:31 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 15:32:58 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 15:33:06 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-25 15:33:09 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 15:36:13 Debug: http://localhost/cakeUren/Roles/edit/45  gebruiker: fluke, id: 15, rol: 1
+2019-01-25 15:36:31 Debug: http://localhost/cakeUren/Roles/edit/45  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 04:49:41 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-26 04:49:45 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 04:59:52 Debug: http://localhost/cakeUren/Roles/edit/43  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 04:59:58 Debug: http://localhost/cakeUren/Roles/edit/43  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:29:16 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:31:05 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:31:19 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:31:50 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:32:06 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 05:47:45 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 06:05:02 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 06:05:15 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 06:05:40 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 14:10:43 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-26 14:10:48 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 14:38:28 Debug: http://localhost/cakeUren/Roles/edit/50  gebruiker: fluke, id: 15, rol: 1
+2019-01-26 14:40:20 Debug: http://localhost/cakeUren/Roles/edit/43  gebruiker: fluke, id: 15, rol: 1
+2019-01-27 12:25:38 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-27 12:25:41 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-27 12:29:26 Debug: http://localhost/cakeUren/Roles/edit/43  gebruiker: fluke, id: 15, rol: 1
+2019-01-27 12:29:52 Debug: http://localhost/cakeUren/Roles/edit/43  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 03:39:38 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-28 03:39:42 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 03:49:09 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 03:49:38 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 03:49:46 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:09:31 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:09:52 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:10:09 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:12:34 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/57  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:16:13 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/57  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:19:26 Debug: http://localhost/cakeUren/user/login  gebruiker: , id: , rol: 
+2019-01-28 04:19:32 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:20:01 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:20:04 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:20:08 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:20:45 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:20:47 Debug: http://localhost/cakeUren/UserMonthbookings/index  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:02 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:04 Debug: http://localhost/cakeUren/UserMonthbookings/index  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:06 Debug: http://localhost/cakeUren/UserMonthbookings/view/53  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:07 Debug: http://localhost/cakeUren/UserMonthbookings/view/53  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:12 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:12 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:28 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:21:29 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:22:46 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-01-28 04:28:44 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:28:48 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:28:54 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:28:55 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:29:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:29:43 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:30:11 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:30:13 Debug: http://localhost/cakeUren/UserMonthbookings/view/1  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:31:35 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:32:06 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:32:38 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:33:23 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:35:49 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:36:13 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:36:14 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:41:19 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:41:20 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:41:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:41:43 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:45:52 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:45:53 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:49:21 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:50:03 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:54:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:54:49 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:55:22 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:57:31 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:57:36 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 04:57:39 Debug: http://localhost/cakeUren/UserMonthbookings/view/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:07:06 Debug: http://localhost/cakeUren/UserMonthbookings/index/sort:created/direction:asc  gebruiker: , id: , rol: 
+2019-01-28 15:07:10 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:45:19 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:45:22 Debug: http://localhost/cakeUren/UserMonthbookings/view/58  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:45:45 Debug: http://localhost/cakeUren/UserMonthbookings/edit/58  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:46:13 Debug: http://localhost/cakeUren/UserMonthbookings/view/56  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:46:28 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:46:30 Debug: http://localhost/cakeUren/UserMonthbookings/view/60  gebruiker: fluke, id: 15, rol: 1
+2019-01-28 15:46:38 Debug: http://localhost/cakeUren/UserMonthbookings/edit/60  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 05:04:13 Debug: http://localhost/cakeUren/UserMonthbookings/view/60  gebruiker: , id: , rol: 
+2019-01-29 05:04:17 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 05:04:20 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 05:04:24 Debug: http://localhost/cakeUren/UserMonthbookings/edit/57  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:22:29 Debug: http://localhost/cakeUren/UserMonthbookings/add/57  gebruiker: , id: , rol: 
+2019-01-29 15:22:29 Debug: http://localhost/cakeUren/UserMonthbookings/add/57  gebruiker: , id: , rol: 
+2019-01-29 15:34:59 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: , id: , rol: 
+2019-01-29 15:35:03 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:08 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:10 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:38 Debug: http://localhost/cakeUren/UserMonthbookings/add/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:38 Debug: http://localhost/cakeUren/UserMonthbookings/add/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:42 Debug: http://localhost/cakeUren/UserMonthbookings/view/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:35:47 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:41:37 Debug: http://localhost/cakeUren/UserMonthbookings/edit/58  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:41:38 Debug: http://localhost/cakeUren/UserMonthbookings/edit/58  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:42:01 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:42:03 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:43:16 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/60  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:47:34 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/57  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 15:54:57 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 16:13:01 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:21:15 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-29 20:21:19 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:21:22 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:21:29 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:21:41 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:22:10 Debug: http://localhost/cakeUren/user_monthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:22:11 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:22:21 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:24:51 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:25:03 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:25:12 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/58  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:25:43 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:25:55 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:26:23 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:28:09 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:28:18 Debug: http://localhost/cakeUren/user_monthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:28:19 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:28:40 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:28:46 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:29:14 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:31:06 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:40:55 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:43:23 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:47:29 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:48:45 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:51:11 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:53:02 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:55:16 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:55:20 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-29 20:55:20 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:27:48 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-30 03:27:52 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:27:57 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:28:00 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:28:07 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:28:11 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:29:36 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:29:42 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:30:45 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:35:12 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/56  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:35:59 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:41:29 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:42:17 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:42:21 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:44:12 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:44:38 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:44:38 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:44:39 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:44:39 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:45:42 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-30 03:47:45 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:09:55 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-31 04:09:59 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:02 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:04 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:05 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:38 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:40 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:10:40 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:12:09 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:12:54 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:17:18 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:17:21 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:19:29 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 04:19:57 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 18:59:31 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-01-31 18:59:39 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 18:59:41 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 18:59:44 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 18:59:49 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:00:37 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:00:38 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:00:40 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:00:43 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:04:48 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:05:38 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:05:39 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:05:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:05:46 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:18:28 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:20:40 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-01-31 19:24:58 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:27:09 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: , id: , rol: 
+2019-02-01 15:27:13 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:27:15 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:27:18 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:27:21 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:30:09 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:32:44 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-01 15:33:08 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:15:05 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: , id: , rol: 
+2019-02-02 03:15:09 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:15:15 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:15:17 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:15:20 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:17:00 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:17:24 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:17:43 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:21:12 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:21:58 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:23:23 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:23:58 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:24:35 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:24:49 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:48:05 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:48:06 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:48:38 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:49:24 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:57:12 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:57:41 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:57:56 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 03:59:56 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:03:35 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:04:11 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:05:25 Debug: http://localhost/cakeUren/Contracts/delete/20  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:14:30 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:15:49 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:16:22 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:33:29 Debug: http://localhost/cakeUren/Company  gebruiker: fluke, id: 15, rol: 1
+2019-02-02 04:41:05 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 00:42:47 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-03 00:42:51 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 00:49:16 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 00:49:29 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:27:17 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-03 13:27:21 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:28:22 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:28:27 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:28:46 Debug: http://localhost/cakeUren/UserMonthbookings/edit/57  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:29:20 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:29:25 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:29:42 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:31:07 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:31:30 Debug: http://localhost/cakeUren/user_monthbookings/search/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:32:50 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:34:08 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:36:02 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:38:28 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:38:53 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:38:57 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:39:13 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 13:39:33 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:57:35 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:57:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/58  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:57:50 Debug: http://localhost/cakeUren/UserMonthbookings/edit/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:58:15 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:58:17 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:59:13 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:59:15 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 14:59:58 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:00:00 Debug: http://localhost/cakeUren/user_monthbookings/addHours/55  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:01:51 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:02:21 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:02:23 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:05:06 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:05:09 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:05:39 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 15:05:42 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:13:36 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:13:37 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:19:05 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:19:06 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:21:38 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-03 16:21:39 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:27:28 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: , id: , rol: 
+2019-02-04 06:27:31 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:27:34 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:27:37 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:27:40 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:28:12 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:28:12 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-04 06:28:43 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-07 00:43:49 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-09 15:24:59 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-09 21:31:35 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-09 21:31:39 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:11:09 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:16:16 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:16:19 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:16:24 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:16:37 Debug: http://localhost/cakeUren/user_monthbookings/search/  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:16:42 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 00:17:45 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-10 12:08:27 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:08:30 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:08:33 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:08:37 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:08:43 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:09:01 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:09:03 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:09:52 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:10:14 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:28:03 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:28:04 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 12:28:09 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 15:48:34 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 15:48:35 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-10 15:49:01 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:09:22 Debug: http://localhost/cakeUren/  gebruiker: , id: , rol: 
+2019-02-12 13:09:27 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:09:50 Debug: http://localhost/cakeUren/Contracts/view/1  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:05 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:24 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:25 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/64  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:25 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/64  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:31 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:10:53 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:12:58 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-12 13:36:02 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:20:21 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:34:56 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:40:22 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:40:30 Debug: http://localhost/cakeUren/UserMonthbookings/edit/56  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:41:20 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:41:35 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:43:44 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:43:46 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:43:57 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:55:23 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 15:55:25 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:10:44 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:11:22 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:11:31 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:11:33 Debug: http://localhost/cakeUren/UserMonthbookings/edit/56  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:11:42 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:12:05 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:12:10 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:12:14 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:05 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:26 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:33 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:33 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/59  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:33 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/59  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:37 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:43 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:43 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/65  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:43 Debug: http://localhost/cakeUren/UserMonthbookings/addHours/65  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:45 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:48 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:52 Debug: http://localhost/cakeUren/UserMonthbookings/edit/53  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:17:55 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:18:33 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:19:05 Debug: http://localhost/cakeUren/user_monthbookings/addHours/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:31:02 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:34:24 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:34:47 Debug: http://localhost/cakeUren/user_monthbookings/search/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:34:59 Debug: http://localhost/cakeUren/user_monthbookings/search/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:38:32 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:38:44 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:38:58 Debug: http://localhost/cakeUren/user_monthbookings/search/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:40:05 Debug: http://localhost/cakeUren/user_monthbookings/view/57  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:40:06 Debug: http://localhost/cakeUren/user_monthbookings/view/57  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:41:30 Debug: http://localhost/cakeUren/UserMonthbookings/settings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:50:44 Debug: http://localhost/cakeUren/user/login  gebruiker: , id: , rol: 
+2019-02-18 16:50:48 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:51:31 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:51:37 Debug: http://localhost/cakeUren/UserMonthbookings/index  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:51:41 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:51:51 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:52:02 Debug: http://localhost/cakeUren/UserMonthbookings/addMonthBooking  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:52:06 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 2
+2019-02-18 16:55:10 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:58:30 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 16:58:34 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 17:09:41 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 17:13:22 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-18 17:16:31 Debug: http://localhost/cakeUren/UserMonthbookings/index/sort:created/direction:asc  gebruiker: fluke, id: 15, rol: 1

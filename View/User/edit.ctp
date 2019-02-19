@@ -16,10 +16,11 @@
                         <?php echo $this->Form->input('UserInfo.Countries.country', array('label' => 'Land', 'class' => 'formText')); ?>
                     </div>
                     <div>
-                        <?php echo $this->Form->input('User.role_id', array('label' => 'Rol', 'options' => $values['Roles'], 'class' => 'formText')); ?>
+                        <?php if ($values['Roles'] == true) {
+                            echo $this->Form->input('User.role_id', array('label' => 'Rol', 'options' => $values['Roles'], 'class' => 'formText'));
+                        } ?>
                     </div>
                 </fieldset>
         <?php echo $this->Form->end(array('label' => 'Opslaan', array('class' => 'rad-button dark gradient'))); ?>
     </div>
 </div>
-

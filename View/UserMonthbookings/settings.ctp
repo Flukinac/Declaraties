@@ -30,31 +30,26 @@
             <tr>
                 <div class="form-group mb-2">
                     <label for="month_id" class="col-sm-2 col-form-label">Periode</label>
+
+                </div>
+            </tr>
+            <tr>
+                <div class="form-group mb-2">
+                    <label for="month_id" class="col-sm-2 col-form-label">Vanaf:</label>
                     <div class="col-sm-10">
-                        <table>
-                            <tr>
-                                <td>
-                                    Vanaf:
-                                </td>
-                                <td>
-                                    <?php echo $this->Form->input('month_id_from', array('options' => $values['months'], 'label' => '', 'selected' => date('m', time()), 'class' => 'form-control form-control-sm')); ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    Tot:
-                                </td>
-                                <td>
-                                    <?php echo $this->Form->input('month_id_to', array('options' => $values['months'], 'label' => '','selected' => date('m', time()), 'class' => 'form-control form-control-sm')); ?>
-                                </td>
-                            </tr>
-                        </table>
+                        <?php echo $this->Form->input('month_id_from', array('options' => $values['months'], 'label' => '', 'selected' => date('m', time()), 'class' => 'form-control form-control-sm')); ?>
                     </div>
                 </div>
             </tr>
             <tr>
-                <?php echo $this->Form->end('Zoek', array('class' => 'rad-button dark gradient')); ?>
+                <div class="form-group mb-2">
+                    <label for="month_id" class="col-sm-2 col-form-label">Tot:</label>
+                    <div class="col-sm-10">
+                        <?php echo $this->Form->input('month_id_to', array('options' => $values['months'], 'label' => '','selected' => date('m', time()), 'class' => 'form-control form-control-sm')); ?>
+                    </div>
+                </div>
             </tr>
         </table>
+        <?php echo $this->Form->end('Zoek', array('class' => 'rad-button dark gradient')); ?>
     </fieldset>
 </div>

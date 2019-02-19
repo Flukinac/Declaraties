@@ -16,9 +16,12 @@
             <?php echo h($userMonthbooking['modified']); ?>
             &nbsp;
         </dd>
+
     </dl>
 </div>
-
+<?php debug($userMonthbooking);exit(); if ($userMonthbooking['UserMonthbookings']['status'] == '0' && $UserMonthbooking['UserMonthbookings']['active'] == '1') {
+    echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));
+} ?>
 <div class="users view">
     <?php if (isset($data[1])) { ?>
         <h3><?php echo __('Contract boekingen'); ?></h3>

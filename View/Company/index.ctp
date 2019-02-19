@@ -3,7 +3,6 @@
     <table cellpadding="0" cellspacing="0">
         <thead>
         <tr>
-            <th><?php echo $this->Paginator->sort('Id'); ?></th>
             <th><?php echo $this->Paginator->sort('Naam'); ?></th>
             <th><?php echo $this->Paginator->sort('Postcode'); ?></th>
             <th><?php echo $this->Paginator->sort('Aangemaakt op'); ?></th>
@@ -19,7 +18,6 @@
         <?php foreach ($companies as $company): ?>
             <tr>
                 <?php if ($company['Company']['modified'] == $company['Company']['created']) {$company['Company']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
-                <td><?php echo h($company['Company']['company_id']); ?></td>
                 <td><?php echo h($company['Company']['name']); ?></td>
                 <td><?php echo h($company['Company']['postalcode']); ?></td>
                 <td><?php echo h($company['Company']['created']); ?></td>
@@ -29,9 +27,9 @@
                 <td><?php echo h($company['Company']['street']); ?></td>
                 <td><?php echo h($company['Company']['city']); ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $company['Company']['company_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $company['Company']['company_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $company['Company']['company_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $company['Company']['company_id']))); ?>
+                    <?php echo $this->Html->link(__('Openen'), array('action' => 'view', $company['Company']['company_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Html->link(__('Bewerken'), array('action' => 'edit', $company['Company']['company_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Form->postLink('Uitschrijven', array('action' => 'delete', $company['Company']['company_id']), array('confirm' => 'Bevestig verwijderen','class' => 'rad-button dark gradient')); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

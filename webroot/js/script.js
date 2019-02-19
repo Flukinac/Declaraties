@@ -9,12 +9,7 @@ $(document).ready(function () {
 $(document).ready(function () {
     $('.selectionYears').select2();
 });
-alert("test");
 
-$(".testy").keyup(function () {
-    var total = $(this).val();
-    $("p").text(total);
-});
 
 //Form opmaak
 $(".name").focus(function () {

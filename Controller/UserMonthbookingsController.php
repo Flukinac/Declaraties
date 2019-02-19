@@ -14,19 +14,22 @@ App::uses('AppController', 'Controller');
  */
 class UserMonthbookingsController extends AppController
 {
-    public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company');
+    public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
     public $helpers = array('Html', 'Form');
-    public $components = array('Paginator');
+    public $components = array('Paginator', "Email", "RequestHandler");
 
-    public function beforeFilter() {
-//        if (AuthComponent::user('role_id') !== 1) {
+//    public function beforeFilter()
+//    {
+//        if (AuthComponent::user('role_id') !== '1') {
 //            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
 //            $this->redirect('/');
 //        }
-    }
+//    }
+
 
     public function index()
     {
+//        s
         $this->UserMonthbookings->contain(array('Monthbookings' => array('Years', 'Months')));
         $this->paginate = array(
             'conditions' => array(
@@ -39,7 +42,19 @@ class UserMonthbookingsController extends AppController
         $this->set(array('UserMonthbookings' => $userMonthbookings));
     }
 
-
+    public function edit($userMonthbookingId) {
+        $allData = $this->addHours($userMonthbookingId);
+        $this->set(array(
+            'daysColor' => $allData[0],
+            'year' => $allData[1],
+            'month' => $allData[2],
+            'contracts' => $allData[3],
+            'bookingInfo' => $allData[4],
+            'bookingTypes' => $allData[5],
+            'userMonthbookingId' => $userMonthbookingId)
+        );
+        return $this->render('add');
+    }
     public function addMonthBooking()
     {
         //if there is request data AKA submit form
@@ -89,7 +104,6 @@ class UserMonthbookingsController extends AppController
 
     }
 
-
     public function addUserMonthBooking($monthbookingId)
     {
 
@@ -126,6 +140,63 @@ class UserMonthbookingsController extends AppController
 
     }
 
+    public function view_pdf($userMonthbookingId = null)
+    {
+        if (!$userMonthbookingId) {
+            $this->Flash->error('Sorry, there was no PDF selected.');
+            $this->redirect(array('controller' => 'pages', 'action' => 'display'), null, true);
+        }
+        $this->layout = 'pdf'; //this will use the pdf.ctp layout
+
+        $allData = $this->addHours($userMonthbookingId);
+        $this->set(array(
+                'daysColor' => $allData[0],
+                'year' => $allData[1],
+                'month' => $allData[2],
+                'contracts' => $allData[3],
+                'bookingInfo' => $allData[4],
+                'bookingTypes' => $allData[5],
+                'userMonthbookingId' => $userMonthbookingId,
+                'hours' => $this->request->data
+        ));
+
+        $this->render();    //TODO zorgen dat dit formulier ook werkt voor meerdere contracten en het totaal opteld voor de interne uren. NB de data zal in deze functie anders ingedeeld moeten worden
+
+    }
+
+    public function settings()
+    {
+        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
+        $status = array(0 => 'openstaand', 1 => 'goedgekeurd', 2 => 'beide');
+        $active = array(0 => 'non actief', 1 => 'actief', 2 => 'beide');
+        $result = $this->getMonthsYears();
+
+        $this->set('values', array('status' => $status, 'active' => $active, 'months' => $result['months'], 'years' => $result['years']));
+
+        $this->render('settings');
+    }
+
+    public function search()
+    {
+        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
+        $this->control();
+    }
+
+    public function approve()
+    {
+        $this->request->allowMethod('post');
+        foreach ($this->request->data['UserMonthbookings'] as $key => $value) {
+            $this->UserMonthbookings->id = $key;
+            if (!$this->UserMonthbookings->exists()) {
+                throw new NotFoundException(__('Boeking ' . $key . 'niet gevonden'));
+            }
+            if (!$this->UserMonthbookings->save(array('UserMonthbookings' => array('status' => $value)))) {
+                $this->Flash->error(__('Fout bij goedkeuring van boeking ' . $key . ', probeer het nog eens.'));
+            }
+        }
+        $this->control();
+    }
+
     public function addHours($userMonthbookingId)
     {
 
@@ -139,13 +210,12 @@ class UserMonthbookingsController extends AppController
             )
         ));
 
-
         if ($securityCheck) {
 
             if ($this->request->is('post')) {
 
                 if ($this->saveHours($this->request->data['UserMonthbooking'], $userMonthbookingId)) {
-
+                    $this->mailToHR();
                     //todo return to overzicht maandstaat
 
 
@@ -157,6 +227,8 @@ class UserMonthbookingsController extends AppController
                 }
 
             }
+
+            $bookingInfo = $securityCheck['UserMonthbookings'];
 
             $this->InternHours->recursive = -1;
             $this->ContractHours->recursive = -1;
@@ -204,21 +276,19 @@ class UserMonthbookingsController extends AppController
             $bookingTypes = $this->InternHoursTypes->find('all', array('recursive' => -1));    //ophalen van interne uren types
             $chosenMonth = $securityCheck['Monthbookings']['Months']['month'];
 
-            //hier wordt meegestuurd: dagen in getalvorm, maanden in getalvorm, contracten: begindatum, einddatum, id en bedrijfsnaam, bookingtypes id, userMonthbookingId.
-            $this->set(array(
-                    'days' => $days,
-                    'year' => $year,
-                    'month' => $chosenMonth,
-                    'contracts' => $contracts,
-                    'bookingTypes' => $bookingTypes,
-                    'userMonthbookingId' => $userMonthbookingId)
-            );
+            foreach ($days as $key => $day) {   //dagen worden hier ook omgezet naar bruikbare kleuren voor de tabelvakjes
+                $color[$key] = 'yellow';
+                if ($day == 'weekend') {
+                    $color[$key] = 'lightblue';
+                } elseif ($day == '') {
+                    $color[$key] = 'white';
+                }
+            }
 
+            //hier wordt meegestuurd: dagen in int, maanden in int, contracten: begindatum, einddatum, id en bedrijfsnaam, bookingtypes id, userMonthbookingId, booking algemene info.
+            return array($color, $year, $chosenMonth, $contracts, $bookingInfo, $bookingTypes, $userMonthbookingId);
 
             //TEST
-
-            $this->render('add');
-
 
         } else {
 
@@ -228,36 +298,8 @@ class UserMonthbookingsController extends AppController
 
     }
 
-
-    public function settings() {
-        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
-        $status = array(0 => 'openstaand', 1 => 'goedgekeurd', 2 => 'beide');
-        $active = array(0 => 'non actief', 1 => 'actief', 2 => 'beide');
-        $result = $this->getMonthsYears();
-
-        $this->set('values', array('status' => $status, 'active' => $active, 'months' => $result['months'], 'years' => $result['years']));
-
-        $this->render('settings');
-    }
-
-    public function search() {
-        SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
-        $this->control();
-    }
-    public function approve() {
-        $this->request->allowMethod('post');
-            foreach($this->request->data['UserMonthbookings'] as $key => $value) {
-                $this->UserMonthbookings->id = $key;
-                if (!$this->UserMonthbookings->exists()) {
-                    throw new NotFoundException(__('Boeking ' . $key . 'niet gevonden'));
-                }
-                if (!$this->UserMonthbookings->save(array('UserMonthbookings' => array('status' => $value)))) {
-                    $this->Flash->error(__('Fout bij goedkeuring van boeking ' . $key . ', probeer het nog eens.'));
-                }
-            }
-        $this->control();
-    }
-    private function control() {
+    private function control()
+    {
         if (SessionComponent::check('searchInfo')) {
             $data = SessionComponent::read('searchInfo');
         } else {
@@ -270,7 +312,7 @@ class UserMonthbookingsController extends AppController
         $month_id_from = $data['UserMonthbookings']['month_id_from'];
         $month_id_to = $data['UserMonthbookings']['month_id_to'];
         $year_id = $data['UserMonthbookings']['year_id'];
-        //opstellen van condities om filtering mogelijk te maken in de control setting en view
+        //opstellen van condities om filtering mogelijk te maken in de control settings en view
         if ($status < 2) {
             $conditions['UserMonthbookings.status'] = $status;
         }
@@ -329,7 +371,9 @@ class UserMonthbookingsController extends AppController
 
         $this->render('control');   //TODO pagination
     }
-    private function getMonthsYears() {
+
+    private function getMonthsYears()
+    {
         $paramsYears = array(
             'fields' => array('Years.year'),
             'recursive' => 0
@@ -356,7 +400,7 @@ class UserMonthbookingsController extends AppController
         //opening transaction
         $dataSource = ConnectionManager::getDataSource('default');
         $dataSource->begin();
-        $countTotalHours = array();
+        $totalHours = 0;
 
         $result = true;
 
@@ -377,7 +421,7 @@ class UserMonthbookingsController extends AppController
             if (!$hours) {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $countTotalHours[] = $value;
+                    $totalHours += $value;
 
                     $this->ContractHours->create();
 
@@ -392,7 +436,7 @@ class UserMonthbookingsController extends AppController
                         $result = false;
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $countTotalHours[] = $value;
+                    $totalHours += $value;
 
                     $this->InternHours->create();
 
@@ -412,7 +456,7 @@ class UserMonthbookingsController extends AppController
             } else {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $countTotalHours[] = $value;
+                    $totalHours += $value;
 
                     $data = array(
                         'contract_id' => $contractId,
@@ -428,7 +472,7 @@ class UserMonthbookingsController extends AppController
 
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $countTotalHours[] = $value;
+                    $totalHours += $value;
 
                     $data = array(
                         'intern_hour_type_id' => $contractId,
@@ -458,13 +502,12 @@ class UserMonthbookingsController extends AppController
         }
 
         //use the total amount of days and hours to be able to warn the user for insufficient declared hours.
-        $totalHours = array_sum($countTotalHours);
-        $totalDays = count($countTotalHours);
-
-        if ($totalHours / $totalDays < 8) {
-            $hourDiff = $totalDays * 8;
-            $hourDiff = $hourDiff - $totalHours;
-            echo $this->Flash->error(__('Het totaal aantal ingediende uren haalt de maandtax niet. Er komen ' . $hourDiff . ' uren tekort.'));
+        if ($totalHours < 160) {
+            $hourDiff = 160 - $totalHours;
+            echo $this->Flash->error(__('Het totaal aantal ingediende uren haalt de standaard maandtax van 160 uur niet. Er komen ' . $hourDiff . ' uren tekort.'));
+        } elseif ($totalHours > 160) {
+            $hourDiff = $totalHours - 160;
+            echo $this->Flash->error(__('Het totaal aantal ingediende uren is hoger dan de standaard maandtax van 160 uur. Er zijn ' . $hourDiff . ' uren extra geboekt.'));
         }
         if ($result) {
             $dataSource->commit();
@@ -474,10 +517,17 @@ class UserMonthbookingsController extends AppController
             $dataSource->rollback();
             return false;
         }
-
-
     }
 
+
+    private function mailToHR()
+    {
+        $Email = new CakeEmail('smtp');
+        $Email->from(array('Uren@localhost.com' => 'UrenApp'))
+            ->to('sevisser1@gmail.com')
+            ->subject('Uren update')
+            ->send('My message');
+    }
     private function checkDayType($month, $year)     //month in '04', year in '2019'
     {
         $days = array();

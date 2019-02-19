@@ -20,19 +20,20 @@ class UserController extends AppController {
     public $components = array('Paginator');
 
     public function beforeFilter() {
-        if (AuthComponent::user('role_id') !== 1) {
-            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-            $this->redirect('/');
-        }
-
         //modeltesting area
-//        $this->loadModel('ContractHours');
-//        debug($this->ContractHours->find('all'));
+//        $this->loadModel('Roles');
+//        debug($this->Roles->find('all'));
 //        exit();
     }
 
     public function index() {
-       $this->User->recursive = 1;
+//        $searchAbility = SessionComponent::read('Abilities.php');   //check of de userrol bevoegt is voor deze pagina
+//        if (!array_search(3, $searchAbility) && !array_search(1, $searchAbility)) {
+//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+//            $this->redirect('/');
+//            return false;
+//        }
+        $this->User->recursive = 1;
 
         //$this->User->contain(array('Contracts' => array('fields' => 'contract_id'), 'Roles'));
         // $this->User->find('all', array('fields' => array('')))
@@ -41,8 +42,14 @@ class UserController extends AppController {
     }
 
     public function view($id = null) {
+        if (AuthComponent::user('role_id') !== '1') {
+            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+            $this->redirect('/');
+            return false;
+        }
         $this->User->id = $id;
         if (!$this->User->exists()) {
+            CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
             throw new NotFoundException(__('Gebruiker niet gevonden.'));
         }
         $this->User->contain(array(
@@ -89,6 +96,12 @@ class UserController extends AppController {
     }
 
     public function edit($id = null) {
+        $accessToRoles = true;
+
+        if (AuthComponent::user('role_id') !== '1') {
+            $id = AuthComponent::user('user_id');
+            $accessToRoles = false;
+        }
 
         if ($this->request->is('post') || $this->request->is('put')) {
             $saveParams = array(
@@ -98,6 +111,9 @@ class UserController extends AppController {
             $this->User->id = $id;
             if ($this->User->exists()) {
 
+                if ($accessToRoles === false) {
+                    $this->request->data['User']['role_id'] = AuthComponent::user('role_id');   //beveiliging tegen form injection
+                }
                 $dataSource = ConnectionManager::getDataSource('default');
                 $dataSource->begin();
                 $result = true;
@@ -169,7 +185,11 @@ class UserController extends AppController {
                 if ($result) {
                     $dataSource->commit();
                     $this->Flash->success(__('Gebruiker opgeslagen.'));
-                    return $this->redirect(array('controller' => 'User', 'action' => 'index'));
+                    if ($accessToRoles === true) {
+                        return $this->redirect(array('controller' => 'User', 'action' => 'index'));
+                    } else {
+                        return $this->redirect('/');
+                    }
                 } else {
 
                     $dataSource->rollback();
@@ -204,7 +224,11 @@ class UserController extends AppController {
 
         $this->request->data['UserInfo'] = $userInfo['UserInfo'];
         $this->request->data['User'] = $userInfo['User'];
-        $this->request->data['Roles'] = $this->Roles->find('list', $paramsRoles);
+        if ($accessToRoles) {
+            $this->request->data['Roles'] = $this->Roles->find('list', $paramsRoles);
+        } else {
+            $this->request->data['Roles'] = $accessToRoles;
+        }
 
 
         return $this->set('values', $this->request->data);
@@ -214,17 +238,15 @@ class UserController extends AppController {
 
         $this->request->allowMethod('post');
 
-        $this->User->id = $id;
-        if (!$this->User->exists()) {
-            throw new NotFoundException(__('Gebruiker niet gevonden'));
-        }
-        if ($this->User->delete()) {
-            $this->Flash->success(__('Gebruiker verwijderd'));
-            return $this->redirect(array('action' => 'index'));
-        }
-        $this->Flash->error(__('Fout bij deleten. De gebruiker is niet verwijderd. Probeer het nog eens.'));
+//        $this->User->id = $id;
+//        if (!$this->User->exists()) {
+//            throw new NotFoundException(__('Gebruiker niet gevonden'));
+//        }
+//        if ($this->User->delete()) {
+//            $this->Flash->success(__('Gebruiker verwijderd'));
+//            return $this->redirect(array('action' => 'index'));
+//        }
+        $this->Flash->error(__('Nog te bepalen welke gegevens er verwijderd gaan worden.'));
         return $this->redirect(array('action' => 'index'));
     }
-
-
 }

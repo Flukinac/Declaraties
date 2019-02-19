@@ -1,8 +1,6 @@
-<div class="index">
+<div class="index"><br><br>
     <h2><?php echo __('Bedrijf');?></h2>
     <dl>
-        <dt><?php echo __('Id'); ?></dt>
-        <dd><?php echo h($company['Company']['company_id']); ?></dd>
         <dt><?php echo __('Naam'); ?></dt>
         <dd><?php echo h($company['Company']['postalcode']); ?></dd>
         <dt><?php echo __('Aangemaakt op'); ?></dt>

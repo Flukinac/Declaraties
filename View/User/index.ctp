@@ -28,7 +28,7 @@
                     <td class="actions">
                         <?php echo $this->Html->link(__('Tonen'), array('action' => 'view', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
                         <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['username']))); ?>
+                        <?php echo $this->Form->postLink('Uitschrijven', array('action' => 'delete', $user['User']['user_id']), array('confirm' => 'Bevestig verwijderen','class' => 'rad-button dark gradient')); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

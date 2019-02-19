@@ -24,6 +24,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         <?= $this->Html->script('jQuery 3.3.1'); ?>
         <?= $this->Html->script('https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js') ?>
         <?php echo $this->Html->charset(); ?>
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
         <title>
             Uren declaratie
@@ -65,7 +66,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <li class="nav-item active">
                 <a class="nav-link" href="/cakeUren">Home <span class="sr-only">(current)</span></a>
             </li>
-            <?php if (AuthComponent::user('role_id') == 1): ?>
+            <?php if (AuthComponent::user('role_id') == '1'): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Gebruikers
@@ -121,9 +122,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     Beheer
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'nav-link')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Gebruikers beheer'), array('controller' => 'User', 'action' => 'users'), array('class' => 'nav-link')); ?>
+                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
             <?php else: ?>
@@ -131,7 +130,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 <a class="nav-link" href="/cakeUren/UserMonthbookings/addMonthBooking">Nieuwe boeking <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="/cakeUren/UserMonthbookings/index">Al mijn boekingen <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/cakeUren/UserMonthbookings/index">Mijn boekingen <span class="sr-only">(current)</span></a>
             </li>
             <?php endif; ?>
         </ul>
