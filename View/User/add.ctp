@@ -5,8 +5,7 @@
         <fieldset>
             <?php
             echo $this->Form->input('username', array('label' => 'naam', 'placeholder' => 'naam', 'class' => 'formText'));
-            echo $this->Form->input('password', array('label' => 'wachtwoord', 'placeholder' => 'wachtwoord', 'class' => 'formText'));
-            echo $this->Form->input('password', array('label' => 'Herhaal wachtwoord', 'placeholder' => 'Herhaal wachtwoord', 'class' => 'formText'));
+            echo $this->Form->input('email', array('label' => 'email adres', 'placeholder' => 'email adres', 'class' => 'formText'));
             echo $this->Form->input('role_id', array('label' => 'Rol', 'options' => $role, 'class' => 'formText'));
             ?>
         </fieldset>

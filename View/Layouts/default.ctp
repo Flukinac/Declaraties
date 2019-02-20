@@ -141,6 +141,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php echo $this->Html->link(__('Mijn profiel'), array('controller' => 'User', 'action' => 'edit/' . AuthComponent::user("user_id"))); ?>
                 <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link(__('Nieuw wachtwoord'), array('controller' => 'User', 'action' => 'password/' . AuthComponent::user("user_id"))); ?>
+                <div class="dropdown-divider"></div>
                     <?php echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout')); ?>
             </div>
         </div>

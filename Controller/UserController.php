@@ -77,6 +77,7 @@ class UserController extends AppController {
         if ($this->request->is('post')) {
 
             $this->User->create();
+
             if ($this->User->save($this->request->data)) {
                 $this->Flash->success(__('Gebruiker opgeslagen.'));
                 return $this->redirect(array('action' => 'index'));
@@ -234,6 +235,27 @@ class UserController extends AppController {
         return $this->set('values', $this->request->data);
     }
 
+    public function password($id = null) {
+        if ($this->request->is('post') || $this->request->is('put')) {
+
+            if (AuthComponent::user('user_id') == $id) {
+                $this->User->id = $id;
+
+                if ($this->User->save($this->request->data)) {
+                    $this->Flash->success(__('Wachtwoord gewijzigd.'));
+                    return $this->redirect(array('action' => 'index'));
+                } else {
+                    $this->Flash->error(__('Opslaan mislukt. Probeer het nog eens.'));
+                }
+            } else {
+                $this->Flash->error(__('Gebruiker niet gevonden.'));
+                return $this->redirect(array('action' => 'index'));
+            }
+        } else {
+            //return $this->render('password');
+        }
+    }
+//$2a$10$hcmkohOnF5d2k5/hrVDlyu0OdsrnXxGBzbfNXhjSGhsTtrilhCsXq
     public function delete($id = null) {
 
         $this->request->allowMethod('post');

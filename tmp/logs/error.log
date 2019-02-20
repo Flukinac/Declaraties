@@ -8870,3 +8870,244 @@ Request URL: /cakeUren/js/select.js
 Stack Trace:
 #0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2019-02-19 16:15:30 Error: [MissingTableException] Table user_infos for model UserInfo was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_infos',
+  'class' => 'UserInfo',
+  'ds' => 'default',
+)
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3673): Model->setSource('user_infos')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(2650): Model->schema()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1857): DboSource->fields(Object(UserInfo), 'UserInfo', '')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1200): DboSource->generateAssociationQuery(Object(User), Object(UserInfo), 'hasOne', 'UserInfo', Array, Array, false)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(129): Model->find('first', Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(78): BaseAuthenticate->_findUser('fluke', 'check')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\AuthComponent.php(772): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\AuthComponent.php(612): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\php\www\cakeUren\app\Controller\AppController.php(98): AuthComponent->login()
+#12 [internal function]: AppController->login()
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#16 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2019-02-19 16:17:44 Error: [MissingTableException] Table user_infos for model UserInfo was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'user_infos',
+  'class' => 'UserInfo',
+  'ds' => 'default',
+)
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3673): Model->setSource('user_infos')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1394): Model->getDataSource()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(2650): Model->schema()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1857): DboSource->fields(Object(AppModel), 'UserInfo', '')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1200): DboSource->generateAssociationQuery(Object(User), Object(AppModel), 'hasOne', 'UserInfo', Array, Array, false)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\Auth\BaseAuthenticate.php(129): Model->find('first', Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\Auth\FormAuthenticate.php(78): BaseAuthenticate->_findUser('fluke', 'check')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\AuthComponent.php(772): FormAuthenticate->authenticate(Object(CakeRequest), Object(CakeResponse))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Component\AuthComponent.php(612): AuthComponent->identify(Object(CakeRequest), Object(CakeResponse))
+#11 C:\xampp\php\www\cakeUren\app\Controller\AppController.php(98): AuthComponent->login()
+#12 [internal function]: AppController->login()
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#16 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#17 {main}
+2019-02-19 18:40:35 Error: [SocketException] SMTP Error: 530 5.7.0 Must issue a STARTTLS command first. b17sm3839134ejh.36 - gsmtp
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(186): SmtpTransport->_smtpSend('AUTH LOGIN', '334|500|502|504')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(87): SmtpTransport->_auth()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\CakeEmail.php(1183): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(529): CakeEmail->send('My message')
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(218): UserMonthbookingsController->mailToHR()
+#5 [internal function]: UserMonthbookingsController->addHours('54')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-19 18:43:55 Error: [SocketException] SMTP Error: 530 5.7.0 Must issue a STARTTLS command first. n12sm3723654ejx.23 - gsmtp
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(186): SmtpTransport->_smtpSend('AUTH LOGIN', '334|500|502|504')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(87): SmtpTransport->_auth()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\CakeEmail.php(1183): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(529): CakeEmail->send('My message')
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(218): UserMonthbookingsController->mailToHR()
+#5 [internal function]: UserMonthbookingsController->addHours('54')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-19 22:56:08 Error: [SocketException] SMTP Error: 530 5.7.0 Must issue a STARTTLS command first. s46sm5338895edd.9 - gsmtp
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(186): SmtpTransport->_smtpSend('AUTH LOGIN', '334|500|502|504')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(87): SmtpTransport->_auth()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\CakeEmail.php(1183): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(529): CakeEmail->send('My message')
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(218): UserMonthbookingsController->mailToHR()
+#5 [internal function]: UserMonthbookingsController->addHours('54')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-20 00:52:58 Error: [SocketException] SMTP timeout.
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(149): SmtpTransport->_smtpSend(NULL, '220')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(86): SmtpTransport->_connect()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\CakeEmail.php(1183): SmtpTransport->send(Object(CakeEmail))
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(529): CakeEmail->send('My message')
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(218): UserMonthbookingsController->mailToHR()
+#5 [internal function]: UserMonthbookingsController->addHours('54')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-20 00:58:28 Error: [SocketException] SMTP server did not accept the connection or trying to connect to non TLS SMTP server using TLS.
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\SmtpTransport.php(86): SmtpTransport->_connect()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Network\Email\CakeEmail.php(1183): SmtpTransport->send(Object(CakeEmail))
+#2 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(530): CakeEmail->send('My message')
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(219): UserMonthbookingsController->mailToHR()
+#4 [internal function]: UserMonthbookingsController->addHours('54')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-02-20 01:39:42 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'validate' at line 1
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('validate', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('validate', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('validate', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('validate', Array, Object(User))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(242): Model->__call('validate', Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 01:39:56 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'validate' at line 1
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('validate', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('validate', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('validate', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('validate', Array, Object(User))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(242): Model->__call('validate', Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 01:42:52 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'validate' at line 1
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('validate', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('validate', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('validate', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('validate', Array, Object(User))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(242): Model->__call('validate', Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 01:45:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(User), '`password` = Ar...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(243): Model->save(Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 01:45:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(User), '`password` = Ar...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(243): Model->save(Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 03:09:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(User), '`password` = Ar...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(245): Model->save(Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 03:33:24 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(User), '`password` = Ar...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(244): Model->save(Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-02-20 14:43:46 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/User/password/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(User), '`test` = Array,...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(244): Model->save(Array)
+#6 [internal function]: UserController->password('15')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}

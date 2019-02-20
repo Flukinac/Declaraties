@@ -1,5 +1,6 @@
 <?php
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * @property UserMonthbookings $UserMonthbookings
@@ -16,7 +17,7 @@ class UserMonthbookingsController extends AppController
 {
     public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
     public $helpers = array('Html', 'Form');
-    public $components = array('Paginator', "Email", "RequestHandler");
+    public $components = array('Paginator');
 
 //    public function beforeFilter()
 //    {
@@ -523,10 +524,12 @@ class UserMonthbookingsController extends AppController
     private function mailToHR()
     {
         $Email = new CakeEmail('smtp');
-        $Email->from(array('Uren@localhost.com' => 'UrenApp'))
+        $Email->template('temp')
+            ->emailFormat('html')
+            ->from(array('Uren@localhost.com' => 'UrenApp'))
             ->to('sevisser1@gmail.com')
             ->subject('Uren update')
-            ->send('My message');
+            ->send();
     }
     private function checkDayType($month, $year)     //month in '04', year in '2019'
     {
