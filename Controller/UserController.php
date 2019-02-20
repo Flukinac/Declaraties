@@ -7,17 +7,23 @@ App::uses('appController', 'Controller');
  * @Property InternHours $InternHours
  * @property Roles $Roles
  * @property User $User
- * @property UserInfo $UserInfo
- * @property Birthplaces $Birthplaces
- * @property Cities $Cities
- * @property Countries $Countries
  * @property ContractHours $ContractHours
  */
 
 class UserController extends AppController {
-    public $helpers = array('Html', 'Form');
+    public $helpers = array('Html', 'Form', 'Paginator');
     public $uses = array('User', 'UserInfo', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours', 'Cities', 'Countries', 'Birthplaces');
     public $components = array('Paginator');
+    public $paginate = array(
+        'limit' => 5,
+        'recursive' => 1,
+        'order' => array(
+            'User.username' => 'asc'
+        ),
+        'conditions' => array(
+            'User.status' => 1
+        )
+    );
 
     public function beforeFilter() {
         //modeltesting area
@@ -33,12 +39,12 @@ class UserController extends AppController {
 //            $this->redirect('/');
 //            return false;
 //        }
-        $this->User->recursive = 1;
+        $this->Paginator->settings = $this->paginate;
 
-        //$this->User->contain(array('Contracts' => array('fields' => 'contract_id'), 'Roles'));
-        // $this->User->find('all', array('fields' => array('')))
-        //($this->paginate());
-        $this->set('users', $this->paginate());
+        $cat_data = $this->Paginator->paginate('User');
+
+
+        $this->set('users', $cat_data);
     }
 
     public function view($id = null) {
@@ -260,14 +266,19 @@ class UserController extends AppController {
 
         $this->request->allowMethod('post');
 
-//        $this->User->id = $id;
-//        if (!$this->User->exists()) {
-//            throw new NotFoundException(__('Gebruiker niet gevonden'));
-//        }
-//        if ($this->User->delete()) {
-//            $this->Flash->success(__('Gebruiker verwijderd'));
-//            return $this->redirect(array('action' => 'index'));
-//        }
+        $this->User->id = $id;
+        if (!$this->User->exists()) {
+            throw new NotFoundException(__('Gebruiker niet gevonden'));
+        }
+        $save = array(
+            'User' => array(
+                'status' => 0
+            )
+        );
+        if ($this->User->save($save)) {
+            $this->Flash->success(__('Gebruiker verwijderd'));
+            return $this->redirect(array('action' => 'index'));
+        }
         $this->Flash->error(__('Nog te bepalen welke gegevens er verwijderd gaan worden.'));
         return $this->redirect(array('action' => 'index'));
     }
