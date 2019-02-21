@@ -126,6 +126,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
+                    <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link(__('Mailtekst'), array('controller' => 'Administratie', 'action' => 'mailTemplate'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
             <?php else: ?>

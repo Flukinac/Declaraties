@@ -6,11 +6,12 @@
     </h1>
     <br>
     <h3 style="color: darkblue">
-        Beste <?php echo $name; ?>
+        Beste <?php echo $name; ?><br><br>
 
-        Het blijkt dat uw urenregistratie nog niet of onvolledig is ingevuld. Gelieve dit zo snel mogelijk te doen.
+        <?php echo $tekst; ?>
 
-        Mvg,
+        <br><br>
+        Mvg,<br>
         HR</h3>
 </div>
 </body>

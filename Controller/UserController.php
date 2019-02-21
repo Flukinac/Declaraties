@@ -5,6 +5,7 @@ App::uses('appController', 'Controller');
  * @property Contracts $Contracts
  * @Property UserMonthbookings $UserMonthbookings
  * @Property InternHours $InternHours
+ * @Property Administratie $Administratie
  * @property Roles $Roles
  * @property User $User
  * @property ContractHours $ContractHours
@@ -12,7 +13,7 @@ App::uses('appController', 'Controller');
 
 class UserController extends AppController {
     public $helpers = array('Html', 'Form', 'Paginator');
-    public $uses = array('User', 'UserInfo', 'Roles', 'Contracts', 'InternHoursTypes', 'InternHours', 'Cities', 'Countries', 'Birthplaces');
+    public $uses = array('User', 'UserInfo', 'Roles', 'Administratie', 'Contracts', 'InternHoursTypes', 'InternHours', 'Cities', 'Countries', 'Birthplaces');
     public $components = array('Paginator');
     public $paginate = array(
         'limit' => 5,
@@ -27,8 +28,8 @@ class UserController extends AppController {
 
     public function beforeFilter() {
         //modeltesting area
-//        $this->loadModel('Roles');
-//        debug($this->Roles->find('all'));
+//        $this->loadModel('Administratie');
+//        debug($this->Administratie->find('all'));
 //        exit();
     }
 

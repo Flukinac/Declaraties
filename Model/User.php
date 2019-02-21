@@ -75,7 +75,7 @@ class User extends AppModel {
                 'message' => 'Dit mailadres bestaat al'
             )
         ),
-        'role' => array(
+        'role_id' => array(
             'valid' => array(
                 'rule' => array('inList', array('admin', 'user', 'company')),
                 'allowEmpty' => false,

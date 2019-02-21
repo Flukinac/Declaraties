@@ -9495,3 +9495,561 @@ Stack Trace:
 #1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
 #2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2019-02-21 13:13:53 Error: [MissingTableException] Table administrations for model Administration was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'administrations',
+  'class' => 'Administration',
+  'ds' => 'default',
+)
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3673): Model->setSource('administrations')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): Model->getDataSource()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(32): Model->find('all')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): UserController->beforeFilter(Object(CakeEvent))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-02-21 13:28:58 Error: [MissingViewException] View file "Pages\mailtekst.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Pages\\mailtekst.ctp',
+)
+Request URL: /cakeUren/pages/Mailtekst
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Pages\\mailtekst')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('Mailtekst', NULL)
+#2 C:\xampp\php\www\cakeUren\app\Controller\PagesController.php(72): Controller->render('Mailtekst')
+#3 [internal function]: PagesController->display('Mailtekst')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2019-02-21 13:50:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'andministration_id' in 'where clause'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Adminis...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Adminis...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Adminis...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Administratie), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(30): Model->find('first', Array)
+#7 [internal function]: AdministratieController->mailTemplate()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-21 13:51:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'andministratie_id' in 'where clause'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Adminis...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Adminis...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Adminis...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Administratie), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(30): Model->find('first', Array)
+#7 [internal function]: AdministratieController->mailTemplate()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-21 13:51:45 Error: [MissingViewException] View file "Administratie\mail_template.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_template.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 13:52:20 Error: [MissingViewException] View file "Administratie\mail_template.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_template.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 13:53:26 Error: [MissingViewException] View file "Administratie\mail_template.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_template.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 13:59:20 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:00:36 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:07:20 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/administratie/Mailtekst
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 14:08:25 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/administratie/Mailtekst
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 14:09:09 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/administratie/Mailtekst
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 14:09:19 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/administratie/Mailtekst
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 14:09:22 Error: [ParseError] syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting identifier (T_STRING) or variable (T_VARIABLE) or '{' or '$'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 14:10:04 Error: [Error] Call to undefined method AdministratieController::save()
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:11:02 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:15:13 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:17:22 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:20:11 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 14:29:07 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:33:08 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:33:34 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:34:18 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:36:22 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:38:12 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:43:38 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(Administratie), '`text` = Array', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(23): Model->saveField('text', Array)
+#7 [internal function]: AdministratieController->mailTemplate()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-21 17:44:58 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:44:58 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:45:20 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 17:53:42 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 18:10:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(Administratie), '`text` = Array', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(23): Model->saveField('text', Array)
+#7 [internal function]: AdministratieController->mailTemplate()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-21 18:20:23 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Administratie.id' in 'where clause'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT COUNT(*)...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('count', Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(2917): Model->find('count', Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1827): Model->exists()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#10 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(19): Model->saveField('text', 'bjhbgj')
+#11 [internal function]: AdministratieController->mailTemplate()
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2019-02-21 18:22:21 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Administratie.id' in 'where clause'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT COUNT(*)...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('count', Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(2917): Model->find('count', Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1827): Model->exists()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#10 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(19): Model->saveField('text', 'bjhbgj')
+#11 [internal function]: AdministratieController->mailTemplate()
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2019-02-21 18:23:08 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Administratie.id' in 'where clause'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT COUNT(*)...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(AppModel), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('count', Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(2917): Model->find('count', Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1827): Model->exists()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#10 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(19): Model->saveField('text', 'bjhbgj')
+#11 [internal function]: AdministratieController->mailTemplate()
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2019-02-21 18:23:56 Error: [Error] Call to a member function saveField() on null
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 18:25:25 Error: [MissingPluginException] Plugin Administratie could not be found.
+Exception Attributes: array (
+  'plugin' => 'Administratie',
+)
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(227): CakePlugin::path('Administratie')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(549): App::path('Model', 'Administratie')
+#2 [internal function]: App::load('php')
+#3 [internal function]: spl_autoload_call('php')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('php')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(171): ClassRegistry::init('php', true)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(204): FormHelper->_getModel('Administratie.p...')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(354): FormHelper->_introspectModel('Administratie.p...', 'key')
+#8 C:\xampp\php\www\cakeUren\app\View\Administratie\mail_template.ctp(3): FormHelper->create('php')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include('C:\\xampp\\php\\ww...')
+#10 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#11 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2019-02-21 18:25:32 Error: [MissingControllerException] Controller class Administratie.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Administratie.phpController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Administratie.php/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-21 18:26:53 Error: [MissingControllerException] Controller class Administratie.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Administratie.phpController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Administratie.php/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-21 18:27:15 Error: [MissingControllerException] Controller class Administratie.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Administratie.phpController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Administratie.php/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-21 18:27:21 Error: [MissingControllerException] Controller class Administratie.phpController could not be found.
+Exception Attributes: array (
+  'class' => 'Administratie.phpController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/Administratie.php/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-21 18:27:27 Error: [MissingPluginException] Plugin Administratie could not be found.
+Exception Attributes: array (
+  'plugin' => 'Administratie',
+)
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(227): CakePlugin::path('Administratie')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(549): App::path('Model', 'Administratie')
+#2 [internal function]: App::load('php')
+#3 [internal function]: spl_autoload_call('php')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('php')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(171): ClassRegistry::init('php', true)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(204): FormHelper->_getModel('Administratie.p...')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\View\Helper\FormHelper.php(354): FormHelper->_introspectModel('Administratie.p...', 'key')
+#8 C:\xampp\php\www\cakeUren\app\View\Administratie\mail_template.ctp(3): FormHelper->create('php')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include('C:\\xampp\\php\\ww...')
+#10 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#11 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#14 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#15 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#16 {main}
+2019-02-21 18:29:08 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 18:30:03 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 18:31:36 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 18:57:19 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1926): Mysql->update(Object(Administratie), '`text` = Array', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1712): Model->save(Array, Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(19): Model->saveField('text', Array)
+#7 [internal function]: AdministratieController->mailTemplate()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-21 18:59:23 Error: [ParseError] syntax error, unexpected ''type'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-21 19:00:14 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-21 19:00:22 Error: [NotFoundException] Gebruiker niet gevonden.
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: AdministratieController->mailTemplate()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}

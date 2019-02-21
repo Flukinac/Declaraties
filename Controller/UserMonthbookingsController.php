@@ -7,6 +7,7 @@ App::uses('CakeEmail', 'Network/Email');
  * @property Monthbookings $Monthbookings
  * @property ContractHours $ContractHours
  * @property InternHoursTypes $InternHoursTypes
+ * @property php $Administration
  * @property InternHours $InternHours
  * @property Contracts $Contracts
  * @property Months $Months
@@ -15,7 +16,7 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class UserMonthbookingsController extends AppController
 {
-    public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
+    public $uses = array('UserMonthbookings', 'Monthbookings', 'Administratie.php', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
     public $helpers = array('Html', 'Form');
     public $components = array('Paginator');
 
@@ -369,7 +370,7 @@ class UserMonthbookingsController extends AppController
 
         $this->set(compact('result', 'totalHours'));
 
-        $this->render('control');   //TODO pagination
+        $this->render('Administratie.php');   //TODO pagination
     }
 
     private function getMonthsYears()
@@ -540,8 +541,16 @@ class UserMonthbookingsController extends AppController
                 )
             ));
 
+            //vind tekst voor email
+            $tekst = $this->Administration->find('first', array(
+                'conditions' => array(
+                    'Administrations.administration_id' => 0
+                ),
+                'fields' => 'text'
+            ));
+
             $Email = new CakeEmail('smtp');             //stuur email naar user
-            $Email->viewVars(array('name' => $user['User']['username']));
+            $Email->viewVars(array('name' => $user['User']['username'], 'tekst' => $tekst));
             $Email->template('urenRegistreren')
                 ->emailFormat('html')
                 ->from(array('Uren@localhost.com' => 'UrenApp'))
@@ -551,7 +560,7 @@ class UserMonthbookingsController extends AppController
             $response["success"] = true;
             $response["message"] = "Saved successfully";
         }
-        
+
         echo json_encode($response);
     }
 
