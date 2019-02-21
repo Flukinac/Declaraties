@@ -35,6 +35,7 @@ class AppController extends Controller {
 
     public $components = array(
         'Flash',
+        'RequestHandler',
         'Auth' => array(
             'loginRedirect' => array(
                 'controller' => 'Pages',

@@ -216,7 +216,6 @@ class UserMonthbookingsController extends AppController
             if ($this->request->is('post')) {
 
                 if ($this->saveHours($this->request->data['UserMonthbooking'], $userMonthbookingId)) {
-                    $this->mailToHR();
                     //todo return to overzicht maandstaat
 
 
@@ -521,16 +520,41 @@ class UserMonthbookingsController extends AppController
     }
 
 
-    private function mailToHR()
+    public function attentionMail()
     {
-        $Email = new CakeEmail('smtp');
-        $Email->template('temp')
-            ->emailFormat('html')
-            ->from(array('Uren@localhost.com' => 'UrenApp'))
-            ->to('sevisser1@gmail.com')
-            ->subject('Uren update')
-            ->send();
+        $this->autoRender = false;
+        $response["success"] = false;
+        $response["message"] = "Server error";
+
+        if ($this->request->is('post')) {
+
+            //vind user gegevens
+            $user = $this->User->find('first', array(
+                'recursive' => -1,
+                'conditions' => array(
+                    'User.user_id' => $this->request->data["id"]
+                ),
+                'fields' => array(
+                    'username',
+                    'email'
+                )
+            ));
+
+            $Email = new CakeEmail('smtp');             //stuur email naar user
+            $Email->viewVars(array('name' => $user['User']['username']));
+            $Email->template('urenRegistreren')
+                ->emailFormat('html')
+                ->from(array('Uren@localhost.com' => 'UrenApp'))
+                ->to($user['User']['email'])
+                ->subject('Uren registreren')
+                ->send();
+            $response["success"] = true;
+            $response["message"] = "Saved successfully";
+        }
+        
+        echo json_encode($response);
     }
+
     private function checkDayType($month, $year)     //month in '04', year in '2019'
     {
         $days = array();

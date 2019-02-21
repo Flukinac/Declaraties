@@ -1,34 +1,50 @@
 $(document).ready(function () {
     $('.selection').select2();
-});
-
-$(document).ready(function () {
     $('.selectionMonths').select2();
-});
-
-$(document).ready(function () {
     $('.selectionYears').select2();
+
+
+    $('[id^=sendNotifcationMail]').click(function(event) {
+        var id = event.target.value;
+        var target = event.target.id;
+
+        $.ajax({
+            type: 'POST',
+            url: "/cakeUren/user_monthbookings/attentionMail/",
+            data: {id: id},
+            dataType: 'json',
+            success: function (response) {
+                if (response.success) {
+                    $('#' + target).hide();
+                }
+            },
+            error: function () {
+                alert('Fout met versturen')
+            }
+        });
+    });
+
+    //Form opmaak
+    $(".name").focus(function () {
+        $(".name-help").slideDown(500);
+    }).blur(function () {
+        $(".name-help").slideUp(500);
+    });
+
+    $(".email").focus(function () {
+        $(".email-help").slideDown(500);
+    }).blur(function () {
+        $(".email-help").slideUp(500);
+    });
+
+    $(".password").focus(function () {
+        $(".password-help").slideDown(500);
+    }).blur(function () {
+        $(".password-help").slideUp(500);
+    });
 });
 
 
-//Form opmaak
-$(".name").focus(function () {
-    $(".name-help").slideDown(500);
-}).blur(function () {
-    $(".name-help").slideUp(500);
-});
-
-$(".email").focus(function () {
-    $(".email-help").slideDown(500);
-}).blur(function () {
-    $(".email-help").slideUp(500);
-});
-
-$(".password").focus(function () {
-    $(".password-help").slideDown(500);
-}).blur(function () {
-    $(".password-help").slideUp(500);
-});
 
 //Form opmaak. schuifbalkjes
 // // Input Lock

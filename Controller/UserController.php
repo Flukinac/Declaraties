@@ -43,7 +43,6 @@ class UserController extends AppController {
 
         $cat_data = $this->Paginator->paginate('User');
 
-
         $this->set('users', $cat_data);
     }
 
@@ -257,8 +256,6 @@ class UserController extends AppController {
                 $this->Flash->error(__('Gebruiker niet gevonden.'));
                 return $this->redirect(array('action' => 'index'));
             }
-        } else {
-            //return $this->render('password');
         }
     }
 //$2a$10$hcmkohOnF5d2k5/hrVDlyu0OdsrnXxGBzbfNXhjSGhsTtrilhCsXq

@@ -14,10 +14,12 @@
             <th><?php echo $this->Paginator->sort('status', 'Status'); ?></th>
             <th><?php echo $this->Paginator->sort('active', 'Actief'); ?></th>
             <th><?php echo $this->Paginator->sort('check', 'Goedkeuren'); ?></th>
-            <th class="actions"><?php echo __('Actions'); ?></th>
+            <th class="actions"><?php echo __('Acties'); ?></th>
+            <th class="actions"><?php echo __('Mailing'); ?></th>
         </tr>
         </thead>
         <tbody>
+        <?php $i = 0; ?>
         <?php foreach ($result as $row): ?>
             <?php if ($row['UserMonthbookings']['modified'] == $row['UserMonthbookings']['created']) {$row['UserMonthbookings']['modified'] = ' ';}; ?>     <!--voorkomen van weergave van overeenkomende datum created en modified-->
             <tr>
@@ -39,16 +41,21 @@
                     $active = 'non actief';
                 };?>
                 <td><?php echo h($active); ?></td>
-                <td><?php echo $this->Form->checkbox($row['UserMonthbookings']['user_monthbooking_id'], array('checked' => $checked, 'label' => '', 'style' => 'width: 30px; height: 20px;'), 'checked'); ?></td>
+                <td><div style="align-content: center;"><?php echo $this->Form->checkbox($row['UserMonthbookings']['user_monthbooking_id'], array('checked' => $checked, 'label' => '', 'style' => 'width: 30px; height: 20px;'), 'checked'); ?></div></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'addHours', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));?>
+                    <?php echo $this->Html->link(__('Inkijken'), array('action' => 'view', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'addHours', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));?>
+                </td>
+                <td class="actions">
+                <?php if ($row['UserMonthbookings']['active'] == 1 && $row['UserMonthbookings']['status'] == 0) : ?>
+                        <button type="button" id=<?php echo 'sendNotifcationMail' . $i++;?> style="width: 140px; height: 30px;" value=<?php echo $row['UserMonthbookings']['user_id']; ?> class="rad-button dark gradient">Stuur mail</button>
+                    <?php endif; ?>
                 </td>
             </tr>
         <?php endforeach; ?>
         </tbody>
     </table>
-        <?php echo $this->Form->end('Opslaan. Weet u het zeker? Ja'); ?>
+        <?php echo $this->Form->end('Opslaan'); ?>
         <p>
         <?php
 //        echo $this->Paginator->counter(array(
