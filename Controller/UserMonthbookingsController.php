@@ -7,7 +7,6 @@ App::uses('CakeEmail', 'Network/Email');
  * @property Monthbookings $Monthbookings
  * @property ContractHours $ContractHours
  * @property InternHoursTypes $InternHoursTypes
- * @property php $Administration
  * @property InternHours $InternHours
  * @property Contracts $Contracts
  * @property Months $Months
@@ -16,7 +15,7 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class UserMonthbookingsController extends AppController
 {
-    public $uses = array('UserMonthbookings', 'Monthbookings', 'Administratie.php', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
+    public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
     public $helpers = array('Html', 'Form');
     public $components = array('Paginator');
 
@@ -370,7 +369,7 @@ class UserMonthbookingsController extends AppController
 
         $this->set(compact('result', 'totalHours'));
 
-        $this->render('Administratie.php');   //TODO pagination
+        $this->render('control');   //TODO pagination
     }
 
     private function getMonthsYears()
