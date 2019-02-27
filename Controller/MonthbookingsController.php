@@ -4,6 +4,7 @@ App::uses('appController', 'Controller');
 /**
  * @property Years $Years
  * @property Months $Months
+ * @property Roles $Roles
  */
 
 class MonthbookingsController extends AppController

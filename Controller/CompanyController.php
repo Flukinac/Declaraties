@@ -8,6 +8,13 @@ class CompanyController extends AppController {
     public $components = array('Paginator');
     public $paginate = array('limit' => 10);
 
+    public function beforeFilter() {
+//        if (AuthComponent::user('role_id') !== '1') {
+//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+//            $this->redirect('/');
+//        }
+    }
+
     public function index() {
         $this->Paginator->settings = $this->paginate;
         $data = $this->Paginator->paginate('Company');
@@ -64,15 +71,17 @@ class CompanyController extends AppController {
 
         $this->request->allowMethod('post');
 
-        $this->Company->id = $id;
-        if (!$this->Company->exists()) {
-            throw new NotFoundException(__('Bedrijf niet gevonden'));
-        }
-        if ($this->Company->delete()) {
-            $this->Flash->success(__('Bedrijf verwijderd'));
-            return $this->redirect(array('action' => 'index'));
-        }
-        $this->Flash->error(__('Fout bij deleten. Het bedrijf is niet verwijderd. Probeer het nog eens.'));
+//        $this->Company->id = $id;
+//        if (!$this->Company->exists()) {
+//            throw new NotFoundException(__('Bedrijf niet gevonden'));
+//        }
+//        if ($this->Company->delete()) {
+//            $this->Flash->success(__('Bedrijf verwijderd'));
+//            return $this->redirect(array('action' => 'index'));
+//        }
+//        $this->Flash->error(__('Fout bij deleten. Het bedrijf is niet verwijderd. Probeer het nog eens.'));
+
+        $this->Flash->error(__('Nog te bepalen welke gegevens er verwijderd gaan worden.'));
         return $this->redirect(array('action' => 'index'));
     }
 }

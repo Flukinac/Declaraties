@@ -1,4 +1,4 @@
-<div class="index"><?php //debug($UserMonthbookings);exit();?>
+<div class="index">
     <h2><?php echo __('Boekingen'); ?></h2>
     <table cellpadding="0" cellspacing="0">
         <thead>
@@ -7,7 +7,7 @@
             <th><?php echo $this->Paginator->sort('month', 'Maand'); ?></th>
             <th><?php echo $this->Paginator->sort('created', 'Aangemaakt op'); ?></th>
             <th><?php echo $this->Paginator->sort('modified', 'Bewerkt op'); ?></th>
-            <th class="actions"><?php echo __('Actions'); ?></th>
+            <th class="actions"><?php echo __('Bekijken'); ?></th>
         </tr>
         </thead>
         <tbody>
@@ -19,8 +19,7 @@
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['created']); ?></td>
                 <td><?php echo h($UserMonthbooking['UserMonthbookings']['modified']); ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'addHours', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
+                    <?php echo $this->Html->link(__('Openen'), array('action' => 'edit', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

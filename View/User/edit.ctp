@@ -1,20 +1,26 @@
 <div class="User form">
     <div class="wrapper">
-        <?php echo $this->Form->create('User'); ?>
+        <?php echo $this->Form->create('User');?>
                 <fieldset>
                     <legend><?php echo __('Gebruiker'); ?></legend>
                     <div>
-                        <?php echo $this->Form->input('username', array('placeholder' => 'Uw naam hier.', 'class' => 'formText')); ?>
+                        <?php echo $this->Form->input('username', array('label' => 'Gebruikersnaam', 'class' => 'formText')); ?>
                     </div>
                     <div>
-                        <?php echo $this->Form->input('password', array('label' => 'Wachtwoord', 'value' => '', 'placeholder' => 'Uw wachtwoord hier.', 'class' => 'formText')); ?>
+                        <?php echo $this->Form->input('UserInfo.Cities.cityname', array('label' => 'Stad', 'class' => 'formText')); ?>
                     </div>
                     <div>
-                        <?php echo $this->Form->input('passwordCheck', array('label' => 'Herhaal wachtwoord', 'value' => '', 'type' => 'password', 'placeholder' => 'Herhaal wachtwoord hier.', 'class' => 'formText')); ?>
+                        <?php echo $this->Form->input('UserInfo.Birthplaces.birthplace', array('label' => 'Geboorteplaats', 'class' => 'formText')); ?>
                     </div>
-                        <?php echo $this->Form->input('role_id', array('label' => 'Rol')); ?>
+                    <div>
+                        <?php echo $this->Form->input('UserInfo.Countries.country', array('label' => 'Land', 'class' => 'formText')); ?>
+                    </div>
+                    <div>
+                        <?php if ($values['Roles'] == true) {
+                            echo $this->Form->input('User.role_id', array('label' => 'Rol', 'options' => $values['Roles'], 'class' => 'formText'));
+                        } ?>
+                    </div>
                 </fieldset>
-        <?php echo $this->Form->end(array('class' => 'submit', 'label' => 'Opslaan')); ?>
+        <?php echo $this->Form->end(array('label' => 'Opslaan', array('class' => 'rad-button dark gradient'))); ?>
     </div>
 </div>
-

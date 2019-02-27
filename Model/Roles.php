@@ -28,11 +28,15 @@ class Roles extends AppModel {
     public $hasMany = array(
         'User' => array(
             'className' => 'User',
-            'conditions' => '',
-            'foreignKey' => 'role_id',
-            'order' => '',
-            'fields' => '',
-            'dependent' => false
+            'foreignKey' => 'role_id'
         )
+    );
+    public $hasAndBelongsToMany = array(
+        'Abilities' => array(
+                'className' => 'Abilities',
+                'joinTable' => 'abilities_roles',
+                'foreignKey' => 'role_id',
+                'associationForeignKey' => 'id'
+            )
     );
 }

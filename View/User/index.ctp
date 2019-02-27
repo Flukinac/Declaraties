@@ -1,6 +1,6 @@
 <div class="index">
     <h2><?php echo __('Alle gebruikers'); ?></h2>
-    <table cellpadding="0" cellspacing="0" class="table">
+    <table class="table">
         <thead class="thead-light">
             <tr>
                 <th><?php echo $this->Paginator->sort('username', 'Naam'); ?></th>
@@ -28,7 +28,7 @@
                     <td class="actions">
                         <?php echo $this->Html->link(__('Tonen'), array('action' => 'view', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
                         <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $user['User']['user_id']), array('class' => 'rad-button dark gradient')); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $user['User']['user_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $user['User']['username']))); ?>
+                        <?php echo $this->Form->postLink('Uitschrijven', array('action' => 'delete', $user['User']['user_id']), array('confirm' => 'Bevestig verwijderen','class' => 'rad-button dark gradient')); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

@@ -45,12 +45,12 @@ class EmailConfig {
 
 	public $smtp = array(
 		'transport' => 'Smtp',
-		'from' => array('site@localhost' => 'My Site'),
-		'host' => 'localhost',
-		'port' => 25,
+		'from' => array('site@gmail' => 'cakeUren'),
+		'host' => 'ssl://smtp.gmail.com',
+		'port' => 465,
 		'timeout' => 30,
-		'username' => 'user',
-		'password' => 'secret',
+		'username' => 'qiencommunity@gmail.com',
+		'password' => 'qienMunity!!',
 		'client' => null,
 		'log' => false,
 		//'charset' => 'utf-8',
@@ -78,7 +78,7 @@ class EmailConfig {
 		'emailFormat' => null,
 		'transport' => 'Smtp',
 		'host' => 'localhost',
-		'port' => 25,
+		'port' => 2525,
 		'timeout' => 30,
 		'username' => 'user',
 		'password' => 'secret',
@@ -87,5 +87,4 @@ class EmailConfig {
 		//'charset' => 'utf-8',
 		//'headerCharset' => 'utf-8',
 	);
-
 }

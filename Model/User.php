@@ -53,24 +53,43 @@ class User extends AppModel {
             'dependent' => false
         )
     );
-    public $hasOne = array(
-        'UserInfo' => array(
-            'className' => 'UserInfo',
-            'foreignKey' => 'user_info_id',
-            'dependent' => false
-        )
-    );
+
     public $validate = array(
         'username' => array(
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Een naam is vereist'
+            ),
+            'characters' => array(
+                'rule' => 'alphaNumeric',
+                'message' => 'Alleen Alfanumerieke karakters'
+            ),
+        ),
+        'email' => array(
+            'valid' => array(
+                'rule' => 'email',
+                'message' => 'Alleen een geldig mailadres is toegestaan'
+            ),
+            'isUnique' => array(
+                'rule' => 'isUnique',
+                'message' => 'Dit mailadres bestaat al'
+            )
+        ),
+        'role_id' => array(
+            'valid' => array(
+                'rule' => array('inList', array('admin', 'user', 'company')),
+                'allowEmpty' => false,
+                'message' => 'Kies een gebruikersrol'
             )
         ),
         'password' => array(
             'required' => array(
                 'rule' => 'notBlank',
                 'message' => 'Een wachtwoord is vereist'
+            ),
+            'password' => array(
+                'rule' => array('lengthBetween', 5, 15),
+                'message' => 'Het wachtwoord moet tussen de 5 en 15 karakters lang zijn.'
             )
         ),
         'passwordCheck' => array(
@@ -79,14 +98,6 @@ class User extends AppModel {
                 'message' => 'Wachtwoorden moeten overeenkomen.'
             )
         ),
-
-        'role' => array(
-            'valid' => array(
-                'rule' => array('inList', array('admin', 'user', 'company')),
-                'message' => 'Voer een geldige waarde in',
-                'allowEmpty' => false
-            )
-        )
     );
 
     public function beforeSave($options = array()) {

@@ -28,9 +28,7 @@
                 <td><?php echo h($contract['Contracts']['start_date']); ?></td>
                 <td><?php echo h($contract['Contracts']['end_date']); ?></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('View'), array('action' => 'view', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Form->postLink(__('Delete'), array('action' => 'delete', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $contract['Contracts']['contract_id']))); ?>
+                    <?php echo $this->Html->link(__('Openen'), array('action' => 'edit', $contract['Contracts']['contract_id']), array('class' => 'rad-button dark gradient')); ?>
                 </td>
             </tr>
         <?php endforeach; ?>

@@ -32,27 +32,24 @@ class ContractHours extends AppModel {
         ),
         'UserMonthbookings' => array(
             'className' => 'UserMonthbookings',
-            'foreignKey' => 'user_monthbookings_id',
+            'foreignKey' => 'user_monthbooking_id',
             'dependent' => false
         )
     );
-    public $validate = array(
+    public $validate = array(       //@todo messages actief maken
         'hours' => array(
-            'Rulename1' => array(
+            'comparison' => array(
                 'rule' => array('comparison', '>=', 0),
-                'required' => true,
                 'message' => 'Invoer moet tussen 0-16 liggen'
             ),
-            'Rulename2' => array(
+            'comparison2' => array(
                 'rule' => array('comparison', '<=', 16),
-                'required' => true,
                 'message' => 'Invoer moet tussen 0-16 liggen'
             ),
-            'Rulename3' => array(
-                'rule' => 'numeric',
-                'required' => true,
-                'message' => 'Invoer moet uit cijfers bestaan'
-            ),
+//            'numeric' => array(
+//                'rule' => 'numeric',                          //@todo activeren als het mogelijk is om ook : in te voeren
+//                'message' => 'Invoer moet uit cijfers bestaan'
+//            ),
         )
     );
 }

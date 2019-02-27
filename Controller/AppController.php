@@ -26,17 +26,20 @@ App::uses('Controller', 'Controller');
  *
  * Add your application-wide methods in the class below, your controllers
  * will inherit them.
- *
+ * @Property $user User
+ * @Property $abilitiesroles AbilitiesRoles
  * @package		app.Controller
  * @link		https://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+
     public $components = array(
         'Flash',
+        'RequestHandler',
         'Auth' => array(
             'loginRedirect' => array(
-                'controller' => 'User',
-                'action' => 'index'
+                'controller' => 'Pages',
+                'action' => 'display'
             ),
             'logoutRedirect' => array(
                 'controller' => 'User',
@@ -68,7 +71,7 @@ class AppController extends Controller {
      *
      * @var array
      */
-    public $uses = array();
+    public $uses = array('User', 'AbilitiesRoles');
 
 
     public $user_id =  NULL;
@@ -76,8 +79,8 @@ class AppController extends Controller {
 
     public function beforeFilter()
     {
-
         $this->Auth->allow('login');
+        CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
 
     }
 
@@ -94,8 +97,19 @@ class AppController extends Controller {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                return $this->redirect($this->Auth->redirectUrl());
+                $abilities = $this->AbilitiesRoles->find("list", array(
+                    'conditions' => array(
+                        'role_id' => AuthComponent::user('role_id')
+                    ),
+                    'fields' => array(
+                        'ability_id'
+                    )
+                ));
+
+                SessionComponent::write('Abilities', $abilities);    //zoek de abilities op van de ingelogde user adhv diens role_id en sla de abilities op.
+                return $this->redirect('/');
             }
+            CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
             $this->Flash->error(__('Verkeerde gebruikersnaam of wachtwoord. Probeer het nog eens.'));
         }
     }
