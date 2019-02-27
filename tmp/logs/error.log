@@ -10227,3 +10227,430 @@ Stack Trace:
 #3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
 #4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #5 {main}
+2019-02-22 14:39:41 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/UserMonthbookings/addHours/66
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 15:08:41 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 15:22:20 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 15:53:42 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:05:24 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:05:59 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:06:54 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:09:54 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:11:01 Error: [Error] Call to undefined method UserMonthbookingsController::autoRender()
+Request URL: /cakeUren/UserMonthbookings/edit/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('54')
+#1 [internal function]: UserMonthbookingsController->edit('54')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-22 16:25:43 Error: [MissingViewException] View file "UserMonthbookings\add_hours.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'UserMonthbookings\\add_hours.ctp',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('UserMonthbookin...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-22 16:34:27 Error: [PrivateActionException] Private Action UserMonthbookingsController::addHours() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'UserMonthbookingsController',
+  'action' => 'addHours',
+)
+Request URL: /cakeUren/user_monthbookings/addHours/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-23 14:24:38 Error: [ParseError] syntax error, unexpected '}'
+Request URL: /cakeUren/Administratie/mailTemplate
+Stack Trace:
+#0 [internal function]: App::load('AdministratieCo...')
+#1 [internal function]: spl_autoload_call('AdministratieCo...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('AdministratieCo...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-23 23:45:36 Error: [MissingActionException] Action AdministratieController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratieController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/Administratie/view/55
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-24 06:14:56 Error: [MissingActionException] Action AdministratieController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratieController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/Administratie/view/53
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-24 06:16:23 Error: [MissingActionException] Action UserMonthbookingsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'UserMonthbookingsController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/user_monthbookings/view/67
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-24 06:19:28 Error: [MissingActionException] Action AdministratieController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratieController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/Administratie/view/53
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-24 06:20:46 Error: [MissingActionException] Action AdministratieController::edit() could not be found.
+Exception Attributes: array (
+  'controller' => 'AdministratieController',
+  'action' => 'edit',
+)
+Request URL: /cakeUren/Administratie/edit/56
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-24 06:56:07 Error: [Error] Call to a member function is() on null
+Request URL: /cakeUren/UserMonthbookings/addMonthBooking
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(96): UserMonthbookingsController->addHours('70')
+#1 [internal function]: UserMonthbookingsController->addMonthBooking()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-24 07:17:45 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-24 07:18:51 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-25 03:46:49 Error: [ParseError] syntax error, unexpected ';'
+Request URL: /cakeUren/user_monthbookings/edit/54
+Stack Trace:
+#0 [internal function]: App::load('UserMonthbookin...')
+#1 [internal function]: spl_autoload_call('UserMonthbookin...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserMonthbookin...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-25 03:48:22 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'validate' at line 1
+Request URL: /cakeUren/user_monthbookings/edit/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('validate', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('validate', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('validate', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('validate', Array, Object(ContractHours))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(509): Model->__call('validate', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(274): UserMonthbookingsController->saveHours(Array, '54')
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('54')
+#8 [internal function]: UserMonthbookingsController->edit('54')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-02-25 03:48:46 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'validate' at line 1
+Request URL: /cakeUren/user_monthbookings/edit/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('validate', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('validate', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('validate', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('validate', Array, Object(ContractHours))
+#5 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(509): Model->__call('validate', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(274): UserMonthbookingsController->saveHours(Array, '54')
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('54')
+#8 [internal function]: UserMonthbookingsController->edit('54')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-02-25 12:18:47 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'element' at line 1
+Request URL: /cakeUren/user_monthbookings/edit/55
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('element', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('element', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(635): DboSource->fetchAll('element', Array, Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(834): DboSource->query('element', Array, Object(InternHours))
+#5 C:\xampp\php\www\cakeUren\app\Model\InternHours.php(68): Model->__call('element', Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Validator\CakeValidationRule.php(275): InternHours->overig(Array, Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Model\Validator\CakeValidationSet.php(135): CakeValidationRule->process('description', Array, Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Model\ModelValidator.php(268): CakeValidationSet->validate(Array, false)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Model\ModelValidator.php(99): ModelValidator->errors(Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3489): ModelValidator->validates(Array)
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1838): Model->validates(Array)
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#13 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(483): Model->save(Array, Array)
+#14 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(274): UserMonthbookingsController->saveHours(Array, '55')
+#15 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('55')
+#16 [internal function]: UserMonthbookingsController->edit('55')
+#17 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#18 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#19 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#20 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#21 {main}
+2019-02-25 13:52:30 Error: Fatal Error (64): Cannot use isset() on the result of an expression (you can use "null !== expression" instead) in [C:\xampp\php\www\cakeUren\app\Model\InternHours.php, line 68]
+2019-02-25 13:52:31 Error: [FatalErrorException] Cannot use isset() on the result of an expression (you can use "null !== expression" instead)
+Request URL: /cakeUren/UserMonthbookings/edit/55
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(64, 'Cannot use isse...', 'C:\\xampp\\php\\ww...', 68)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(64, 'Cannot use isse...', 'C:\\xampp\\php\\ww...', 68, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-02-25 13:53:39 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/UserMonthbookings/edit/55
+Stack Trace:
+#0 [internal function]: App::load('InternHours')
+#1 [internal function]: spl_autoload_call('InternHours')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Utility\ClassRegistry.php(146): class_exists('InternHours')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(741): ClassRegistry::init('InternHours')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(368): Controller->loadModel('InternHours')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(406): Controller->__isset('InternHours')
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(289): Controller->__get('InternHours')
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('55')
+#8 [internal function]: UserMonthbookingsController->edit('55')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-02-25 22:14:59 Error: [Error] Call to a member function error() on null
+Request URL: /cakeUren/user_monthbookings/edit/68
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Validator\CakeValidationRule.php(275): InternHours->checkForComment(Array, Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Validator\CakeValidationSet.php(135): CakeValidationRule->process('intern_hour_typ...', Array, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\ModelValidator.php(268): CakeValidationSet->validate(Array, false)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\ModelValidator.php(99): ModelValidator->errors(Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3489): ModelValidator->validates(Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1838): Model->validates(Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(1760): Model->_doSave(Array, Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(516): Model->save(Array)
+#8 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(274): UserMonthbookingsController->saveHours(Array, '68')
+#9 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('68')
+#10 [internal function]: UserMonthbookingsController->edit('68')
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#12 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#13 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#14 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#15 {main}
+2019-02-25 22:51:02 Error: [Error] Call to a member function error() on null
+Request URL: /cakeUren/user_monthbookings/edit/68
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('add', NULL)
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(58): Controller->render('add')
+#5 [internal function]: UserMonthbookingsController->edit('68')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-27 14:06:24 Error: [ParseError] syntax error, unexpected '$data' (T_VARIABLE)
+Request URL: /cakeUren/UserMonthbookings/edit/67
+Stack Trace:
+#0 [internal function]: App::load('UserMonthbookin...')
+#1 [internal function]: spl_autoload_call('UserMonthbookin...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserMonthbookin...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-27 15:27:33 Error: [Error] Call to undefined method AdministratieController::convertTimeNotationToValues()
+Request URL: /cakeUren/Administratie/status
+Stack Trace:
+#0 [internal function]: AdministratieController->status()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-02-27 15:30:52 Error: [Error] Call to undefined method UserMonthbookingsController::convertTimeNotationToValues()
+Request URL: /cakeUren/UserMonthbookings/edit/59
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('59')
+#1 [internal function]: UserMonthbookingsController->edit('59')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-27 18:44:16 Error: [ParseError] syntax error, unexpected '<', expecting end of file
+Request URL: /cakeUren/UserMonthbookings/view_pdf/61
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(177): Controller->render()
+#4 [internal function]: UserMonthbookingsController->view_pdf('61')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-02-27 23:01:47 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/js/select.js
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-27 23:18:48 Error: [ParseError] syntax error, unexpected '<'
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(177): Controller->render()
+#4 [internal function]: UserMonthbookingsController->view_pdf('54')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-02-27 23:18:58 Error: [ParseError] syntax error, unexpected '<'
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(177): Controller->render()
+#4 [internal function]: UserMonthbookingsController->view_pdf('54')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}

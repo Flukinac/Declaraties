@@ -6,14 +6,14 @@ App::uses('CakeEmail', 'Network/Email');
  * @Property Administratie $Administratie
  * @property UserMonthbookings $UserMonthbookings
  */
-
 class AdministratieController extends AppController
 {
     public $helpers = array('Html', 'Form', 'Paginator');
     public $uses = array('Administratie', 'UserMonthbookings');
-    public $components = array('Paginator');
+    public $components = array('Paginator', 'Math');
 
-    public function mailTemplate() {
+    public function mailTemplate()
+    {
         if ($this->request->is('post')) {
             $this->Administratie->id = 1;
 
@@ -28,7 +28,8 @@ class AdministratieController extends AppController
         $this->set('tekst', $tekst['Administratie']['text']);
     }
 
-    public function status() {
+    public function status()
+    {
 
         if ($this->request->is('post')) {
 
@@ -58,7 +59,6 @@ class AdministratieController extends AppController
                 }
                 if ($check) {
                     $this->Flash->success(__('status wijzigingen opgeslagen.'));
-                    //$this->redirect('/');
                 } else {
                     $this->Flash->error(__('Er is iets fout gegaan probeer het nog eens.'));
                 }
@@ -91,7 +91,9 @@ class AdministratieController extends AppController
                     }
                 }
 
-                $totalHours[$row] = $totalInternHours + $totalContractHours;
+                $totalHoursToConvert = $totalInternHours + $totalContractHours;
+                $totalHours[$row] = $this->Math->convertTimeNotationToValues($totalHoursToConvert, false);
+
                 $interHoursCheck[$row] = ($totalInternHours > 0 ? $totalInternHours : '0');
                 $name = $this->User->find('list', array(
                     'conditions' => array('user_id' => $result[$i]['UserMonthbookings']['approver']),   //haal de laatste gebruiker op met een user_id die een goedkeuring in de betreffende boeking heeft gedaan.
@@ -99,6 +101,7 @@ class AdministratieController extends AppController
                 ));
                 $approver[$row] = (isset($name[$result[$i]['UserMonthbookings']['approver']]) ? $name[$result[$i]['UserMonthbookings']['approver']] : '');
             }
+
         }
         if (empty($totalHours)) {
             $totalHours = 0;
@@ -107,13 +110,14 @@ class AdministratieController extends AppController
         $this->set(compact('result', 'totalHours', 'interHoursCheck', 'approver'));
     }
 
-    private function checkAndApprover($values) {
+    private function checkAndApprover($values)
+    {
         $status = $this->UserMonthbookings->find('first', array(
-            'conditions' => array(
-                'user_monthbooking_id' => $values[0]
-            ),
-            'fields' => 'status',
-            'recursive' => -1
+                'conditions' => array(
+                    'user_monthbooking_id' => $values[0]
+                ),
+                'fields' => 'status',
+                'recursive' => -1
             )
         );
 

@@ -115,7 +115,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     Boekingen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle boekingen'), array('controller' => 'UserMonthbookings', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
+                    <?php echo $this->Html->link(__('Mijn boekingen'), array('controller' => 'UserMonthbookings', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
                     <div class="dropdown-divider"></div>
                     <?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'UserMonthbookings', 'action' => 'addMonthBooking'), array('class' => 'dropdown-item')); ?>
                 </div>

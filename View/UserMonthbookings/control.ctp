@@ -43,8 +43,7 @@
                 <td><?php echo h($active); ?></td>
                 <td><div style="align-content: center;"><?php echo $this->Form->checkbox($row['UserMonthbookings']['user_monthbooking_id'], array('checked' => $checked, 'label' => '', 'style' => 'width: 30px; height: 20px;'), 'checked'); ?></div></td>
                 <td class="actions">
-                    <?php echo $this->Html->link(__('Inkijken'), array('action' => 'view', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient')); ?>
-                    <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'addHours', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));?>
+                    <?php echo $this->Html->link(__('Openen'), array('action' => 'edit', $row['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));?>
                 </td>
                 <td class="actions">
                 <?php if ($row['UserMonthbookings']['active'] == 1 && $row['UserMonthbookings']['status'] == 0) : ?>

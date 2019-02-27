@@ -19,7 +19,7 @@
 
     </dl>
 </div>
-<?php debug($userMonthbooking);exit(); if ($userMonthbooking['UserMonthbookings']['status'] == '0' && $UserMonthbooking['UserMonthbookings']['active'] == '1') {
+<?php if ($userMonthbooking['UserMonthbookings']['status'] == '0' && $UserMonthbooking['UserMonthbookings']['active'] == '1') {
     echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $UserMonthbooking['UserMonthbookings']['user_monthbooking_id']), array('class' => 'rad-button dark gradient'));
 } ?>
 <div class="users view">

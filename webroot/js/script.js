@@ -24,12 +24,46 @@ $(document).ready(function () {
         });
     });
 
+    for (let i = 0; i < 31;i++) {
+        if ($('#UserMonthbookingComment' + i).val() !== "") {       //@todo activeren op pagin add en verder nier
+            $('#comment' + i).attr('hidden', false);
+            $('#noComment').attr('hidden', true);
+        }
+    }
+
+    $(':input').on('propertychange input', function (e) {   //view:userMonthbooking,add wanneer de overige uren een waarde krijgen verschijnt er een bijbehorend comment balkje
+        if (e.target.value !== '') {
+            $('#comment' + e.target.id).attr('hidden', false);
+            $('#noComment').attr('hidden', true);
+        } else {
+            $('#comment' + e.target.id).attr('hidden', true);
+            if (checkAllCommentInputFields()) {
+                $('#noComment').attr('hidden', false);
+            }
+        }
+    });
+
+    function checkAllCommentInputFields() {
+        var allHidden = true;
+        for (let i = 0; i < 31;i++) {
+            if ($('#comment' + i).attr('hidden') == false) {
+                return false;
+            }
+        }
+        return true
+    }
+
+
+
+
+
     //Form opmaak
     $(".name").focus(function () {
         $(".name-help").slideDown(500);
     }).blur(function () {
         $(".name-help").slideUp(500);
     });
+
 
     $(".email").focus(function () {
         $(".email-help").slideDown(500);

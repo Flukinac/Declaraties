@@ -23,6 +23,8 @@ App::uses('Model', 'Model');
 
 
 class InternHours extends AppModel {
+    public $helpers = array('Html');
+
     public $primaryKey = 'intern_hour_id';
     public $belongsTo = array(
         'InternHoursTypes' => array(
@@ -53,7 +55,28 @@ class InternHours extends AppModel {
                 'rule' => 'numeric',
                 'required' => true,
                 'message' => 'Invoer moet uit cijfers bestaan'
-            ),
+            )
+        ),
+        'intern_hour_type_id' => array(
+            'required' => array(
+                'rule' => 'checkForComment',
+                'message' => 'test'
+            )
         )
     );
-}
+
+    public function checkForComment()
+    {
+
+        if (
+            $this->data['InternHours']['intern_hour_type_id'] == '3' &&
+            $this->data['InternHours']['hours'] > 0 &&
+            ($this->data['InternHours']['description'] == '' || $this->data['InternHours']['description'] == null)
+        ) {
+            return false;
+        }
+
+        return true;
+    }
+};
+
