@@ -2099,3 +2099,10 @@
 2019-02-27 23:20:47 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
 2019-02-27 23:20:59 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
 2019-02-27 23:29:53 Debug: http://localhost/cakeUren/UserMonthbookings/view_pdf/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:23:16 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: , id: , rol: 
+2019-02-28 00:23:21 Debug: http://localhost/cakeUren/  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:23:25 Debug: http://localhost/cakeUren/UserMonthbookings  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:23:27 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:23:28 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:44:34 Debug: http://localhost/cakeUren/UserMonthbookings/edit/54  gebruiker: fluke, id: 15, rol: 1
+2019-02-28 00:51:44 Debug: http://localhost/cakeUren/js/select.js  gebruiker: fluke, id: 15, rol: 1

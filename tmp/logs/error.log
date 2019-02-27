@@ -10654,3 +10654,31 @@ Stack Trace:
 #7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
 #8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2019-02-28 00:23:27 Error: [MissingTableException] Table contracts for model Contracts was not found in datasource default.
+Exception Attributes: array (
+  'table' => 'contracts',
+  'class' => 'Contracts',
+  'ds' => 'default',
+)
+Request URL: /cakeUren/UserMonthbookings/edit/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3673): Model->setSource('contracts')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): Model->getDataSource()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(338): Model->find('all', Array)
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('54')
+#5 [internal function]: UserMonthbookingsController->edit('54')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-02-28 00:51:43 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/js/select.js
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
