@@ -13,13 +13,10 @@ class RolesController extends AppController {
     public $uses = array('Roles', 'User', 'Abilities', 'AbilitiesRoles');
     public $components = array('Paginator');
 
-    public function beforeFilter() {
-        if (AuthComponent::user('role_id') !== '1') {
-            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-            $this->redirect('/');
-        }
-    }
+
     public function index() {
+        $this->checkAuth(5);
+
         $this->Roles->recursive = -1;
         $this->set('roles', $this->Paginator->paginate('Roles'));
     }
@@ -29,6 +26,8 @@ class RolesController extends AppController {
     }
 
     public function add() {
+        $this->checkAuth(5);
+
         if ($this->request->is('post')) {
 
             $this->Roles->create();
@@ -58,11 +57,10 @@ class RolesController extends AppController {
     }
 
     public function edit($id = null) {
+        $this->checkAuth(5);
 
         if ($this->request->is('post') || $this->request->is('put')) {
-            $saveParams = array(
-                'validation' => true
-            );
+
             $this->Roles->id = $id;
 
             //opening transaction
@@ -136,7 +134,16 @@ class RolesController extends AppController {
         if (!$this->Roles->exists()) {
             throw new NotFoundException(__('Rol niet gevonden'));
         }
+        $users = $this->Roles->find('first', array(
+            'conditions' => array(
+                'Roles.role_id' => $id
+            )
+        ));
 
+        if ($users['User'][0] !== null)  {
+            $this->Flash->error(__('Rol kan nog niet verwijderd worden. Er zijn nog gebruikers die deze rol bezitten. Geef deze gebruikers eerst een andere rol.'));
+            return $this->redirect(array('action' => 'index'));
+        }
         if ($this->Roles->delete()) {
             $this->Flash->success(__('Rol verwijderd'));
             return $this->redirect(array('action' => 'index'));

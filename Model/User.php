@@ -77,8 +77,7 @@ class User extends AppModel {
         ),
         'role_id' => array(
             'valid' => array(
-                'rule' => array('inList', array('admin', 'user', 'company')),
-                'allowEmpty' => false,
+                'rule' => 'notBlank',
                 'message' => 'Kies een gebruikersrol'
             )
         ),

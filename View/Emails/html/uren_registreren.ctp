@@ -8,7 +8,7 @@
     <h3 style="color: darkblue">
         Beste <?php echo $name; ?><br><br>
 
-        <?php echo $tekst; ?>
+        <?php echo $tekst['Administratie']['text']; ?>
 
         <br><br>
         Mvg,<br>

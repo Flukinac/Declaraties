@@ -10682,3 +10682,948 @@ Request URL: /cakeUren/js/select.js
 Stack Trace:
 #0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2019-02-28 00:57:54 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')'
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-28 11:20:18 Error: [PrivateActionException] Private Action UserMonthbookingsController::addHours() is not directly accessible.
+Exception Attributes: array (
+  'controller' => 'UserMonthbookingsController',
+  'action' => 'addHours',
+)
+Request URL: /cakeUren/UserMonthbookings/addHours/53
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-02-28 11:23:54 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/User/view/15
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-28 15:22:16 Error: [PDOException] SQLSTATE[42S02]: Base table or view not found: 1051 Unknown table 'cakephp_uren.UserMonthbookings'
+Request URL: /cakeUren/User/view/18
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Roles`....', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Roles`....', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Roles`....', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(User), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(78): Model->find('first', Array)
+#7 [internal function]: UserController->view('18')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-28 15:23:04 Error: [ParseError] syntax error, unexpected ''UserMonthbookings'' (T_CONSTANT_ENCAPSED_STRING), expecting ')'
+Request URL: /cakeUren/User/view/15
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-28 15:33:56 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Company.contract_id' in 'field list'
+Request URL: /cakeUren/User/view/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(79): Model->find('first', Array)
+#7 [internal function]: UserController->view('15')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-28 15:34:28 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Company.campany_id' in 'field list'
+Request URL: /cakeUren/User/view/15
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Company...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Company...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Company...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Company), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(79): Model->find('first', Array)
+#7 [internal function]: UserController->view('15')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-02-28 15:40:15 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/User/view/15
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-28 16:42:01 Error: [MissingControllerException] Controller class JsController could not be found.
+Exception Attributes: array (
+  'class' => 'JsController',
+  'plugin' => NULL,
+)
+Request URL: /cakeUren/js/select.js
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2019-02-28 17:10:54 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-02-28 17:14:28 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-01 16:31:18 Error: [ParseError] syntax error, unexpected 'id' (T_STRING)
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-01 16:31:38 Error: [ParseError] syntax error, unexpected 'id' (T_STRING)
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-01 17:30:04 Error: [ParseError] syntax error, unexpected 'foreach' (T_FOREACH)
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 [internal function]: App::load('UserController')
+#1 [internal function]: spl_autoload_call('UserController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-01 17:34:07 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'where clause'
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT COUNT(*)...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT COUNT(*)...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT COUNT(*)...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('count', Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(2917): Model->find('count', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(107): Model->exists(Array)
+#8 [internal function]: UserController->add()
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-01 17:35:16 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in where clause is ambiguous
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(107): Model->find('first', Array)
+#7 [internal function]: UserController->add()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-03-01 17:36:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'user_id' in where clause is ambiguous
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('first', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(107): Model->find('first', Array)
+#7 [internal function]: UserController->add()
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-03-01 17:59:44 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.1' in 'field list'
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('UPDATE `cakephp...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\Database\Mysql.php(424): DboSource->execute('UPDATE `cakephp...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(2672): Mysql->update(Object(Contracts), '`Contracts`.`co...', NULL, ' WHERE 1 = 1')
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(150): Model->updateAll(Array)
+#5 [internal function]: UserController->add()
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-03-02 01:58:53 Error: [MissingActionException] Action ContractsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ContractsController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/Contracts/view/42
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContractsController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-03-02 01:59:42 Error: [MissingActionException] Action ContractsController::view() could not be found.
+Exception Attributes: array (
+  'controller' => 'ContractsController',
+  'action' => 'view',
+)
+Request URL: /cakeUren/Contracts/view/42
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(ContractsController), Object(CakeRequest))
+#2 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2019-03-02 02:01:34 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/UserMonthbookings/edit/56
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(338): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('56')
+#8 [internal function]: UserMonthbookingsController->edit('56')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-02 02:01:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/UserMonthbookings/addMonthBooking
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(338): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(97): UserMonthbookingsController->addHours('60', true)
+#8 [internal function]: UserMonthbookingsController->addMonthBooking()
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-02 02:02:25 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/user_monthbookings/edit/70
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(338): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('70')
+#8 [internal function]: UserMonthbookingsController->edit('70')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-02 02:02:36 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:02:54 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/UserMonthbookings/edit/56
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(338): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(48): UserMonthbookingsController->addHours('56')
+#8 [internal function]: UserMonthbookingsController->edit('56')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-02 02:09:16 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:09:51 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:10:03 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/userMonthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:16:09 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:18:16 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/UserMonthbookings/attentionMail
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:23:27 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:23:36 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:30:42 Error: [MissingComponentException] Component class RequestComponent could not be found.
+Exception Attributes: array (
+  'class' => 'RequestComponent',
+  'plugin' => false,
+)
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Request', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UserMonthbookingsController))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:31:02 Error: [MissingComponentException] Component class RequestComponent could not be found.
+Exception Attributes: array (
+  'class' => 'RequestComponent',
+  'plugin' => false,
+)
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Request', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UserMonthbookingsController))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:34:16 Error: [MissingComponentException] Component class RequestComponent could not be found.
+Exception Attributes: array (
+  'class' => 'RequestComponent',
+  'plugin' => false,
+)
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Request', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UserMonthbookingsController))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:34:18 Error: [MissingComponentException] Component class RequestComponent could not be found.
+Exception Attributes: array (
+  'class' => 'RequestComponent',
+  'plugin' => false,
+)
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Request', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UserMonthbookingsController))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:36:09 Error: [MissingComponentException] Component class RequestComponent could not be found.
+Exception Attributes: array (
+  'class' => 'RequestComponent',
+  'plugin' => false,
+)
+Request URL: /cakeUren/UserMonthbookings/settings
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Controller\ComponentCollection.php(53): ComponentCollection->load('Request', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(644): ComponentCollection->init(Object(UserMonthbookingsController))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(188): Controller->constructClasses()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:37:11 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-02 02:40:55 Error: [Error] Call to a member function find() on null
+Request URL: /cakeUren/user_monthbookings/attentionMail/
+Stack Trace:
+#0 [internal function]: UserMonthbookingsController->attentionMail()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-03 02:08:44 Error: [Error] Class 'CakeEmail' not found
+Request URL: /cakeUren/User/add
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(95): UserController->newUserMail(Array)
+#1 [internal function]: UserController->add()
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 02:17:12 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/UserMonthbookings/edit/53
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(339): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(49): UserMonthbookingsController->addHours('53')
+#8 [internal function]: UserMonthbookingsController->edit('53')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-03 02:18:52 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Contracts.start_date' in 'field list'
+Request URL: /cakeUren/UserMonthbookings/edit/56
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(Contracts), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(339): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(49): UserMonthbookingsController->addHours('56')
+#8 [internal function]: UserMonthbookingsController->edit('56')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}
+2019-03-03 17:42:31 Error: [MissingViewException] View file "Administratie\mail_tekst_welkom.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_tekst_welkom.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTekstWelkom
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-03 17:43:19 Error: [MissingViewException] View file "Administratie\mail_tekst_welkom.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_tekst_welkom.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTekstWelkom
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-03 17:45:25 Error: [MissingViewException] View file "Administratie\mail_tmeplate.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Administratie\\mail_tmeplate.ctp',
+)
+Request URL: /cakeUren/Administratie/mailTekstWelkom
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(470): View->_getViewFileName('Administratie\\m...')
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('mail_tmeplate', NULL)
+#2 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(30): Controller->render('mail_tmeplate')
+#3 C:\xampp\php\www\cakeUren\app\Controller\AdministratieController.php(35): AdministratieController->mailTemplate(2)
+#4 [internal function]: AdministratieController->mailTekstWelkom()
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(AdministratieController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(AdministratieController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-03-03 18:51:26 Error: [Error] Call to undefined method View::checkout()
+Request URL: /cakeUren/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<!doctype html>...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('home', 'default')
+#5 C:\xampp\php\www\cakeUren\app\Controller\PagesController.php(72): Controller->render('home')
+#6 [internal function]: PagesController->display('home')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2019-03-03 18:51:27 Error: Fatal Error (1): Uncaught Error: Call to undefined method View::checkout() in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:66
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Call to und...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): Ex in [C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp, line 66]
+2019-03-03 18:51:27 Error: [FatalErrorException] Uncaught Error: Call to undefined method View::checkout() in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:66
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Call to und...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): Ex
+Request URL: /cakeUren/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 66)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 66, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 18:56:10 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\RolesController.php(17): AppController->checkAuth(5)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): RolesController->beforeFilter(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 18:56:10 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:20
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Class &#039...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): Exception in [C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp, line 20]
+2019-03-03 18:56:11 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp:20
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<h2>Class &#039...', 'default')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('error500', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): Exception
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 20)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 20, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 19:06:09 Error: [CakeException] Method session does not exist
+Request URL: /cakeUren/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\View\Layouts\default.ctp(18): CakeRequest->__call('session', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<!doctype html>...', 'default')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('home', 'default')
+#6 C:\xampp\php\www\cakeUren\app\Controller\PagesController.php(72): Controller->render('home')
+#7 [internal function]: PagesController->display('home')
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2019-03-03 19:44:58 Error: [ParseError] syntax error, unexpected 'endif' (T_ENDIF), expecting end of file
+Request URL: /cakeUren/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(546): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(481): View->renderLayout('<!doctype html>...', 'default')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render('home', 'default')
+#4 C:\xampp\php\www\cakeUren\app\Controller\PagesController.php(72): Controller->render('home')
+#5 [internal function]: PagesController->display('home')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(PagesController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(PagesController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-03-03 19:44:58 Error: Fatal Error (16): Exception thrown without a stack frame in [Unknown, line 0]
+2019-03-03 19:44:58 Error: [FatalErrorException] Exception thrown without a stack frame
+Request URL: /cakeUren/
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(16, 'Exception throw...', 'Unknown', 0)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(16, 'Exception throw...', 'Unknown', 0, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 22:54:04 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\RolesController.php(17): AppController->checkAuth(5)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): RolesController->beforeFilter(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 22:54:04 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 22:54:04 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 22:54:24 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\RolesController.php(17): AppController->checkAuth(5)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): RolesController->beforeFilter(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(RolesController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 22:54:24 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 22:54:24 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 22:58:57 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/UserMonthbookings
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(24): AppController->checkAuth(2)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): UserMonthbookingsController->beforeFilter(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(677): CakeEventManager->dispatch(Object(CakeEvent))
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(189): Controller->startupProcess()
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 22:58:57 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 22:58:57 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/UserMonthbookings
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 23:36:37 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/Roles/delete/34
+Stack Trace:
+#0 [internal function]: App::load('RolesController')
+#1 [internal function]: spl_autoload_call('RolesController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('RolesController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 23:36:37 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 23:36:37 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles/delete/34
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 23:36:48 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/Roles/delete/34
+Stack Trace:
+#0 [internal function]: App::load('RolesController')
+#1 [internal function]: spl_autoload_call('RolesController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('RolesController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 23:36:48 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 23:36:48 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles/delete/34
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 23:36:52 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 [internal function]: App::load('RolesController')
+#1 [internal function]: spl_autoload_call('RolesController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('RolesController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 23:36:53 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 23:36:53 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-03 23:37:03 Error: [ParseError] syntax error, unexpected ')'
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 [internal function]: App::load('RolesController')
+#1 [internal function]: spl_autoload_call('RolesController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('RolesController')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-03 23:37:04 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-03 23:37:04 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(ParseError))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(ParseError))
+#7 {main}
+  thrown
+Request URL: /cakeUren/Roles
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}

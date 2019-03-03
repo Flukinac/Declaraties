@@ -8,14 +8,10 @@ class CompanyController extends AppController {
     public $components = array('Paginator');
     public $paginate = array('limit' => 10);
 
-    public function beforeFilter() {
-//        if (AuthComponent::user('role_id') !== '1') {
-//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-//            $this->redirect('/');
-//        }
-    }
 
     public function index() {
+        $this->checkAuth(6);
+
         $this->Paginator->settings = $this->paginate;
         $data = $this->Paginator->paginate('Company');
         $this->set('companies', $data);
@@ -35,6 +31,8 @@ class CompanyController extends AppController {
     }
 
     public function add() {
+        $this->checkAuth(7);
+
         if ($this->request->is('Post')) {
             $this->Company->create();
             if ($this->Company->save($this->request->data)) {
@@ -64,7 +62,7 @@ class CompanyController extends AppController {
             $company = $this->Company->find('first', $params);
             $this->request->data['Company'] = $company['Company'];
 
-            return $this->set($company);
+            $this->set($company);
         }
     }
     public function delete($id = null) {

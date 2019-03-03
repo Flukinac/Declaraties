@@ -19,7 +19,7 @@ $(document).ready(function () {
                 }
             },
             error: function () {
-                alert('Fout met versturen');
+                alert('Fout met versturen')
             }
         });
     });

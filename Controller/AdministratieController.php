@@ -12,24 +12,20 @@ class AdministratieController extends AppController
     public $uses = array('Administratie', 'UserMonthbookings');
     public $components = array('Paginator', 'Math');
 
-    public function mailTemplate()
-    {
-        if ($this->request->is('post')) {
-            $this->Administratie->id = 1;
 
-            if (!$this->Administratie->save($this->request->data)) {
-                $this->Flash->error(__('Probeer het nog eens.'));
-            } else {
-                $this->Flash->success(__('Mailtekst gewijzigd.'));
-                $this->redirect('/');
-            }
-        }
-        $tekst = $this->Administratie->find('first', array('conditions' => array('administratie_id' => 1), 'fields' => 'text'));
-        $this->set('tekst', $tekst['Administratie']['text']);
+    public function mailReminder() {
+        $this->checkAuth(9);
+        $this->mailTemplate(1);             //@todo deze functie is tijdelijk. er moet een onderscheid komen in de twee mailtekst knoppen in de navbar
+    }
+
+    public function mailTekstWelkom() {
+        $this->checkAuth(10);
+        $this->mailTemplate(2);             //@todo deze functie is tijdelijk. er moet een onderscheid komen in de twee mailtekst knoppen in de navbar
     }
 
     public function status()
     {
+        $this->checkAuth(11);
 
         if ($this->request->is('post')) {
 
@@ -125,5 +121,22 @@ class AdministratieController extends AppController
             return false;
         }
         return true;
+    }
+
+    private function mailTemplate($type) {
+        if ($this->request->is('post')) {
+            $this->Administratie->id = 1;
+
+            if (!$this->Administratie->save($this->request->data)) {
+                $this->Flash->error(__('Probeer het nog eens.'));
+            } else {
+                $this->Flash->success(__('Mailtekst gewijzigd.'));
+                $this->redirect('/');
+            }
+        }
+
+        $tekst = $this->Administratie->find('first', array('conditions' => array('administratie_id' => $type), 'fields' => 'text'));
+        $this->set('tekst', $tekst['Administratie']['text']);
+        $this->render('mail_template');
     }
 }

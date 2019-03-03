@@ -80,7 +80,7 @@ class AppController extends Controller {
     public function beforeFilter()
     {
         $this->Auth->allow('login');
-        CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
+        CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', roles: ' . AuthComponent::user('role_id'));
 
     }
 
@@ -97,7 +97,7 @@ class AppController extends Controller {
     public function login() {
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
-                $abilities = $this->AbilitiesRoles->find("list", array(
+                $userAbilities = $this->AbilitiesRoles->find("list", array(
                     'conditions' => array(
                         'role_id' => AuthComponent::user('role_id')
                     ),
@@ -106,7 +106,7 @@ class AppController extends Controller {
                     )
                 ));
 
-                SessionComponent::write('Abilities', $abilities);    //zoek de abilities op van de ingelogde user adhv diens role_id en sla de abilities op.
+                SessionComponent::write('Abilities', $userAbilities);    //zoek de abilities op van de ingelogde user adhv diens role_id en sla de abilities op.
                 return $this->redirect('/');
             }
             CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
@@ -115,6 +115,7 @@ class AppController extends Controller {
     }
 
     public function logout() {
+        SessionComponent::write('Abilities');
         return $this->redirect($this->Auth->logout());
     }
 
@@ -124,6 +125,11 @@ class AppController extends Controller {
      * @return void
      */
     public function beforeRender() {
+        $userAbilities = SessionComponent::read('Abilities');
+        if ($userAbilities == null) {
+            $userAbilities = array();
+        }
+        $this->set('userAbilities', $userAbilities);
         parent::beforeRender();
     }
 
@@ -135,5 +141,16 @@ class AppController extends Controller {
      */
     public function afterFilter() {
         parent::afterFilter();
+    }
+
+    protected function checkAuth($roleId) {
+        $searchAbility = SessionComponent::read('Abilities');   //check of de userrol bevoegt is voor deze pagina
+        if (!array_search($roleId, $searchAbility) && !array_search(1, $searchAbility)) {
+            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
+            $this->redirect('/');
+            return false;
+        } else {
+            return true;
+        }
     }
 }

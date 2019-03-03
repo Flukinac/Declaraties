@@ -5,7 +5,7 @@
             <tr>
                 <th><?php echo $this->Paginator->sort('username', 'Naam'); ?></th>
                 <th><?php echo $this->Paginator->sort('role_id', 'Account type'); ?></th>
-                <th><?php echo $this->Paginator->sort('contract_id', 'Contracten'); ?></th>
+                <th><?php echo $this->Paginator->sort('contract_id', 'Opdrachten'); ?></th>
                 <th><?php echo $this->Paginator->sort('created', 'Aangemaakt op'); ?></th>
                 <th><?php echo $this->Paginator->sort('modified', 'Gewijzigd op'); ?></th>
                 <th class="actions"><?php echo __('Acties'); ?></th>
