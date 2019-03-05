@@ -1,11 +1,14 @@
 <?php
 App::uses('appController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
+
 
 /**
  * @property Contracts $Contracts
  * @Property UserMonthbookings $UserMonthbookings
  * @Property InternHours $InternHours
  * @Property Administratie $Administratie
+ * @Property Company $Company
  * @property Roles $Roles
  * @property User $User
  * @property ContractHours $ContractHours
@@ -13,7 +16,7 @@ App::uses('appController', 'Controller');
 
 class UserController extends AppController {
     public $helpers = array('Html', 'Form', 'Paginator');
-    public $uses = array('User', 'UserInfo', 'Roles', 'Administratie', 'Contracts', 'InternHoursTypes', 'InternHours', 'Cities', 'Countries', 'Birthplaces');
+    public $uses = array('User', 'Roles', 'Company', 'Administratie', 'Contracts', 'InternHoursTypes', 'InternHours', 'CakeEmail', 'Network/Email');
     public $components = array('Paginator');
     public $paginate = array(
         'limit' => 5,
@@ -34,12 +37,8 @@ class UserController extends AppController {
     }
 
     public function index() {
-//        $searchAbility = SessionComponent::read('Abilities.php');   //check of de userrol bevoegt is voor deze pagina
-//        if (!array_search(3, $searchAbility) && !array_search(1, $searchAbility)) {
-//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-//            $this->redirect('/');
-//            return false;
-//        }
+        $this->checkAuth(3);
+
         $this->Paginator->settings = $this->paginate;
 
         $cat_data = $this->Paginator->paginate('User');
@@ -48,22 +47,13 @@ class UserController extends AppController {
     }
 
     public function view($id = null) {
-        if (AuthComponent::user('role_id') !== '1') {
-            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-            $this->redirect('/');
-            return false;
-        }
+
         $this->User->id = $id;
         if (!$this->User->exists()) {
             CakeLog::write('debug', Router::url(null, true) . '  gebruiker: ' . AuthComponent::user('username') . ', id: ' . AuthComponent::user('user_id') . ', rol: ' . AuthComponent::user('role_id'));
             throw new NotFoundException(__('Gebruiker niet gevonden.'));
         }
         $this->User->contain(array(
-            'UserInfo' => array(
-                'Cities',
-                'Birthplaces',
-                'Countries'
-            ),
             'Roles' => array(
                 'description'
             ),
@@ -76,21 +66,37 @@ class UserController extends AppController {
                 'user_id' => $id
             )
         );
-        $this->set('user', $this->User->find('first', $params));
+
+        $user = $this->User->find('first', $params);
+
+        $this->set('user', $user);
     }
 
     public function add() {
+        $this->checkAuth(4);
+
         if ($this->request->is('post')) {
 
-            $this->User->create();
+            $data = $this->request->data;
 
-            if ($this->User->save($this->request->data)) {
-                $this->Flash->success(__('Gebruiker opgeslagen.'));
-                return $this->redirect(array('action' => 'index'));
+            $data['User']['password'] = '123456'; //$this->randomPassStr(8); tijdelijk, totdat de mailing het op de host doet
+
+            if (!$this->User->save($data)) {
+                $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+            } else {
+                $userId = $this->User->getLastInsertID();
+
+                if ($this->storeContracts($userId, $data)) {
+//                    if ($this->newUserMail($data)) {                      //tijdelijk, totdat de mailing het op de host doet
+                    $this->Flash->success(__('Gebruiker opgeslagen.'));
+                    return $this->redirect(array('action' => 'index'));
+//                    } else {
+//                        $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+//                    }
+                } else {
+                    $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+                }
             }
-            $this->Flash->error(
-                __('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.')
-            );
         }
 
         $roles = $this->Roles->find('list', array(
@@ -99,120 +105,35 @@ class UserController extends AppController {
             )
         ));
 
-        $this->set('role', $roles);
+        $companies = $this->Company->find('list', array(
+            'recursive' => -1,
+            'fields' => 'name'
+        ));
+
+        $companiesExtra = $companies;
+        $companiesExtra[0] = 'geen';
+
+        $this->set(array('role' => $roles, 'companies' => $companies, 'companiesExtra' => $companiesExtra));
     }
 
     public function edit($id = null) {
-        $accessToRoles = true;
-
-        if (AuthComponent::user('role_id') !== '1') {
-            $id = AuthComponent::user('user_id');
-            $accessToRoles = false;
-        }
 
         if ($this->request->is('post') || $this->request->is('put')) {
-            $saveParams = array(
-                'validation' => true,
-            );
 
             $this->User->id = $id;
             if ($this->User->exists()) {
 
-                if ($accessToRoles === false) {
-                    $this->request->data['User']['role_id'] = AuthComponent::user('role_id');   //beveiliging tegen form injection
-                }
-                $dataSource = ConnectionManager::getDataSource('default');
-                $dataSource->begin();
-                $result = true;
-
-                //doing an create if not exitst on cities, countries and birthplace
-                $city_id = $this->Cities->find('first', array(
-                    'conditions' => array(
-                        'cityname' => $this->request->data['UserInfo']['Cities']['cityname']
-                    ),
-                    'recursive' => -1
-                ));
-
-                if(empty($city_id)) {
-                    if ($this->Cities->save($this->request->data['UserInfo']['Cities'], $saveParams)) {
-                        $city_id = $this->Cities->getLastInsertID();
-                    } else {
-                        $result = false;
-                    }
-                } else {
-                    $city_id = $city_id['Cities']['city_id'];
-                }
-
-                $birthplace_id = $this->Birthplaces->find('first', array(
-                    'conditions' => array(
-                        'birthplace' => $this->request->data['UserInfo']['Birthplaces']['birthplace']
-                    ),
-                    'recursive' => -1
-                ));
-                if(empty($birthplace_id)) {
-                    if ($this->Birthplaces->save($this->request->data['UserInfo']['Birthplaces'], $saveParams)) {
-                        $birthplace_id = $this->Birthplaces->getLastInsertID();
-                    } else {
-                        $result = false;
-                    }
-                } else {
-                    $birthplace_id = $birthplace_id['Birthplaces']['birthplace_id'];
-                }
-
-                $country_id = $this->Countries->find('first', array(
-                    'conditions' => array(
-                        'country' => $this->request->data['UserInfo']['Countries']['country']
-                    ),
-                    'recursive' => -1
-                ));
-                if(empty($country_id)) {
-                    if ($this->Countries->save($this->request->data['UserInfo']['Countries'], $saveParams)) {
-                        $country_id = $this->Countries->getLastInsertID();
-                    } else {
-                        $result = false;
-                    }
-                } else {
-                    $country_id = $country_id['Countries']['country_id'];
-                }
-
-                if (isset($city_id) && isset($birthplace_id) && isset($country_id)) {
-                    $info['UserInfo'] = array('user_info_id' => $id, 'city_id' => $city_id, 'birthplace_id' => $birthplace_id, 'country_id' => $country_id);
-                }
-
-                $this->UserInfo->id = $id;
-
-                if (!$this->UserInfo->save($info)) {
-                    $result = false;
-                };
-
-                if (!$this->User->save($this->request->data['User'])) {
-                    $result = false;
-                }
-
-                if ($result) {
-                    $dataSource->commit();
-                    $this->Flash->success(__('Gebruiker opgeslagen.'));
-                    if ($accessToRoles === true) {
-                        return $this->redirect(array('controller' => 'User', 'action' => 'index'));
-                    } else {
-                        return $this->redirect('/');
-                    }
-                } else {
-
-                    $dataSource->rollback();
+                if (!$this->User->save($this->request->data)) {
                     $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
-                    return false;
+                } else {
+                    if ($this->storeContracts($id, $this->request->data)) {
+                        $this->Flash->success(__('Gebruiker opgeslagen.'));
+                        return $this->redirect(array('controller' => 'User', 'action' => 'index'));
+                    }
+                    $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
                 }
             }
         }
-
-        $this->User->contain(array(
-            'UserInfo' => array(
-                'Cities',
-                'Birthplaces',
-                'Countries'
-            )
-        ));
 
         $params = array(
             'conditions' => array(
@@ -227,18 +148,18 @@ class UserController extends AppController {
             )
         );
 
-        $userInfo = $this->User->find('first', $params);
+        $companies = $this->Company->find('list', array(
+            'recursive' => -1,
+            'fields' => 'name'
+        ));
 
-        $this->request->data['UserInfo'] = $userInfo['UserInfo'];
-        $this->request->data['User'] = $userInfo['User'];
-        if ($accessToRoles) {
-            $this->request->data['Roles'] = $this->Roles->find('list', $paramsRoles);
-        } else {
-            $this->request->data['Roles'] = $accessToRoles;
-        }
+        $companiesExtra = $companies;
+        $companiesExtra[0] = 'geen';
 
+        $userdata = $this->User->find('first', $params);
+        $this->request->data['Roles'] = $this->Roles->find('list', $paramsRoles);
 
-        return $this->set('values', $this->request->data);
+        $this->set(array('values' => $this->request->data, 'userdata' => $userdata, 'companiesExtra' => $companiesExtra, 'companies' => $companies));
     }
 
     public function password($id = null) {
@@ -259,7 +180,7 @@ class UserController extends AppController {
             }
         }
     }
-//$2a$10$hcmkohOnF5d2k5/hrVDlyu0OdsrnXxGBzbfNXhjSGhsTtrilhCsXq
+
     public function delete($id = null) {
 
         $this->request->allowMethod('post');
@@ -279,5 +200,122 @@ class UserController extends AppController {
         }
         $this->Flash->error(__('Nog te bepalen welke gegevens er verwijderd gaan worden.'));
         return $this->redirect(array('action' => 'index'));
+    }
+
+    private function storeContracts($userId = null, $data = null) {
+
+        $this->User->create();
+        $this->Contracts->create();
+
+        $result = true;
+
+        foreach ($data['User'] as $key => $value) {
+            if (($key == 'company_id1' || $key == 'company_id2' || $key == 'company_id3') && $value !== '0') {      //check of de key van een opdracht dropdown menu komt en of dit dropdownmenu niet leeg is gelaten
+
+                $contractIds[] = array('Contracts.company_id !=' => $value);
+
+                if ($userId > 0) {
+
+                    $contractExists = $this->Contracts->find('first', array(   //kijk voor elke company_id of er een contract bestaat voor deze user
+                        'conditions' => array(
+                            'user_id' => $userId,
+                            'company_id' => $value
+                        ),
+                        'recursive' => -1
+                    ));
+
+                    if (!$contractExists) {         //als er geen contract bestaat. maak deze aan
+
+                        $assignment = $this->Company->find('first', array(
+                            'conditions' => array(
+                                'company_id' => $value
+                            ),
+                            'fields' => 'Company.name',
+                            'recursive' => -1
+                        ));
+
+                        $contract[] = array(
+                            'name' => $assignment['Company']['name'],
+                            'company_id' => $value,
+                            'user_id' => $userId
+                        );
+
+                    } else {                        //als er een contract bestaat meer niet actief is. maak deze actief
+
+                        $existingContractParams['Contracts.contract_id'][] = $contractExists['Contracts']['contract_id'];
+
+                    }
+                }
+            }
+        }
+
+        $dataSource = ConnectionManager::getDataSource('default');
+        $dataSource->begin();
+
+        if (isset($contract)) {
+            if (!$this->Contracts->saveMany($contract)) {
+                $result = false;
+            }
+        }
+
+        if (isset($existingContractParams)) {
+            if (!$this->Contracts->updateAll(array('Contracts.active' => 1), $existingContractParams)) {
+                $result = false;
+            }
+        }
+
+        $conditions = array(
+            array('Contracts.user_id' => $userId),
+            'AND' => $contractIds
+        );
+
+        if (!$this->Contracts->updateAll(array('Contracts.active' => 0), $conditions)) {
+            $result = false;
+        }
+
+        if ($result) {
+            $dataSource->commit();
+            return true;
+        } else {
+            $dataSource->rollback();
+            return false;
+        }
+    }
+
+    private function newUserMail($user) {
+
+        //vind tekst voor email
+        $tekst = $this->Administratie->find('first', array(
+            'conditions' => array(
+                'Administratie.administratie_id' => 2
+            ),
+            'fields' => 'text'
+        ));
+
+        $Email = new CakeEmail('smtp');             //stuur email naar user
+        $Email->viewVars(array('name' => $user['User']['username'], 'tekst' => $tekst, 'password' => $user['User']['password']));
+        $Email->template('nieuweGebruiker')
+            ->emailFormat('html')
+            ->from(array('Uren@localhost.com' => 'UrenApp'))
+            ->to($user['User']['email'])
+            ->subject('Aanmelding')
+            ->send();
+
+        return true;
+    }
+
+    private function randomPassStr(
+        $length,
+        $keyspace = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    ) {
+        $str = '';
+        $max = mb_strlen($keyspace, '8bit') - 1;
+        if ($max < 1) {
+            throw new Exception('$keyspace must be at least two characters long');
+        }
+        for ($i = 0; $i < $length; ++$i) {
+            $str .= $keyspace[random_int(0, $max)];
+        }
+        return $str;
     }
 }

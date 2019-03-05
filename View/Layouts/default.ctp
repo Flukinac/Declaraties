@@ -16,7 +16,7 @@
 $title = __d('cake_dev', 'Uren declaratie');
 
 $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework');
-$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
+$cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,54 +62,62 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <a class="navbar-brand" href="/cakeUren">Uren declaratie</a>
-
-    <?php if (AuthComponent::user()): ?>
     <div class="collapse navbar-collapse container" id="navbarSupportedContent">
+        <?php if (count($userAbilities) > 0) : ?>
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/cakeUren">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <?php if (AuthComponent::user('role_id') == '1'): ?>
+            </li>s
+
+            <?php if (array_search(3, $userAbilities) || array_search(4, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Gebruikers
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <?php if (array_search(3, $userAbilities) || array_search(1, $userAbilities)) {
+                        echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'), array('class' => 'dropdown-item'));
+                    } ?>
+                    <?php if (array_search(4, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
                 </div>
             </li>
+            <?php endif; ?>
+
+            <?php if (array_search(5, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Rollen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
                     <?php echo $this->Html->link(__('Nieuwe rol'), array('controller' => 'Roles', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
+            <?php endif; ?>
+
+            <?php if (array_search(6, $userAbilities) || array_search(7, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Contracten
+                    Opdrachten
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle contracten'), array('controller' => 'Contracts', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Nieuw contract'), array('controller' => 'Contracts', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <?php if (array_search(6, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <?php echo $this->Html->link(__('Alle opdrachten'), array('controller' => 'Company', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
+                    <?php if (array_search(7, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Nieuwe opdracht'), array('controller' => 'Company', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
                 </div>
+
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Bedrijven
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle bedrijven'), array('controller' => 'Company', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Nieuw bedrijf'), array('controller' => 'Company', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
-                </div>
-            </li>
+            <?php endif; ?>
+
+            <?php if (array_search(2, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Boekingen
@@ -120,24 +128,30 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     <?php echo $this->Html->link(__('Nieuwe boeking'), array('controller' => 'UserMonthbookings', 'action' => 'addMonthBooking'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
+            <?php endif; ?>
+
+            <?php if (array_search(8, $userAbilities) || array_search(9, $userAbilities) || array_search(10, $userAbilities) || array_search(11, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Beheer
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Mailtekst'), array('controller' => 'Administratie', 'action' => 'mailTemplate'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link(__('Uren Status'), array('controller' => 'Administratie', 'action' => 'status'), array('class' => 'dropdown-item')); ?>
+                    <?php if (array_search(8, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <?php echo $this->Html->link(__('Boeking beheer'), array('controller' => 'UserMonthbookings', 'action' => 'settings'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
+                    <?php if (array_search(9, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Reminder mail '), array('controller' => 'Administratie', 'action' => 'mailReminder'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
+                    <?php if (array_search(10, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Welkomst Mail'), array('controller' => 'Administratie', 'action' => 'mailTekstWelkom'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
+                    <?php if (array_search(11, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Uren Status'), array('controller' => 'Administratie', 'action' => 'status'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
                 </div>
-            </li>
-            <?php else: ?>
-            <li class="nav-item active">
-                <a class="nav-link" href="/cakeUren/UserMonthbookings/addMonthBooking">Nieuwe boeking <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="/cakeUren/UserMonthbookings/index">Mijn boekingen <span class="sr-only">(current)</span></a>
             </li>
             <?php endif; ?>
         </ul>
@@ -146,15 +160,17 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                     <span class="navbar-toggler-icon"></span>
                 </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php if (array_search(1, $userAbilities)) : ?>
                     <?php echo $this->Html->link(__('Mijn profiel'), array('controller' => 'User', 'action' => 'edit/' . AuthComponent::user("user_id"))); ?>
                 <div class="dropdown-divider"></div>
+                <?php endif; ?>
                     <?php echo $this->Html->link(__('Nieuw wachtwoord'), array('controller' => 'User', 'action' => 'password/' . AuthComponent::user("user_id"))); ?>
                 <div class="dropdown-divider"></div>
-                    <?php echo $this->Html->link('Logout', array('controller' => 'User', 'action' => 'logout')); ?>
+                    <?php echo $this->Html->link('Logout', array('controller' => 'App', 'action' => 'logout')); ?>
             </div>
         </div>
+        <?php endif; ?>
     </div>
-    <?php endif; ?>
 </nav>
 
     <div id="container">

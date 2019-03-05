@@ -55,7 +55,7 @@
         //uitrollen van contracturen
         if (count($contracts) > 0) {
             foreach ($contracts as $contract) {
-                echo "<tr>" . "<td><strong>Bedrijf </strong>" . $contract['Company']['name'] . "</td>";
+                echo "<tr>" . "<td><strong>Opdracht </strong>" . $contract['Contracts']['name'] . "</td>";
                 for ($i = 0; $i < count($daysColor);) {
                     echo '<td>' . $this->Form->input('contract_' . ++$i . '_' . $contract['Contracts']['contract_id'], array('label' => '', 'maxlength' => '5', 'class' => 'testy', $checked,  'style' => 'text-align:center; width:35px; background: ' . $daysColor[$i])) . '</td>';
                 }

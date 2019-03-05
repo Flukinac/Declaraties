@@ -60,18 +60,6 @@ class Contracts extends AppModel {
                 'message' => 'Een contractnaam is vereist'
             )
         ),
-        'start_date' => array(
-            'required' => array(
-                'rule' => 'notBlank',
-                'message' => 'Een start datum is vereist'
-            )
-        ),
-        'end_date' => array(
-            'required' => array(
-                'rule' => 'notBlank',
-                'message' => 'Een eind datum is vereist'
-            )
-        ),
         'company_id' => array(
             'required' => array(
                 'rule' => 'notBlank',

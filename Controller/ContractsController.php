@@ -12,12 +12,6 @@ class ContractsController extends AppController {
     public $components = array('Paginator');
     public $paginate = array('limit' => 10);
 
-    public function beforeFilter() {
-//        if (AuthComponent::user('role_id') !== '1') {
-//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-//            $this->redirect('/');
-//        }
-    }
 
     public function index() {
         $this->Paginator->settings = $this->paginate;
@@ -25,27 +19,27 @@ class ContractsController extends AppController {
         $this->set('contracts', $data);
     }
 
-//    public function view($id = null) {
-//        if ($id) {
-//            $params = array(
-//                'conditions' => array('contract_id' => $id),
-//                'fields' => array(
-//                    'Contracts.*',
-//                    'User.username',
-//                    'Company.name'
-//                ),
-//                'recursive' => 1
-//            );
-//
-//            $contract = $this->Contracts->find('first', $params);
-//
-//            $this->set('contract', $contract);
-//
-//
-//        } else {
-//            echo $this->Flash->error(__('Contract niet gevonden.'));
-//        }
-//    }
+    public function view($id = null) {
+        if ($id) {
+            $params = array(
+                'conditions' => array('contract_id' => $id),
+                'fields' => array(
+                    'Contracts.*',
+                    'User.username',
+                    'Company.name'
+                ),
+                'recursive' => 1
+            );
+
+            $contract = $this->Contracts->find('first', $params);
+
+            $this->set('contract', $contract);
+
+
+        } else {
+            echo $this->Flash->error(__('Contract niet gevonden.'));
+        }
+    }
 
     public function add() {
         if ($this->request->is('post')) {

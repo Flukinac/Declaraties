@@ -5,6 +5,7 @@ App::uses('CakeEmail', 'Network/Email');
 /**
  * @property UserMonthbookings $UserMonthbookings
  * @property Monthbookings $Monthbookings
+ * @property Administratie $Administratie
  * @property ContractHours $ContractHours
  * @property InternHoursTypes $InternHoursTypes
  * @property InternHours $InternHours
@@ -15,22 +16,15 @@ App::uses('CakeEmail', 'Network/Email');
  */
 class UserMonthbookingsController extends AppController
 {
-    public $uses = array('UserMonthbookings', 'Monthbookings', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
+    public $uses = array('UserMonthbookings', 'Monthbookings', 'Administratie', 'ContractHours', 'InternHours', 'InternHoursTypes', 'User', 'Contracts', 'Months', 'Years', 'Company', 'CakePdf', 'CakePdf.Pdf', 'CakeEmail', 'Network/Email');
     public $helpers = array('Html', 'Form');
     public $components = array('Paginator', 'Math');
-
-//    public function beforeFilter()
-//    {
-//        if (AuthComponent::user('role_id') !== '1') {
-//            $this->Flash->error(__('Je hebt geen autorisatie voor deze handeling.'));
-//            $this->redirect('/');
-//        }
-//    }
 
 
     public function index()
     {
-//        s
+        $this->checkAuth(2);
+
         $this->UserMonthbookings->contain(array('Monthbookings' => array('Years', 'Months')));
         $this->paginate = array(
             'conditions' => array(
@@ -60,6 +54,8 @@ class UserMonthbookingsController extends AppController
 
     public function addMonthBooking()
     {
+        $this->checkAuth(2);
+
         //if there is request data AKA submit form
         if ($this->request->is('post')) {
 
@@ -180,6 +176,8 @@ class UserMonthbookingsController extends AppController
 
     public function settings()
     {
+        $this->checkAuth(8);
+
         SessionComponent::delete('searchInfo');             //reset vooropgeslagen zoekdata die vanuit een eerdere zoekopdracht is opgeslagen in de sessie
         $status = array(0 => 'openstaand', 1 => 'goedgekeurd', 2 => 'beide');
         $active = array(0 => 'non actief', 1 => 'actief', 2 => 'beide');
@@ -232,9 +230,9 @@ class UserMonthbookingsController extends AppController
             ));
 
             //vind tekst voor email
-            $tekst = $this->Administration->find('first', array(
+            $tekst = $this->Administratie->find('first', array(
                 'conditions' => array(
-                    'Administrations.administration_id' => 0
+                    'Administratie.administratie_id' => 1
                 ),
                 'fields' => 'text'
             ));
@@ -298,7 +296,7 @@ class UserMonthbookingsController extends AppController
 
                 $this->request->data['UserMonthbooking'][$newKey] = $hoursInternConverted;
                 if ($value['InternHours']['description']) {
-                    $this->request->data['UserMonthbooking']['comment_' . $key] = $value['InternHours']['description'];
+                    $this->request->data['UserMonthbooking']['comment_' . $value['InternHours']['day']] = $value['InternHours']['description'];
                 }
             }
 
@@ -312,7 +310,6 @@ class UserMonthbookingsController extends AppController
             }
 
 
-
             //todo show uren van deze user en maand
             $month = $securityCheck['Monthbookings']['month_id'];
             $year = $securityCheck['Monthbookings']['Years']['year'];
@@ -320,19 +317,13 @@ class UserMonthbookingsController extends AppController
 
             $params = array(                                                                    //ophalen van contracten van de gebruiker waarbij adhv jaar en maand gecontroleerd
                 'fields' => array(                                                              //wordt welke contracten opgehaald moeten worden
-                    'Contracts.start_date',
-                    'Contracts.end_date',
                     'Contracts.contract_id',
-                    'Company.name'
+                    'Contracts.name'
                 ),
                 'conditions' => array(
                     'Contracts.user_id' => $this->Auth->user('user_id')
                 ),
-                'having' => array(
-                    'Contracts.end_date >' => $year . '-' . $month . '-01',
-                    'Contracts.start_date <' => $year . '-' . $month . '-' . $monthMax
-                ),
-                'recursive' => 0
+                'recursive' => -1
             );
 
             $contracts = $this->Contracts->find('all', $params);                                        //relevante contracten van de gebruiker
@@ -495,11 +486,11 @@ class UserMonthbookingsController extends AppController
             if (!$hours) {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $totalHours += $value;
-
                     $this->ContractHours->create();
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'contract_id' => $contractOrInternId,
@@ -512,11 +503,11 @@ class UserMonthbookingsController extends AppController
                         $result = false;
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $totalHours += $value;
-
                     $this->InternHours->create();
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'intern_hour_type_id' => $contractOrInternId,
@@ -535,9 +526,10 @@ class UserMonthbookingsController extends AppController
             } else {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $totalHours += $value;
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'contract_id' => $contractOrInternId,
@@ -553,9 +545,10 @@ class UserMonthbookingsController extends AppController
 
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $totalHours += $value;
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'intern_hour_type_id' => $contractOrInternId,

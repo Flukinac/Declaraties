@@ -9,10 +9,6 @@
                 <dd><?php echo $contract['Contracts']['name']; ?></dd>
                 <dt><?php echo __('Gebruikersnaam'); ?></dt>
                 <dd><?php echo $contract['User']['username']; ?></dd>
-                <dt><?php echo __('Start datum'); ?></dt>
-                <dd><?php echo $contract['Contracts']['start_date']; ?></dd>
-                <dt><?php echo __('Eind datum'); ?></dt>
-                <dd><?php echo $contract['Contracts']['end_date']; ?></dd>
                 <dt><?php echo __('Bedrijfsnaam'); ?></dt>
                 <dd><?php echo $contract['Company']['name']; ?></dd>
                 <dt><?php echo __('Aangemaakt op'); ?></dt>
