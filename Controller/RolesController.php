@@ -144,6 +144,7 @@ class RolesController extends AppController {
             $this->Flash->error(__('Rol kan nog niet verwijderd worden. Er zijn nog gebruikers die deze rol bezitten. Geef deze gebruikers eerst een andere rol.'));
             return $this->redirect(array('action' => 'index'));
         }
+
         if ($this->Roles->delete()) {
             $this->Flash->success(__('Rol verwijderd'));
             return $this->redirect(array('action' => 'index'));

@@ -67,7 +67,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/cakeUren">Home <span class="sr-only">(current)</span></a>
-            </li>
+            </li>s
 
             <?php if (array_search(3, $userAbilities) || array_search(4, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">
@@ -78,11 +78,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
                     <?php if (array_search(3, $userAbilities) || array_search(1, $userAbilities)) {
                         echo $this->Html->link(__('Alle gebruikers'), array('controller' => 'User', 'action' => 'index'), array('class' => 'dropdown-item'));
                     } ?>
-                    <div class="dropdown-divider"></div>
-                    <?php if (array_search(4, $userAbilities) || array_search(1, $userAbilities)) {
-                        echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'), array('class' => 'dropdown-item'));
-                    } ?>
-
+                    <?php if (array_search(4, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <div class="dropdown-divider"></div>
+                        <?php echo $this->Html->link(__('Nieuwe gebruiker'), array('controller' => 'User', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
                 </div>
             </li>
             <?php endif; ?>
@@ -93,9 +92,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
                     Rollen
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
-                    <div class="dropdown-divider"></div>
                     <?php echo $this->Html->link(__('Nieuwe rol'), array('controller' => 'Roles', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
+                    <div class="dropdown-divider"></div>
+                    <?php echo $this->Html->link(__('Alle rollen'), array('controller' => 'Roles', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
                 </div>
             </li>
             <?php endif; ?>
@@ -106,14 +105,15 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
                     Opdrachten
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <?php if (array_search(6, $userAbilities) || array_search(1, $userAbilities)) {
-                        echo $this->Html->link(__('Alle opdrachten'), array('controller' => 'Company', 'action' => 'index'), array('class' => 'dropdown-item'));
-                    } ?>
+                    <?php if (array_search(6, $userAbilities) || array_search(1, $userAbilities)) : ?>
+                        <?php echo $this->Html->link(__('Alle opdrachten'), array('controller' => 'Company', 'action' => 'index'), array('class' => 'dropdown-item')); ?>
+                    <?php endif; ?>
                     <?php if (array_search(7, $userAbilities) || array_search(1, $userAbilities)) : ?>
                         <div class="dropdown-divider"></div>
                         <?php echo $this->Html->link(__('Nieuwe opdracht'), array('controller' => 'Company', 'action' => 'add'), array('class' => 'dropdown-item')); ?>
                     <?php endif; ?>
                 </div>
+
             </li>
             <?php endif; ?>
 
@@ -160,8 +160,10 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
                     <span class="navbar-toggler-icon"></span>
                 </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <?php if (array_search(1, $userAbilities)) : ?>
                     <?php echo $this->Html->link(__('Mijn profiel'), array('controller' => 'User', 'action' => 'edit/' . AuthComponent::user("user_id"))); ?>
                 <div class="dropdown-divider"></div>
+                <?php endif; ?>
                     <?php echo $this->Html->link(__('Nieuw wachtwoord'), array('controller' => 'User', 'action' => 'password/' . AuthComponent::user("user_id"))); ?>
                 <div class="dropdown-divider"></div>
                     <?php echo $this->Html->link('Logout', array('controller' => 'App', 'action' => 'logout')); ?>

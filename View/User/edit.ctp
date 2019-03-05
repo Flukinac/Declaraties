@@ -10,7 +10,7 @@
                         <?php echo $this->Form->input('email', array('label' => 'email', 'value' => $userdata['User']['email'], 'class' => 'formText')); ?>
                     </div>
                     <div>
-                        <?php echo $this->Form->input('role_id', array('label' => 'Rol', 'options' => $values['Roles'], 'class' => 'formText')); ?>
+                        <?php echo $this->Form->input('role_id', array('label' => 'Rol', 'options' => $values['Roles'], 'selected' => $userdata['User']['role_id'], 'class' => 'formText')); ?>
                     </div>
                     <div class="card">
                         <div class="card-header" style="background-color: cyan">

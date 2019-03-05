@@ -486,11 +486,11 @@ class UserMonthbookingsController extends AppController
             if (!$hours) {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $totalHours += $value;
-
                     $this->ContractHours->create();
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'contract_id' => $contractOrInternId,
@@ -503,11 +503,11 @@ class UserMonthbookingsController extends AppController
                         $result = false;
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $totalHours += $value;
-
                     $this->InternHours->create();
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'intern_hour_type_id' => $contractOrInternId,
@@ -526,9 +526,10 @@ class UserMonthbookingsController extends AppController
             } else {
 
                 if ($typeContract == 'contract' && !empty($value)) {
-                    $totalHours += $value;
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'contract_id' => $contractOrInternId,
@@ -544,9 +545,10 @@ class UserMonthbookingsController extends AppController
 
 
                 } elseif ($typeContract == 'intern' && !empty($value)) {
-                    $totalHours += $value;
 
                     $value = $this->Math->convertTimeNotationToValues($value, true);
+
+                    $totalHours += $value;
 
                     $data = array(
                         'intern_hour_type_id' => $contractOrInternId,

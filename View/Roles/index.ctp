@@ -18,7 +18,7 @@
                     <td><?php echo h($role['Roles']['modified']); ?></td>
                     <td class="actions">
                         <?php echo $this->Html->link(__('Aanpassen'), array('action' => 'edit', $role['Roles']['role_id']), array('class' => 'rad-button dark gradient')); ?>
-                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $role['Roles']['role_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Are you sure you want to delete # %s?', $role['Roles']['role_id']))); ?>
+                        <?php echo $this->Form->postLink(__('Verwijderen'), array('action' => 'delete', $role['Roles']['role_id']), array('class' => 'rad-button dark gradient'), array('confirm' => __('Zeker weten?'))); ?>
                     </td>
                 </tr>
             <?php endforeach; ?>

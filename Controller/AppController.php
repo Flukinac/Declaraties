@@ -125,7 +125,7 @@ class AppController extends Controller {
      * @return void
      */
     public function beforeRender() {
-        $userAbilities = SessionComponent::read('Abilities');
+        $userAbilities = (class_exists ('SessionComponent') ? SessionComponent::read('Abilities') : null);
         if ($userAbilities == null) {
             $userAbilities = array();
         }

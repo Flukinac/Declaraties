@@ -11627,3 +11627,215 @@ Stack Trace:
 #2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
 #3 [internal function]: App::shutdown()
 #4 {main}
+2019-03-05 15:57:16 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-05 15:57:16 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-05 15:57:16 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-05 16:08:20 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-05 16:08:20 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-05 16:08:20 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-05 16:08:48 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-05 16:08:48 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-05 16:08:48 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-05 16:10:28 Error: [ParseError] syntax error, unexpected ':', expecting ',' or ')'
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 [internal function]: App::load('AppController')
+#1 C:\xampp\php\www\cakeUren\app\Controller\UserController.php(17): spl_autoload_call('AppController')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(567): include('C:\\xampp\\php\\ww...')
+#3 [internal function]: App::load('UserController')
+#4 [internal function]: spl_autoload_call('UserController')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserController')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-03-05 16:10:28 Error: Fatal Error (16): Exception thrown without a stack frame in [Unknown, line 0]
+2019-03-05 16:10:28 Error: [FatalErrorException] Exception thrown without a stack frame
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(16, 'Exception throw...', 'Unknown', 0)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(16, 'Exception throw...', 'Unknown', 0, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-05 16:11:54 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-05 16:11:54 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-05 16:11:54 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}
+2019-03-05 16:14:08 Error: [Error] Class 'SessionComponent' not found
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(200): Controller->render()
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserController), Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2019-03-05 16:14:08 Error: Fatal Error (1): Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown in [C:\xampp\php\www\cakeUren\app\Controller\AppController.php, line 128]
+2019-03-05 16:14:08 Error: [FatalErrorException] Uncaught Error: Class 'SessionComponent' not found in C:\xampp\php\www\cakeUren\app\Controller\AppController.php:128
+Stack trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Event\CakeEventManager.php(243): AppController->beforeRender(Object(CakeEvent))
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(936): CakeEventManager->dispatch(Object(CakeEvent))
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(292): Controller->render('error500')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(260): ExceptionRenderer->_outputMessage('error500')
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Error\ExceptionRenderer.php(190): ExceptionRenderer->error500(Object(Error))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(127): ExceptionRenderer->render()
+#6 [internal function]: ErrorHandler::handleException(Object(Error))
+#7 {main}
+  thrown
+Request URL: /cakeUren/user/login
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Error\ErrorHandler.php(212): ErrorHandler::handleFatalError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(970): ErrorHandler::handleError(1, 'Uncaught Error:...', 'C:\\xampp\\php\\ww...', 128, Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
+#3 [internal function]: App::shutdown()
+#4 {main}

@@ -79,7 +79,7 @@ class UserController extends AppController {
 
             $data = $this->request->data;
 
-            $data['User']['password'] = $this->randomPassStr(8);
+            $data['User']['password'] = '123456'; //$this->randomPassStr(8); tijdelijk, totdat de mailing het op de host doet
 
             if (!$this->User->save($data)) {
                 $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
@@ -87,12 +87,12 @@ class UserController extends AppController {
                 $userId = $this->User->getLastInsertID();
 
                 if ($this->storeContracts($userId, $data)) {
-                    if ($this->newUserMail($data)) {
-                        $this->Flash->success(__('Gebruiker opgeslagen.'));
-                        return $this->redirect(array('action' => 'index'));
-                    } else {
-                        $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
-                    }
+//                    if ($this->newUserMail($data)) {                      //tijdelijk, totdat de mailing het op de host doet
+                    $this->Flash->success(__('Gebruiker opgeslagen.'));
+                    return $this->redirect(array('action' => 'index'));
+//                    } else {
+//                        $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+//                    }
                 } else {
                     $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
                 }
