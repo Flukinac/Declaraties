@@ -67,7 +67,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version());
         <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
                 <a class="nav-link" href="/cakeUren">Home <span class="sr-only">(current)</span></a>
-            </li>s
+            </li>
 
             <?php if (array_search(3, $userAbilities) || array_search(4, $userAbilities) || array_search(1, $userAbilities)): ?>
             <li class="nav-item dropdown">

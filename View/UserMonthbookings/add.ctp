@@ -77,11 +77,15 @@
     </fieldset><br>
     <div class="row" style="padding-bottom: 20px;">
         <div class="col-sm-4">
-            <div class="card">
+            <div class="card" style="align-items: center">
                 <?php if ($bookingInfo['status'] == '0') {
-                    echo '<button type="submit" class="rad-button dark gradient">Opslaan</button>' . '<br>';
+                    echo '<button type="submit" class="rad-button dark gradient" style="width: 350px">Opslaan</button>';
                 }
-                echo $this->Html->link(__('toon print versie'), array('action' => 'view_pdf', $userMonthbookingId), array('class' => 'rad-button dark gradient'));
+                if (count($contracts) > 0) {
+                    foreach ($contracts as $contract) {
+                        echo '<br>' . $this->Html->link(__('toon print versie van ' . $contract['Contracts']['name']), array('action' => 'view_pdf', $userMonthbookingId, $contract['Contracts']['contract_id'], $contract['Contracts']['name']), array('class' => 'rad-button dark gradient', 'style' => 'text-align:center; width: 350px;'));
+                    }
+                }
                 ?>
             </div>
         </div>

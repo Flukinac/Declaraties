@@ -11839,3 +11839,88 @@ Stack Trace:
 #2 C:\xampp\php\www\cakeUren\lib\Cake\Core\App.php(943): App::_checkFatalError()
 #3 [internal function]: App::shutdown()
 #4 {main}
+2019-03-08 16:00:19 Error: [Error] Unsupported operand types
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(372): MathComponent->convertTimeNotationToValues(Array, false)
+#1 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(162): UserMonthbookingsController->addHours('54')
+#2 [internal function]: UserMonthbookingsController->view_pdf('54')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#6 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2019-03-08 16:37:08 Error: [ParseError] syntax error, unexpected end of file
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#3 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(174): Controller->render()
+#4 [internal function]: UserMonthbookingsController->view_pdf('54')
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2019-03-09 14:55:21 Error: [Error] Call to undefined function onvertTimeNotationToValues()
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(162): UserMonthbookingsController->addHours('54')
+#1 [internal function]: UserMonthbookingsController->view_pdf('54')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-09 15:08:49 Error: [Error] Call to a member function convertTimeNotationToValues() on null
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(162): UserMonthbookingsController->addHours('54')
+#1 [internal function]: UserMonthbookingsController->view_pdf('54')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-11 21:46:54 Error: [ParseError] syntax error, unexpected ';', expecting ',' or ')'
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54/19
+Stack Trace:
+#0 [internal function]: App::load('UserMonthbookin...')
+#1 [internal function]: spl_autoload_call('UserMonthbookin...')
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(266): class_exists('UserMonthbookin...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(235): Dispatcher->_loadController(Object(CakeRequest))
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(158): Dispatcher->_getController(Object(CakeRequest), Object(CakeResponse))
+#5 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}
+2019-03-11 21:48:04 Error: [Error] Cannot use string offset as an array
+Request URL: /cakeUren/UserMonthbookings/view_pdf/54/19
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(971): include()
+#1 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(933): View->_evaluate('C:\\xampp\\php\\ww...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\View\View.php(473): View->_render('C:\\xampp\\php\\ww...')
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(963): View->render(NULL, NULL)
+#4 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(185): Controller->render()
+#5 [internal function]: UserMonthbookingsController->view_pdf('54', '19')
+#6 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#7 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#8 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#9 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2019-03-12 02:04:17 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'active' in 'where clause'
+Request URL: /cakeUren/UserMonthbookings/edit/54
+Stack Trace:
+#0 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(489): PDOStatement->execute(Array)
+#1 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(455): DboSource->_execute('SELECT `Contrac...', Array)
+#2 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(702): DboSource->execute('SELECT `Contrac...', Array, Array)
+#3 C:\xampp\php\www\cakeUren\lib\Cake\Model\Datasource\DboSource.php(1213): DboSource->fetchAll('SELECT `Contrac...', Array)
+#4 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3040): DboSource->read(Object(ContractHours), Array)
+#5 C:\xampp\php\www\cakeUren\lib\Cake\Model\Model.php(3012): Model->_readDataSource('all', Array)
+#6 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(308): Model->find('all', Array)
+#7 C:\xampp\php\www\cakeUren\app\Controller\UserMonthbookingsController.php(43): UserMonthbookingsController->addHours('54')
+#8 [internal function]: UserMonthbookingsController->edit('54')
+#9 C:\xampp\php\www\cakeUren\lib\Cake\Controller\Controller.php(491): ReflectionMethod->invokeArgs(Object(UserMonthbookingsController), Array)
+#10 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#11 C:\xampp\php\www\cakeUren\lib\Cake\Routing\Dispatcher.php(167): Dispatcher->_invoke(Object(UserMonthbookingsController), Object(CakeRequest))
+#12 C:\xampp\php\www\cakeUren\app\webroot\index.php(117): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#13 {main}

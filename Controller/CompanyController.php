@@ -2,9 +2,14 @@
 
 App::uses('appController', 'Controller');
 
+/**
+ * @property Company $Company
+ * @property Contracts $Contracts
+ * @property ContractsHours $ContractsHours
+ */
 class CompanyController extends AppController {
     public $helpers = array('Html', 'Form');
-    public $uses = array('Company');
+    public $uses = array('Company', 'Contracts', 'ContractsHours');
     public $components = array('Paginator');
     public $paginate = array('limit' => 10);
 
@@ -69,18 +74,37 @@ class CompanyController extends AppController {
 
         $this->request->allowMethod('post');
 
-//        $this->Company->id = $id;
-//        if (!$this->Company->exists()) {
-//            throw new NotFoundException(__('Bedrijf niet gevonden'));
-//        }
-//        if ($this->Company->delete()) {
-//            $this->Flash->success(__('Bedrijf verwijderd'));
-//            return $this->redirect(array('action' => 'index'));
-//        }
-//        $this->Flash->error(__('Fout bij deleten. Het bedrijf is niet verwijderd. Probeer het nog eens.'));
+        $this->Company->id = $id;
+        if (!$this->Company->exists()) {
+            throw new NotFoundException(__('Bedrijf niet gevonden'));
+        }
+        if ($this->Company->save(array('fields' => array('Company.active' => 0)))) {
+            $this->Contracts->updateAll(array('Contracts.active' => 0), array('Contracts.company_id' => $id));
 
-        $this->Flash->error(__('Nog te bepalen welke gegevens er verwijderd gaan worden.'));
+            $contractIds = $this->Contracts->find('list', array(
+                'conditions' => array(
+                    'Contracts.company_id' => $id,
+                    'Contracts.active' => 0
+                ),
+                'fields' => 'Contracts.contract_id'
+            ));
+
+            $conditions = array(
+                array('Contracts.user_id' => $userId),
+                'AND' => $contractIds
+            );
+
+            foreach ($contractIds as $value) {
+                $this->ContractsHours->updateAll(array('ContractsHours.active' => 0), array('Contracts.contract_id' => $value));
+            }
+
+
+            $this->Flash->success(__('Bedrijf verwijderd'));
+        } else {
+            $this->Flash->error(__('Fout bij deleten. Het bedrijf is niet verwijderd. Probeer het nog eens.'));
+        }
         return $this->redirect(array('action' => 'index'));
+
     }
 }
 

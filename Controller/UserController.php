@@ -16,7 +16,7 @@ App::uses('CakeEmail', 'Network/Email');
 
 class UserController extends AppController {
     public $helpers = array('Html', 'Form', 'Paginator');
-    public $uses = array('User', 'Roles', 'Company', 'Administratie', 'Contracts', 'InternHoursTypes', 'InternHours', 'CakeEmail', 'Network/Email');
+    public $uses = array('User', 'Roles', 'Company', 'Administratie', 'Contracts', 'InternHoursTypes', 'InternHours', 'UserMonthbookings', 'CakeEmail', 'Network/Email');
     public $components = array('Paginator');
     public $paginate = array(
         'limit' => 5,
@@ -79,7 +79,7 @@ class UserController extends AppController {
 
             $data = $this->request->data;
 
-            $data['User']['password'] = '123456'; //$this->randomPassStr(8); tijdelijk, totdat de mailing het op de host doet
+            $data['User']['password'] = $this->randomPassStr(8);
 
             if (!$this->User->save($data)) {
                 $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
@@ -87,12 +87,12 @@ class UserController extends AppController {
                 $userId = $this->User->getLastInsertID();
 
                 if ($this->storeContracts($userId, $data)) {
-//                    if ($this->newUserMail($data)) {                      //tijdelijk, totdat de mailing het op de host doet
+                    if ($this->newUserMail($data)) {
                     $this->Flash->success(__('Gebruiker opgeslagen.'));
                     return $this->redirect(array('action' => 'index'));
-//                    } else {
-//                        $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
-//                    }
+                    } else {
+                        $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
+                    }
                 } else {
                     $this->Flash->error(__('Fout bij opslaan. De gebruiker is niet opgslagen. Probeer het nog eens.'));
                 }
@@ -149,6 +149,7 @@ class UserController extends AppController {
         );
 
         $companies = $this->Company->find('list', array(
+            'comditions' => array('active' => 1),
             'recursive' => -1,
             'fields' => 'name'
         ));
@@ -195,6 +196,12 @@ class UserController extends AppController {
             )
         );
         if ($this->User->save($save)) {
+
+            $this->UserMonthbookings->updateAll (array(
+                'UserMonthbookings.active' => 0), array(
+                    'UserMonthbookings.user_id' => $id)
+            );
+
             $this->Flash->success(__('Gebruiker verwijderd'));
             return $this->redirect(array('action' => 'index'));
         }
@@ -263,6 +270,7 @@ class UserController extends AppController {
                 $result = false;
             }
         }
+
 
         $conditions = array(
             array('Contracts.user_id' => $userId),

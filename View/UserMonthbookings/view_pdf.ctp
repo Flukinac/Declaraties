@@ -1,11 +1,3 @@
-<?php
-    $totalContract = 0;
-    $totalContractTwo = 0;
-    $totalIntern = 0;
-    $totalInternTwo = 0;
-    $totalInternThree = 0;
-?>
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
 
 <HTML>
@@ -52,7 +44,7 @@
     <TR>
         <TD ALIGN=LEFT VALIGN=BOTTOM BGCOLOR="#9A35FF" SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
         <TD STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=LEFT VALIGN=CENTER SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Opdracht</FONT></B></TD>
-        <TD STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" COLSPAN=2 ALIGN=CENTER VALIGN=CENTER SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri">Qien</FONT></B></TD>
+        <TD STYLE="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" COLSPAN=2 ALIGN=CENTER VALIGN=CENTER SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri"><?php echo $company;?></FONT></B></TD>
         <TD ALIGN=LEFT VALIGN=BOTTOM BGCOLOR="#9A35FF" SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
         <TD STYLE="border-right: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM BGCOLOR="#9A35FF" SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
     </TR>
@@ -81,7 +73,7 @@
     </TR>
     <TR>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000; border-left: 3px solid #000000" HEIGHT=19 ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Datum</FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($contracts[0]['Company']['name']) ?  $contracts[0]['Company']['name'] : '');?></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $company;?></FONT></B></TD>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"></FONT></B></TD>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Overuren</FONT></B></TD>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Ziek</FONT></B></TD>
@@ -99,29 +91,20 @@
         <TD STYLE="border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
         <TD STYLE="border-bottom: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
     </TR>
-    <?php if (!isset($contracts[0]['Contracts']['contract_id'])) {
-        $contracts[0]['Contracts']['contract_id'] = '';
-    };
-    if (!isset($contracts[1]['Contracts']['contract_id'])) {
-        $contracts[1]['Contracts']['contract_id'] = '';
-    };?>
-<?php for ($i = 0; $i < count($daysColor);): ?>
+<?php if (!isset($company)) {
+    $company = '';
+};
+for ($i = 0; $i < count($daysColor);): ?>
     <TR>
         <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000; BACKGROUND:<?php echo $daysColor[++$i]; ?>" HEIGHT=16 ALIGN=CENTER VALIGN=BOTTOM SDVAL="43405" SDNUM="1043;1043;DD-MM-JJ"><FONT FACE="Calibri" COLOR="#000000" ><?php echo $i . '-' . $month . '-' . $year;?></FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="8" SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"> <?php echo (isset($hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[0]['Contracts']['contract_id']]) ? $hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[0]['Contracts']['contract_id']] : ''); ?>    </FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[1]['Contracts']['contract_id']]) ? $hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[1]['Contracts']['contract_id']] : ''); ?><BR></FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['UserMonthbooking']['intern_' . $i . '_1']) ? $hours['UserMonthbooking']['intern_' . $i . '_1'] : '');?><BR></FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['UserMonthbooking']['intern_' . $i . '_2']) ? $hours['UserMonthbooking']['intern_' . $i . '_2'] : '');?><BR></FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['UserMonthbooking']['intern_' . $i . '_3']) ? $hours['UserMonthbooking']['intern_' . $i . '_3'] : '');?><BR></FONT></TD>
-        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="8" SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"> <?php echo (isset($hours['contract_' . $i]) ? $hours['contract_' . $i] : ''); ?></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['intern_' . $i . '_1']) ? $hours['intern_' . $i . '_1'] : '');?><BR></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['intern_' . $i . '_2']) ? $hours['intern_' . $i . '_2'] : '');?><BR></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($hours['intern_' . $i . '_3']) ? $hours['intern_' . $i . '_3'] : '');?><BR></FONT></TD>
+        <TD STYLE="border-bottom: 1px solid #000000; border-left: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><?php echo (isset($comment[$i]) ? $comment[$i] : '');?><BR></FONT></TD>
         <TD STYLE="border-bottom: 1px solid #000000; border-right: 1px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"></FONT></TD>
     </TR>
-<?php $totalContract += (isset($hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[0]['Contracts']['contract_id']]) ? $hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[0]['Contracts']['contract_id']] : 0);?>
-<?php $totalContractTwo += (isset($hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[1]['Contracts']['contract_id']]) ? $hours['UserMonthbooking']['contract_' . $i . '_' . $contracts[1]['Contracts']['contract_id']] : 0);?>
-<?php $totalIntern += (isset($hours['UserMonthbooking']['intern_' . $i . '_1']) ? $hours['UserMonthbooking']['intern_' . $i . '_1'] : 0);?>
-<?php $totalInternTwo += (isset($hours['UserMonthbooking']['intern_' . $i . '_2']) ? $hours['UserMonthbooking']['intern_' . $i . '_2'] : 0);?>
-<?php $totalInternThree += (isset($hours['UserMonthbooking']['intern_' . $i . '_3']) ? $hours['UserMonthbooking']['intern_' . $i . '_3'] : 0);?>
-<?php $total = $totalContract + $totalContractTwo + $totalIntern + $totalInternTwo + $totalInternThree; ?>
 <?php endfor; ?>
 
     <TR>
@@ -136,13 +119,13 @@
     </TR>
     <TR>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000; border-left: 3px solid #000000" HEIGHT=19 ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Totaal</FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="176" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totalContract; ?></FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totalContractTwo; ?></FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totalIntern; ?></FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totalInternTwo; ?></FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totalInternThree; ?></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="176" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totals['totalContract']; ?></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totals['totalIntern1']; ?></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totals['totalIntern2']; ?></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=CENTER VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totals['totalIntern3']; ?></FONT></B></TD>
         <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000" ALIGN=RIGHT VALIGN=BOTTOM SDVAL="0" SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000">Alles totaal: </FONT></B></TD>
-        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000; border-right: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $total; ?><BR></FONT></B></TD>
+        <TD STYLE="border-top: 3px solid #000000; border-bottom: 3px solid #000000; border-right: 3px solid #000000" ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><B><FONT FACE="Calibri" COLOR="#000000"><?php echo $totals['total']; ?><BR></FONT></B></TD>
     </TR>
     <TR>
         <TD HEIGHT=19 ALIGN=LEFT VALIGN=BOTTOM SDNUM="1043;1043;Standaard"><FONT FACE="Calibri" COLOR="#000000"><BR></FONT></TD>

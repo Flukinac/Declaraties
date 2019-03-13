@@ -63,7 +63,8 @@ class AdministratieController extends AppController
             }
         }
         $params = array('conditions' => array(
-            'UserMonthbookings.status' => 0),
+            'UserMonthbookings.status' => 0,
+            'UserMonthbookings.active' => 1),
             'recursive' => 2
         );
 

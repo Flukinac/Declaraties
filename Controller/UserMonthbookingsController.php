@@ -28,7 +28,8 @@ class UserMonthbookingsController extends AppController
         $this->UserMonthbookings->contain(array('Monthbookings' => array('Years', 'Months')));
         $this->paginate = array(
             'conditions' => array(
-                'UserMonthbookings.user_id' => $this->Auth->user('user_id')
+                'UserMonthbookings.user_id' => $this->Auth->user('user_id'),
+                'UserMonthbookings.active' => 1
             )
         );
 
@@ -117,7 +118,6 @@ class UserMonthbookingsController extends AppController
     public function addUserMonthBooking($monthbookingId)
     {
 
-
         //only user month booking is needed for the check
         $this->UserMonthbookings->recursive = -1;
 
@@ -150,24 +150,64 @@ class UserMonthbookingsController extends AppController
 
     }
 
-    public function view_pdf($userMonthbookingId = null)
+    public function view_pdf($userMonthbookingId = null, $viewContract = null, $company = '')
     {
         if (!$userMonthbookingId) {
             $this->Flash->error('Sorry, there was no PDF selected.');
             $this->redirect(array('controller' => 'pages', 'action' => 'display'), null, true);
         }
+
+        $hours = array();
+        $comment = array();
+        $totals = array('totalContract' => 0, 'totalIntern1' => 0, 'totalIntern2' => 0, 'totalIntern3' => 0, 'total' => 0);     //verzamel alle totaal aantal uren per contract en interne boekingtype
+
         $this->layout = 'pdf'; //this will use the pdf.ctp layout
 
         $allData = $this->addHours($userMonthbookingId);
+
+
+        foreach ($this->request->data['UserMonthbooking'] as $key => $value) {
+            $key = explode('_', $key);
+            $intValue = 0;
+            switch($key) {
+                case ($key[0] == 'contract' && $key[2] == $viewContract) :
+                    $hours['contract_' . $key[1]] = $value;
+                    $intValue = $this->Math->convertTimeNotationToValues($value, true);
+                    $totals['totalContract'] += $intValue;
+                    break;
+                case ($key[0] == 'intern' && $key[2] == '1') :
+                    $hours['intern_' . $key[1] . '_' . $key[2]] = $value;
+                    $intValue = $this->Math->convertTimeNotationToValues($value, true);
+                    $totals['totalIntern1'] += $intValue;
+                    break;
+                case ($key[0] == 'intern' && $key[2] == '2') :
+                    $hours['intern_' . $key[1] . '_' . $key[2]] = $value;
+                    $intValue = $this->Math->convertTimeNotationToValues($value, true);
+                    $totals['totalIntern2'] += $intValue;
+                    break;
+                case ($key[0] == 'intern' && $key[2] == '3') :
+                    $hours['intern_' . $key[1] . '_' . $key[2]] = $value;
+                    $intValue = $this->Math->convertTimeNotationToValues($value, true);
+                    $totals['totalIntern3'] += $intValue;
+                    break;
+                case ($key[0] == 'comment') :
+                    $comment[$key[1]] = $value;
+            }
+            $totals['total'] += $intValue;
+        }
+
+        foreach ($totals as $key => $total) {
+            $totals[$key] = $this->Math->convertTimeNotationToValues($total, false);
+        }
+
         $this->set(array(
             'daysColor' => $allData[0],
             'year' => $allData[1],
             'month' => $allData[2],
-            'contracts' => $allData[3],
-            'bookingInfo' => $allData[4],
-            'bookingTypes' => $allData[5],
-            'userMonthbookingId' => $userMonthbookingId,
-            'hours' => $this->request->data
+            'company' => $company,
+            'comment' => $comment,
+            'hours' => $hours,
+            'totals' => $totals
         ));
 
         $this->render();    //TODO zorgen dat dit formulier ook werkt voor meerdere contracten en het totaal opteld voor de interne uren. NB de data zal in deze functie anders ingedeeld moeten worden
@@ -286,6 +326,7 @@ class UserMonthbookingsController extends AppController
 
             $this->InternHours->recursive = -1;
             $this->ContractHours->recursive = -1;
+
             $internHours = $this->InternHours->find('all', array('conditions' => array('user_monthbooking_id' => $userMonthbookingId)));
             $contractHours = $this->ContractHours->find('all', array('conditions' => array('user_monthbooking_id' => $userMonthbookingId)));
 
@@ -313,7 +354,6 @@ class UserMonthbookingsController extends AppController
             //todo show uren van deze user en maand
             $month = $securityCheck['Monthbookings']['month_id'];
             $year = $securityCheck['Monthbookings']['Years']['year'];
-            $monthMax = date('t', $month);
 
             $params = array(                                                                    //ophalen van contracten van de gebruiker waarbij adhv jaar en maand gecontroleerd
                 'fields' => array(                                                              //wordt welke contracten opgehaald moeten worden
@@ -321,7 +361,7 @@ class UserMonthbookingsController extends AppController
                     'Contracts.name'
                 ),
                 'conditions' => array(
-                    'Contracts.user_id' => $this->Auth->user('user_id')
+                    'Contracts.user_id' => $this->Auth->user('user_id'),
                 ),
                 'recursive' => -1
             );
@@ -340,10 +380,10 @@ class UserMonthbookingsController extends AppController
                 }
             }
 
+
             //hier wordt meegestuurd: dagen in int, maanden in int, contracten: begindatum, einddatum, id en bedrijfsnaam, bookingtypes id, userMonthbookingId, booking algemene info.
             return array($color, $year, $chosenMonth, $contracts, $bookingInfo, $bookingTypes, $userMonthbookingId);
 
-            //TEST
 
         } else {
             $this->Flash->error(__('Verkeerde response ontvangen.'));
@@ -351,7 +391,7 @@ class UserMonthbookingsController extends AppController
         }
 
     }
-
+                                                    //@TODO er zou een functie moeten komen met het ophalen van uren,contracten enzo
     private function control()
     {
         if (SessionComponent::check('searchInfo')) {
@@ -579,14 +619,16 @@ class UserMonthbookingsController extends AppController
 
         }
         //  @TODO totaal aantal dagen aanpassen aan huidige maand, geen standaard 160 uur
-        //use the total amount of days and hours to be able to warn the user for insufficient declared hours.
-//        if ($totalHours < 160) {
-//            $hourDiff = 160 - $totalHours;
-//            echo $this->Flash->error(__('Het totaal aantal ingediende uren haalt de standaard maandtax van 160 uur niet. Er komen ' . $hourDiff . ' uren tekort.'));
-//        } elseif ($totalHours > 160) {
-//            $hourDiff = $totalHours - 160;
-//            echo $this->Flash->error(__('Het totaal aantal ingediende uren is hoger dan de standaard maandtax van 160 uur. Er zijn ' . $hourDiff . ' uren extra geboekt.'));
-//        }
+       $totalDays =  count($dataOrg);
+        if ($totalHours < $totalDays) {
+            $hourDiff =  $totalDays - $totalHours;
+            echo $this->Flash->error(__('Het totaal aantal ingediende uren haalt de standaard maandtax van 160 uur niet. Er komen ' . $hourDiff . ' uren tekort.'));
+        } elseif ($totalHours > $totalDays) {
+            $hourDiff = $totalHours - $totalDays;
+            echo $this->Flash->error(__('Het totaal aantal ingediende uren is hoger dan de standaard maandtax van 160 uur. Er zijn ' . $hourDiff . ' uren extra geboekt.'));
+        }
+
+
         if ($result) {
             $dataSource->commit();
             return true;

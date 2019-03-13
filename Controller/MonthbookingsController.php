@@ -20,7 +20,6 @@ class MonthbookingsController extends AppController
     public function add() {
         if ($this->request->is('post')) {
 
-            //TODO:
             $this->Roles->create();
             if ($this->Roles->save($this->request->data)) {
                 $this->Flash->success(__('Rol opgeslagen.'));
